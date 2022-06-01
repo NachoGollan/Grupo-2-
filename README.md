@@ -15,10 +15,11 @@ eVins está orientado a un público mayor de 18 años, con acceso a internet y g
 ### const dreamTeam = ["Matías Añón", "Ignacio Gollan", "Maximiliano Pola", "Jeferson Chavez", "Matías Brocco"]
 
 ##### Console.log(dreamTeam[0]):
-> Mi nombres es Matías Añón. Tengo 32 años. Soy de Buenos Aires, Argentina. Fanatico de la tecnologia y amante del buen vino. 
+Mi nombres es Matías Añón. Tengo 32 años. Soy de Buenos Aires, Argentina. Fanatico de la tecnologia y amante del buen vino. 
 Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 
 ##### Console.log(dreamTeam[1]):
+Nuevo en el mundo de la Programacion, con muchas ganas de aprender y profecionalizarme. Fanatico de la cocina y buena musica.
 
 ##### Console.log(dreamTeam[2]):
 
@@ -34,12 +35,10 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
     
   referencia2:  "[Frappe](https://frappe.com.ar)",
     
-  referencia3:  "[Cava Morande](https://www.cavamorande.cl)",
+  referencia3:  "",
     
-  referencia4:  "[Galpon de Bebidas](https://www.galpondebebidas.com.ar/)",
+  referencia4:  "",
     
-  referencia5:  "[Rutini Wines](https://www.rutiniwines.com/)",
-  
-  referencia6:  "[Cerveza Patagonia](https://www.cervezapatagonia.com.ar/)"
- ###    }
+  referencia5:  ""
+ }
    
