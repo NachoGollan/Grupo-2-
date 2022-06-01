@@ -38,6 +38,8 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
     
   referencia4:  "[Galpon de Bebidas](https://www.galpondebebidas.com.ar/)",
     
-  referencia5:  "[Rutini Wines](https://www.rutiniwines.com/)"
+  referencia5:  "[Rutini Wines](https://www.rutiniwines.com/)",
+  
+  referencia6:  "[Cerveza Patagonia](https://www.cervezapatagonia.com.ar/)"
  ###    }
    
