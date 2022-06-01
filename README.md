@@ -32,7 +32,7 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 
   referencia1: "[Barrel Vinos](https://barrelvinos.com.ar)",
     
-  referencia2:  "",
+  referencia2:  "[Frappe](https://frappe.com.ar)",
     
   referencia3:  "",
     
