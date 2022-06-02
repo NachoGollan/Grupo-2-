@@ -45,7 +45,7 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
  ### Wireframes:
 [Home](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/home.png?raw=true) | 
 [Producto](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/producto.png?raw=true) 
-[Login](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/login.png) |
-[Carrito de Compras](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/carrito.png) |
-[Contacto](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/Contactanos.png) |
+[Login](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/login.png?raw=true) |
+[Carrito de Compras](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/carrito.png?raw=true) |
+[Contacto](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/Contactanos.png?raw=true) |
  
