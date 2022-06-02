@@ -22,6 +22,7 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 > Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo en el mundo de la Programación, con muchas ganas de aprender y profesionalizarme. Fanático de la cocina y buena música.
 
 ##### Console.log(dreamTeam[2]):
+> Mi nombre es Maximiliano Pola. Tengo 26 años y soy de Mendoza, tierra del sol y del buen vino. Me encanta la naturaleza, pasar tiempo con amigos, y aprender cosas nuevas. Con este proyecto espero adentrarme en el mundo de la programacion y adquirir los conocimientos necesarios para entrar en el mundo laboral de dicho campo.
 
 ##### Console.log(dreamTeam[3]):
 
