@@ -1,6 +1,6 @@
 # GRUPO 2 | eVins. Tienda de vinos
 
-![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/LogoeVins.png)
+![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/public/images/LogoeVins.png)
 --------
 Hola, somos el grupo 2 del curso de desarrollo Full Stack de Digital House.
 
@@ -53,4 +53,4 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 [Registro](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/registro.jpg?raw=true) |
  _______________
  ### Paleta de colores de referencia:
- ![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/Paleta_Colores.png)
+ ![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/public/images/Paleta_Colores.png)
