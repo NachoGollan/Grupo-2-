@@ -24,7 +24,8 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 ##### Console.log(dreamTeam[2]):
 > Mi nombre es Maximiliano Pola. Tengo 26 años y soy de Mendoza, tierra del sol y del buen vino. Me encanta la naturaleza, pasar tiempo con amigos, y aprender cosas nuevas. Con este proyecto espero adentrarme en el mundo de la programacion y adquirir los conocimientos necesarios para entrar en el mundo laboral de dicho campo.
 
-##### Console.log(dreamTeam[3]):Mi nombre es Jeferson Fernando Chavez, tengo 23 años , colombiano dando todo el entusiasmo y las ganas en este proyecto para brindar la mejor experiencia de navegación.
+**#####Console.log(dreamTeam[3]):**
+> Soy Jeferson Fernando Chavez, tengo 23 años , colombiano dando todo el entusiasmo y las ganas en este proyecto para brindar la mejor experiencia de navegación.
 
 ##### Console.log(dreamTeam[4]):
 > Me llamo Matías Brocos, tengo 29 años, soy de La Matanza, Buenos Aires. Y recién ahora estoy aprendiendo algo de programación, nunca antes había incursionado en la materia
