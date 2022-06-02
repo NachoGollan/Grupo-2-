@@ -1,6 +1,6 @@
 # GRUPO 2 | eVins. Tienda de vinos
 
-![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/public/images/logo.png)
+![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/LogoeVins.png)
 --------
 Hola, somos el grupo 2 del curso de desarrollo Full Stack de Digital House.
 
