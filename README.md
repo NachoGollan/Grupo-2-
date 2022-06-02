@@ -19,7 +19,7 @@ Mi nombres es Matías Añón. Tengo 32 años. Soy de Buenos Aires, Argentina. Fa
 Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 
 ##### Console.log(dreamTeam[1]):
-Nuevo en el mundo de la Programacion, con muchas ganas de aprender y profecionalizarme. Fanatico de la cocina y buena musica.
+Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo en el mundo de la Programación, con muchas ganas de aprender y profesionalizarme. Fanático de la cocina y buena música.
 
 ##### Console.log(dreamTeam[2]):
 
