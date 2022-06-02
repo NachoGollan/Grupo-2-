@@ -12,21 +12,21 @@ ________
 eVins está orientado a un público mayor de 18 años, con acceso a internet y gustos por vino y las bebidas espirituosas. Por motivos de logística y costos nuestro principal foco es el público local/nacional. Pero como entendemos que un buen vino despierta pasiones al rededor del mundo nuestro alcance no tiene fronteras.
 
 --------
-### const dreamTeam = ["Matías Añón", "Ignacio Gollan", "Maximiliano Pola", "Jeferson Chavez", "Matías Brocco"]
+### const dreamTeam = ["Matías Añón", "Ignacio Gollan", "Maximiliano Pola", "Jeferson Chavez", "Matías Brocos"]
 
 ##### Console.log(dreamTeam[0]):
-Mi nombres es Matías Añón. Tengo 32 años. Soy de Buenos Aires, Argentina. Fanatico de la tecnologia y amante del buen vino. 
+> Mi nombres es Matías Añón. Tengo 32 años. Soy de Buenos Aires, Argentina. Fanatico de la tecnologia y amante del buen vino. 
 Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 
 ##### Console.log(dreamTeam[1]):
-Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo en el mundo de la Programación, con muchas ganas de aprender y profesionalizarme. Fanático de la cocina y buena música.
+> Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo en el mundo de la Programación, con muchas ganas de aprender y profesionalizarme. Fanático de la cocina y buena música.
 
 ##### Console.log(dreamTeam[2]):
 
 ##### Console.log(dreamTeam[3]):
 
 ##### Console.log(dreamTeam[4]):
-
+> Me llamo Matías Brocos, tengo 29 años, soy de La Matanza, Buenos Aires. Y recién ahora estoy aprendiendo algo de programación, nunca antes había incursionado en la materia
 
 --------
 ### const referencias = {
@@ -44,7 +44,7 @@ Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo e
  _______
  ### Wireframes:
 [Home](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/home.png) | 
-[Producto](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/producto.png) |
+[Producto](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/producto.png) 
 [Login](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/login.png) |
 [Carrito de Compras](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/carrito.png) |
 [Contacto](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/Contactanos.png) |
