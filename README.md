@@ -41,4 +41,11 @@ Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo e
     
   referencia5:  "[Cerveza Patagonia](https://www.cervezapatagonia.com.ar/)"
  }
-   
+ _______
+ ### Wireframes:
+[Home](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/home.png) | 
+[Producto](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/producto.png) |
+[Login](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/login.png) |
+[Carrito de Compras](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/carrito.png) |
+[Contacto](https://raw.githubusercontent.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/Contactanos.png) |
+ 
