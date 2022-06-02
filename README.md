@@ -51,4 +51,6 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 [Carrito de Compras](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/carrito.png?raw=true) |
 [Contacto](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/Contactanos.png?raw=true) |
 [Registro](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/registro.jpg?raw=true) |
- 
+ _______________
+ ### Paleta de colores de referencia:
+ ![](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/Paleta_Colores.png)
