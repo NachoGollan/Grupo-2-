@@ -49,4 +49,5 @@ Este proyecto es mi puntapié inicial en el mundo del desarrollo.
 [Login](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/login.png?raw=true) |
 [Carrito de Compras](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/carrito.png?raw=true) |
 [Contacto](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/Contactanos.png?raw=true) |
+[Registro](https://github.com/NachoGollan/Grupo_2_eVins/blob/main/wireframes/registro.jpg?raw=true) |
  
