@@ -35,10 +35,10 @@ Mi nombre es Ignacio Gollan. Tengo 30 años, soy de Córdoba  Argentina. Nuevo e
     
   referencia2:  "[Frappe](https://frappe.com.ar)",
     
-  referencia3:  "",
+  referencia3:  "[Rutini Wines](https://www.rutiniwines.com/)",
     
-  referencia4:  "",
+  referencia4:  "[Mascota Vineyards](http://www.mascotavineyards.com/es/home/)",
     
-  referencia5:  ""
+  referencia5:  "[Cerveza Patagonia](https://www.cervezapatagonia.com.ar/)"
  }
    
