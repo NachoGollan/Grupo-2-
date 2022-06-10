@@ -1,6 +1,7 @@
 // todos los requieres, constantes y variables.
+const express = require('express'); // 
 const path = require('path');
-const express = require('express');
+
 const app = express();
 const puerto = 3000;
 
