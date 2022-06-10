@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eVins</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <img src="/images/logoeVins.png" class=" logo">
-            <h2 class="copy-header"><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de
-                crédito
-            </h2>
-        </div>
-        <a href="#" class="hamburguer-button">
-            <i class="fas fa-bars"></i>
-        </a>
-        <nav class="main-navbar">
-            <ul class="left-navbar">
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Tiendas Oficiales</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
 
-            <ul class="right-navbar">
-                <li><a href="#">Creá tu cuenta <i class="fa-regular fa-id-card"></i></a></li> 
-                <li><a href="#">Ingresá <i class="fa-solid fa-right-to-bracket"></i></a></li>
-                <li><a href="#">Mis compras <i class="fa-solid fa-basket-shopping"></i></a></li>
-            </ul>
-        </nav>
-        <h2 class="parrafo-destacado">Buscar productos , marcas</h2>
-        <i class="fa-solid fa-magnifying-glass"></i>
+<body>
+    <header>
+        <div class="search-login-cart">
+            <div class="menuBurger">
+                <i id="iconosHeader" class="fas fa-bars"></i><i><img
+                        style="width:45px; display: flex; align-items: center;" src="images/logoeVins2.png"></i>
+            </div>
+            <form action="../../form-result.php" method="post" target="_blank">
+                <p style="width:90%;">
+                    <input type="search" name="busquedaProducto" placeholder="El que busca encuentra, decia mi ex...">
+                </p>
+            </form>
+            <p class="login-register">
+                Login | Register<i style="margin: 5px" class="fas fa-key"></i>
+            </p>
+            <div>
+                <i id="iconosHeader" class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <section class="encabezado">
+            <nav>
+                <ul>
+                    <li><a href="">VINOS</a></li>
+                    <li><a href="">ESPUMANTES</a></li>
+                    <li><a href="">DESTILADOS</a></li>
+                </ul>
+                <img src="images/logoeVins.png" alt="logo eVins">
+                <ul>
+                    <li><a href="">IMPORTADOS</a></li>
+                    <li><a href="">ACCESORIOS</a></li>
+                    <li><a href="">PROMOCIONES</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
 </body>
+
 </html>
