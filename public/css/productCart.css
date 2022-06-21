@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+h1, h2{
+    color: #b19b42;
+}
+/*----- Primer detalle de producto -----*/
+.titulo-carrito{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+} 
+
+.detalle-carrito{   
+    justify-content: center;
+    margin: 15px;
+}
+
+.carrito{
+    display: block;  
+    justify-content: space-between;
+    display: flex;   
+    align-items: stretch;
+    border: solid 2px black;
+    height: 200px;
+}
+
+.detalle-producto, .detalle-precio,
+.detalle-cantidad, .detalle-total{
+    flex-direction: column;
+    margin: 5px 8px;   
+}
+.detalle-producto{
+    position: relative;
+    max-width: 100px;
+  
+}
+.vino-carrito{
+    position: absolute;
+    height: 100px;
+    border: solid 1px black;
+    width: 70px;
+    align-self: center;
+    background-size: auto;   
+}
+.img-vino{
+    width: 100%;
+    height: 100%;
+}
+
+.detalle-cantidad{
+    position: relative;
+}
+.contador-cantidad{
+    position: absolute;
+}
+.delete-icon{
+    position: absolute;
+    background-size: 15px;
+    right: 1px;
+    margin-left:4px ;
+    background-color: transparent;
+    color: black;
+}
+.delete-icon:hover{
+    color: red;
+}
+
+.cupon{
+    margin: 15px ;
+
+}
+
+
+/*----- Total del carrito -----*/
+h2{
+    display: flex;
+    justify-content: center;
+}
+.carrito-total{
+    border: solid 2px black;
+    margin: 15px;
+}
+
+.total-subtotal, .total-envio,
+.total-descuentos, .total-pagos
+{
+    border-bottom: solid 2px black;
+    margin: 5px;
+}
+
+.total-precio{
+    margin: 5px;
+}
+
+.botones-carrito{
+    background-color: #AC3A3A;
+    opacity: 0.8;
+    font-weight: bold;
+    color: black;
+    border-radius: 4px;
+}
+.boton-finalizar-compra{
+    display: flex;
+    justify-content: center;
+}
+
+/*----- Media queries -----*/
+
+@media (min-width: 361px){
+
+}
+
+@media (min-width: 768px){
+    .detalle-carrito, .carrito-total{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .detalle-producto{
+        max-width: 150px;
+    }
+    .vino-carrito{
+        position: absolute;
+        height: 120px;
+        border: solid 1px black;
+        width: 100px;
+        align-self: center;
+        background-size: auto;   
+    }
+
+}
+
+@media (min-width: 1200px){
+    .detalle-producto{      
+        max-width: 200px;
+    }
+    .vino-carrito{
+        position: absolute;
+        height: 140px;
+        border: solid 1px black;
+        width: 110px;
+        align-self: center;
+        background-size: auto;   
+    }
+}

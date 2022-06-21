@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+
+   
+    <link rel="stylesheet" href="/css/formularios.css" />
+    
+
+    <title>Creá tu usuario</title>
+  </head>
+  <body>
+    <header class="bg-yellow">
+
+        </div>
+
+      </div>
+      <section>
+        <nav class="navbar texto-centrado">
+          <ul>
+            <li>
+              <a href="/register"
+                >Creá tu cuenta <i class="fas fa-id-card"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <div class="burger-menu texto-centrado">
+          
+        </div>
+      </section>
+    </header>
+    <section>
+      <form action="/" class="form-container">
+        <div>
+          <div>
+            <label for="user-full-name">
+              <input
+                type="text"
+                class="input-text"
+                placeholder="Nombre y apellido"
+                name="user-full-name"
+                id="user-full-name"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label for="user">
+              <input
+                type="text"
+                class="input-text"
+                placeholder="Nombre de usuario"
+                name="user"
+                id="user"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label for="email">
+              <input
+                type="email"
+                class="input-email"
+                placeholder="E-mail"
+                name="email"
+                id="email"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <p class="font-sixteen bold">Fecha de nacimiento</p>
+        <div>
+          <div>
+            <label for="birthday-date">
+              <input
+                type="date"
+                name="bd-date"
+                class="input-date"
+                id="birthday-date"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label for="domicilio">
+              <input
+                type="text"
+                class="input-text"
+                placeholder="Domicilio"
+                name="domicilio"
+                id="domicilio"
+              />
+            </label>
+          </div>
+        </div>
+        </div>
+        <div>
+          <div>
+            <label for="">
+              <input
+                type="password"
+                class="input-password"
+                name="password"
+                placeholder="Password"
+                required
+              />
+            </label>
+          </div>
+          <div>
+            <label for="">
+              <input
+                type="password"
+                class="input-password"
+                name="password"
+                placeholder="Confirm password"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <div>
+          <button type="submit">ENVIAR</button>
+        </div>
+      
+      </form>
+    </section>
+    <footer>
+    </footer>
+  </body>
+</html>

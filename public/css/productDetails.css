@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Bebas Neue';
-    width: 100vw;
+    width: 98.5vw;
     background-color: #dadada;
 }
 
@@ -16,6 +16,10 @@ body {
     background: linear-gradient(to bottom, rgba(54, 57, 62, 1), rgba(218, 218, 218, 0.5));
     color: #b19b42;
     font-size: 20px;
+    width: 100%;    
+}
+
+main {
     width: 100%;
     position: fixed;
     top: 0;
@@ -51,7 +55,7 @@ nav {
 
 nav ul {
     display: flex;
-    width: 40%;
+    width: 45%;
     justify-content: space-around;
     list-style: none;
     font-size: 10px;
@@ -582,6 +586,7 @@ footer ul li {
         font-size: 14px;
     }
 
+
 }
 
 
@@ -634,6 +639,17 @@ footer ul li {
         width: 150px;
         height: 150px;
     }
+
+    footer ul{
+        display:block;
+        list-style: none;
+    }
+    footer img {
+        display: block;
+        width: 150px;
+        height: 150px;
+    }
+
 }
 
 @media screen and (min-width: 968px) {
