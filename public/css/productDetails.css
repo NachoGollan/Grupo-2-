@@ -11,7 +11,11 @@ body {
 }
 
 header {
-    background: linear-gradient(to bottom, rgba(54,57,62,1),rgba(218,218,218,0.5));
+    position: absolute;
+    z-index: 10;
+    position: fixed;
+    top: 1x;
+    background: linear-gradient(to bottom, rgba(54,57,62,1),rgb(218, 218, 218,0.9));
     color: #b19b42;
     font-size: 20px;
     width: 100%;    
@@ -153,6 +157,7 @@ header div input{
 
 
 .divDetalleProducto{
+    position: relative;
     width: 60%;
     justify-content: center;
     align-items: center;
@@ -175,6 +180,7 @@ header div input{
 .descripcionProducto{
     padding-right: 10px;
 }
+
 
 .formCarrito{
     display: flex;
@@ -271,6 +277,10 @@ footer ul li{
 
     }
 
+    section {
+        position: relative;
+        top: -20px
+    }
     .login-register{
         display: flex;
         width: 30%;
@@ -284,6 +294,7 @@ footer ul li{
     width: 50%;
     font-size: 14px;
     }
+
 
 }
 
@@ -301,10 +312,12 @@ footer ul li{
         display: none;
     }
     
+
     section {
         position: relative;
-        top: -50px
+        top: -20px
     }
+
 
 }
 
@@ -321,11 +334,10 @@ footer ul li{
         display: none;
     }
 
-    section {
-        position: relative;
-        top: -30px
+    .agregarAlCarrito{
+        position: absolute;
+        bottom: 50px;
     }
-
     .divFooter {
         display: flex;
         justify-content: space-around
@@ -340,6 +352,7 @@ footer ul li{
         width: 150px;
         height: 150px;
     }
+
 }
 
 @media screen and (min-width: 968px) {
@@ -355,6 +368,10 @@ footer ul li{
         font-size: 25px;
     }
 
+    .agregarAlCarrito{
+        position: absolute;
+        bottom: 50px;
+    }
     .menuBurger{
         display: none;
     }
