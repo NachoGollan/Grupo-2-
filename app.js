@@ -24,6 +24,10 @@ app.get('/productCart', (req,res) => {
     res.sendFile(path.join(__dirname,'./views/productCart.html'))
 });
 
+app.get('/menu', (req,res) => {
+    res.sendFile(path.join(__dirname,'./views/menu.html'))
+});
+
 app.listen(puerto,() => {
     console.log("Servidor corriendo en el puerto " + puerto)
 })
