@@ -1,67 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
-    
-    <link rel="stylesheet" href="/css/formularios.css" />
-    
-
-    <title>Ingrese a su cuenta</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/login.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <title>eVins | Login</title>
+</head>
+<body>
     <header>
-          </ul>
-          <ul>
-            <li>
-              <a href="/register"
-                >Creá tu cuenta <i class="fas fa-id-card"></i
-              ></a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="burger-menu texto-centrado">
+        <div class="search-login-cart">
+            <div class="menuBurger">
+                <i id="iconosHeader" class="fas fa-bars"></i><i><img style="width:45px; display: flex; align-items: center;" src="images/logoeVins2.png"></i>
+            </div>
+                    <form action="#" method="post">
+                <p style="width:90%;">
+                    <input type="search" name="busquedaProducto" placeholder="El que busca encuentra, decia mi ex...">
+                </p>
+            </form>
+            <div class="login-register">
+                <i class="far fa-id-card"></i><a href="/login"> Ingresar</a> | <a href="/registrar">Registrar </a><i style="margin: 5px" class="fas fa-key"></i>
+            </div>
+            <div>
+                <i id="iconosHeader" class="fas fa-shopping-cart"></i>
+            </div>
         </div>
-      </section>
+        <section class="encabezado">
+            <nav>
+                <ul>
+                    <li><a href="">VINOS</a></li>
+                    <li><a href="">ESPUMANTES</a></li>
+                    <li><a href="">DESTILADOS</a></li>
+                </ul>
+                <img src="images/logoeVins.png" alt="logo eVins">
+                <ul>
+                    <li><a href="">IMPORTADOS</a></li>
+                    <li><a href="">ACCESORIOS</a></li>
+                    <li><a href="">PROMOCIONES</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <form action="/" class="form-container">
-      <div>
-        <label for="">
-          <input
-            type="text"
-            name="username"
-            placeholder="Nombre de Usuario"
-            class="input-text"
-          />
-        </label>
-      </div>
-      <div>
-        <input
-          type="password"
-          placeholder="Ingrese su contraseña"
-          class="input-password"
-        />
-      </div>
-      <div>
-        <button type="submit">Enviar</button>
-      </div>
-    </form>
-    <footer class="texto-centrado" style="padding: 10px">
+    <main>
+        <div class="login">
+          <form action="/" class="form-container">
+            <div>
+              <label for="">
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="Nombre de Usuario"
+                  class="input-text"
+                />
+              </label>
+            </div>
+            <div>
+              <input
+                type="password"
+                placeholder="Ingrese su contraseña"
+                class="input-password"
+              />
+            </div>
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </form>
+        </article>
+    </main>
+    <footer>
+        <p class="beberConModeracion"> BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</p>
+        <div class="divFooter">
+            <div>
+                <i class="fas fa-mobile-alt"></i> <span>REDES</span>
+                <p>
+                    <ul class="textoFooter"> 
+                        <li><i class="fab fa-instagram"></i> Instagram |</li>
+                        <li><i class="fab fa-facebook"></i> Facebook |</li>
+                        <li><i class="fab fa-twitter"></i> Twitter</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <i class="far fa-envelope"></i> <span>CONTACTO</span>
+                <p class="textoFooter">
+                    Correo: contacto@eVins.com.ar  |  Telefono: +XX XXX XXXX XXXX
+                </p>
+            </div>
+            <img src="images/logoeVins.png" alt="logo eVins">
+            <div>
+                <i class="fas fa-map-marker-alt"></i> <span>UBACACION</span>
+                <p class="textoFooter">Av. Siempre viva 742, Springfields, Estados Unidos</p>
+            </div>
+            <div>
+                <i class="far fa-list-alt"></i> <span>NAVEGACION</span>
+                <p></p>
+                    <ul class="textoFooter">
+                        <li> VINOS |</li>
+                        <li> ESPUMANTES |</li>
+                        <li> DESTILADOS |</li>
+                        <li> IMPORTADOS |</li>
+                        <li> ACCESORIOS |</li>
+                        <li> PROMOCIONES</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

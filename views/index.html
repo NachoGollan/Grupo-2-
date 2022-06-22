@@ -1,12 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <title>eVins | Home</title>
 </head>
+
 <body>
-    Servidor funcionand
+    <header>
+        <div class="search-login-cart">
+            <div class="menuBurger">
+                <i id="iconosHeader" class="fas fa-bars"></i><i><img
+                        style="width: 35px; display: flex; align-items: center;" src="images/logoeVins2.png"></i>
+            </div>
+            <form action="#" method="post" target="_blank">
+                <p style="width:90%;">
+                    <input type="search" name="busquedaProducto" placeholder="El que busca encuentra, decia mi ex...">
+                </p>
+            </form>
+            <div class="login-register">
+                <i class="far fa-id-card"></i><a href="/login"> Ingresar</a> | <a href="/registrar">Registrar </a><i style="margin: 5px" class="fas fa-key"></i>
+            </div>
+            <div>
+                <i id="iconosHeader" class="fas fa-shopping-cart"></i>
+            </div>
+        </div>
+        <section class="encabezado">
+            <nav>
+                <ul>
+                    <li><a href="">VINOS</a></li>
+                    <li><a href="">ESPUMANTES</a></li>
+                    <li><a href="">DESTILADOS</a></li>
+                </ul>
+                <img src="images/logoeVins.png" alt="logo eVins">
+                <ul>
+                    <li><a href="">IMPORTADOS</a></li>
+                    <li><a href="">ACCESORIOS</a></li>
+                    <li><a href="">PROMOCIONES</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+            <article>
+                <img style="width:100% ;" src="images/banner-vinos-ed.jpg" alt="Banner">
+            </article>
+            <article>
+                    <p class="titulares">VINOS</p>
+                    <div class="article">
+                        <div class="articulo">
+                            <div class="divImagen">
+                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                            </div>
+                            <div class="caja">
+                                <div class="precioDescuento">
+                                    <p id="precio">$XX.XXX</p>
+                                </div>
+                                <br>
+                                <p id="descripcion">VINO 1</p>
+                            </div>
+                        </div>
+                        <div class="articulo">
+                            <div class="divImagen">
+                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                            </div>
+                            <div class="caja">
+                                <div class="precioDescuento">
+                                    <p id="precio">$XX.XXX</p>
+                                </div>
+                                <br>
+                                <p id="descripcion">VINO 2</p>
+                            </div>
+                        </div>
+                        <div class="articulo">
+                            <div class="divImagen">
+                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                            </div>
+                            <div class="caja">
+                                <div class="precioDescuento">
+                                    <p id="precio">$XX.XXX</p>
+                                </div>
+                                <br>
+                                <p id="descripcion">VINO 3</p>
+                            </div>
+                        </div>
+                        <div class="articulo">
+                            <div class="divImagen">
+                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                            </div>
+                            <div class="caja">
+                                <div class="precioDescuento">
+                                    <p id="precio">$XX.XXX</p>
+                                </div>
+                                <br>
+                                <p id="descripcion">VINO 4</p>
+                            </div>
+                        </div>
+                    </div>    
+            </article>
+            <article>
+                <p class="titulares">ESPUMANTES</p>
+                <div class="article">
+                    <div class="articulo">
+                        <div class="divImagen">
+                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                        </div>
+                        <div class="caja">
+                            <div class="precioDescuento">
+                                <p id="precio">$XX.XXX</p>
+                            </div>
+                            <br>
+                            <p id="descripcion">ESPUMANTE 1</p>
+                        </div>
+                    </div>
+                    <div class="articulo">
+                        <div class="divImagen">
+                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                        </div>
+                        <div class="caja">
+                            <div class="precioDescuento">
+                                <p id="precio">$XX.XXX</p>
+                            </div>
+                            <br>
+                            <p id="descripcion">ESPUMANTE 2</p>
+                        </div>
+                    </div>
+                    <div class="articulo">
+                        <div class="divImagen">
+                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                        </div>
+                        <div class="caja">
+                            <div class="precioDescuento">
+                                <p id="precio">$XX.XXX</p>
+                            </div>
+                            <br>
+                            <p id="descripcion">ESPUMANTE 3</p>
+                        </div>
+                    </div>
+                    <div class="articulo">
+                        <div class="divImagen">
+                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                        </div>
+                        <div class="caja">
+                            <div class="precioDescuento">
+                                <p id="precio">$XX.XXX</p>
+                            </div>
+                            <br>
+                            <p id="descripcion">ESPUMATE 4</p>
+                        </div>
+                    </div>
+                </div>    
+        </article>
+            <article>
+                <p class="titulares">PROMOCIONES</p>
+                <div class="article">
+                <div class="articulo">
+                    <div class="divImagen">
+                        <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                    </div>
+                    <div class="caja">
+                        <div class="precioDescuento">
+                            <p id="precio">$XX.XXX</p>
+                            <p id="descuento">XX% OFF</p>
+                        </div>
+                        <br>
+                        <p id="descripcion">PROMO 1</p>
+                    </div>
+                </div>
+                <div class="articulo">
+                    <div class="divImagen">
+                        <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                    </div>
+                    <div class="caja">
+                        <div class="precioDescuento">
+                            <p id="precio">$XX.XXX</p>
+                            <p id="descuento">XX% OFF</p>
+                        </div>
+                        <br>
+                        <p id="descripcion">PROMO 2</p>
+                    </div>
+                </div>
+                <div class="articulo">
+                    <div class="divImagen">
+                        <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                    </div>
+                    <div class="caja">
+                        <div class="precioDescuento">
+                            <p id="precio">$XX.XXX</p>
+                            <p id="descuento">XX% OFF</p>
+                        </div>
+                        <br>
+                        <p id="descripcion">PROMO 3</p>
+                    </div>
+                </div>
+                <div class="articulo">
+                    <div class="divImagen">
+                        <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                    </div>
+                    <div class="caja">
+                        <div class="precioDescuento">
+                            <p id="precio">$XX.XXX</p>
+                            <p id="descuento">XX% OFF</p>
+                        </div>
+                        <br>
+                        <p id="descripcion">PROMO 4</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p class="beberConModeracion"> BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</p>
+        <div class="divFooter">
+            <div>
+                <i class="fas fa-mobile-alt"></i> <span>REDES</span>
+                <p>
+                <ul class="textoFooter">
+                    <li><i class="fab fa-instagram"></i> Instagram |</li>
+                    <li><i class="fab fa-facebook"></i> Facebook |</li>
+                    <li><i class="fab fa-twitter"></i> Twitter</li>
+                </ul>
+                </p>
+            </div>
+            <div>
+                <i class="far fa-envelope"></i> <span>CONTACTO</span>
+                <p class="textoFooter">
+                    Correo: contacto@eVins.com.ar | Telefono: +XX XXX XXXX XXXX
+                </p>
+            </div>
+            <img src="images/logoeVins.png" alt="logo eVins">
+            <div>
+                <i class="fas fa-map-marker-alt"></i> <span>UBACACION</span>
+                <p class="textoFooter">Av. Siempre viva 742, Springfields, Estados Unidos</p>
+            </div>
+            <div>
+                <i class="far fa-list-alt"></i> <span>NAVEGACION</span>
+                <p></p>
+                <ul class="textoFooter">
+                    <li> VINOS |</li>
+                    <li> ESPUMANTES |</li>
+                    <li> DESTILADOS |</li>
+                    <li> IMPORTADOS |</li>
+                    <li> ACCESORIOS |</li>
+                    <li> PROMOCIONES</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>

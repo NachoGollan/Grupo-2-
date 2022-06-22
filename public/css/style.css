@@ -1,0 +1,600 @@
+/*configuraciones generales*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebas Neue';
+    width: 100vw;
+    background-color: #dadada;
+}
+
+p#precio {
+    font-size:18px ;
+    width: 30%;
+}
+
+p#descuento {
+    font-size:16px ;
+    color: #39b54a;
+    width: 70%;
+}
+
+p#descripcion {
+    font-size:16px ;
+    color: #666;
+    width: 100%;
+
+}
+
+div a {
+    color:#b19b42;
+    text-decoration: none;
+}
+/*inicio del header*/
+header {
+    background: linear-gradient(to bottom, rgba(54, 57, 62, 1), rgba(218, 218, 218, 0.5));
+    color: #b19b42;
+    font-size: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
+}
+
+.search-login-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: #b19b42, 1px, solid;
+    width: 100%;
+}
+
+.search {
+    display: block;
+    width: 40%;
+    justify-content: left;
+}
+
+.login-register {
+    display: none;
+}
+
+nav {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: flex;
+    width: 100%;
+}
+
+
+nav ul {
+    display: flex;
+    width: 45%;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 12px;
+    background-color: #962020;
+    box-shadow: 0px 0px 10px rgb(7, 7, 7);
+}
+
+nav ul li {
+    display: block;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px rgb(58, 0, 0);
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+nav ul li:active,
+li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: .4s;
+    border-radius: 5px;
+}
+
+nav ul li a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #b19b42;
+    text-decoration: none;
+
+}
+
+nav img {
+    width: 15%;
+}
+
+.menuBurger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*carrito de mercado*/
+#iconosHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #AC3A3A;
+    font-size: 30px;
+    color:#b19b42;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 6px;
+    box-shadow: 0px 0px 10px rgb(7, 7, 7);
+}
+
+.cuerpoPagina {
+    display: flex;
+}
+
+article{
+    background-color: #ebebeb
+}
+
+.article {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+}
+
+.articulo{
+    margin: 5px;
+    background-color: white;
+
+}
+
+.imagenes {
+    width: 100%;
+}
+
+
+.articulo:hover p#descripcion{
+    display: block;
+    transition-duration: 5s;
+}
+
+.articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main {
+
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.titulares {
+    padding-right: 10px;
+    font-size: 24px;
+    color: #666;
+}
+.divProducto {
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+    border: solid, 10px, #36393E;
+}
+
+.divImagen {
+    text-align: center;
+
+}
+
+main {
+
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+article{
+    background-color: #ebebeb
+}
+
+.article {
+    display: flex;
+    direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #ebebeb;
+}
+
+.articulo{
+    margin: 5px;
+    background-color: white;
+
+}
+
+.articulo:hover p#descripcion{
+    display: block;
+    transition-duration: 5s;
+}
+
+.articulo:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+i.fas.fa-truck{
+    transition-duration: 2s;
+}
+
+i.fas.fa-truck:hover {
+    transform: rotate(-90deg);
+}
+
+.caja {
+    border-top:#ebebeb 1px solid;
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    position: relative;
+
+
+}
+
+.precioDescuento {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header div form {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+header div input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+main {
+    position: relative;
+    padding-top: 50px;
+}
+
+@media screen and (min-width: 449px) {
+
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+    }
+
+    .login-register {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+    }
+
+    .menuBurger {
+        display: none;
+    }
+
+    header div input {
+        font-size: 14px;
+    }
+
+    .articulo {
+        max-width: 40%;
+        background-color: white;
+    }
+    p#precio{
+        font-size: 14px;
+    }
+
+    p#descuento {
+        text-align: right;
+        font-size:12px ;
+        color: #39b54a;
+        width: 70%;
+    }
+    .compraEnCuotas{
+        width: 33%;
+    }
+
+    p#descripcion {
+
+        font-size:16px ;
+        color: #666;
+        width: 100%;
+    }
+
+    main {
+        position: relative;
+        padding-top: 123.56px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 18px;
+
+
+    }
+
+    .menuBurger {
+        display: none;
+    }
+
+    section {
+        position: relative;
+        top: -50px
+    }
+}
+
+@media screen and (min-width: 700px) {
+    
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 22px;
+    }
+
+    .menuBurger {
+        display: none;
+    }
+
+    section {
+        position: relative;
+        top: -30px
+    }
+
+    header div input {
+        width: 60%
+    }
+    .imagenes {
+        width: 100%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .articulo {
+        max-width: 23%;
+        background-color: white;
+    }
+    p#descuento {
+        text-align: right;
+        font-size:16px ;
+        color: #39b54a;
+        width: 70%;
+    }
+    p#descripcion {
+        font-size:16px ;
+        color: #666;
+        width: 100%;
+    
+    }
+}
+
+@media screen and (min-width: 968px) {
+    header {    
+        height: 200px;
+    }
+    nav {
+        position: relative;
+        top: -40px
+    }
+
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+        height: 30px;
+    }
+    .menuBurger {
+        display: none;
+    }
+
+    main {
+        position: relative;
+        padding-top: 200px;
+    }
+}
+
+
+
+
+/*inicio del seccion*/
+/*setting del contenedor padre*/
+.contenedor-productos {
+    width: 90vw;
+    background-color: #ebebeb;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+
+/* setting del contendor hijo*/
+.producto {
+    width: 250px;
+    background-color: white;
+    border: solid #ebebeb 1px;
+    padding: 10px;
+    position: relative;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+
+
+@media screen and (min-width: 968px) {
+ 
+}
+
+@media screen and (min-width: 1200px) {
+
+}
+
+
+
+/*inicio del footer*/
+.beberConModeracion {
+    display: flex;
+    justify-content: center;
+    border-top: #b19b42, 1px, solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.divFooter {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #36393E;
+    color: #b19b42;
+    font-size: 20px;
+}
+
+footer i {
+    color: white;
+}
+
+footer img {
+    display: none;
+}
+
+footer span {
+    font-size: 18px
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+footer ul li {
+    font-size: 14px;
+}
+
+.textoFooter {
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+}
+
+@media screen and (min-width: 449px) {
+    nav {
+        display: flex;
+    }
+
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+
+    }
+
+    section {
+        position: relative;
+        top: -20px
+    }
+
+    .login-register {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+    }
+
+    .menuBurger {
+        display: none;
+    }
+
+    header div input {
+        width: 50%;
+        font-size: 14px;
+    }
+
+}
+
+
+@media screen and (min-width: 576px) {
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 18px;
+    }
+
+    .menuBurger {
+        display: none;
+    }
+
+    section {
+        position: relative;
+        top: -20px
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 22px;
+
+
+    }
+
+    .menuBurger {
+        display: none;
+    }
+
+
+    .divFooter {
+        display: flex;
+        justify-content: space-around
+    }
+
+    footer ul {
+        display: block;
+        list-style: none;
+    }
+
+    footer img {
+        display: block;
+        width: 150px;
+        height: 150px;
+    }
+}
+

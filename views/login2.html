@@ -24,9 +24,9 @@
                     <input type="search" name="busquedaProducto" placeholder="El que busca encuentra, decia mi ex...">
                 </p>
             </form>
-            <div  class="login-register">
-                <i class="far fa-id-card"></i><a href="/login"> Ingresar</a> | <a href="/registrar">Registrar </a><i style="margin: 5px" class="fas fa-key"></i>
-            </div>
+            <p class="login-register">
+               Login | Register<i style="margin: 5px" class="fas fa-key"></i>
+            </p>
             <div>
                 <i id="iconosHeader" class="fas fa-shopping-cart"></i>
             </div>
@@ -48,58 +48,29 @@
         </section>
     </header>
 
-    <main>
-        <div class="titulo-carrito">                
-           <h1>Mi carrito</h1>          
+ <main>
+    <form action="/" class="form-container">
+        <div>
+          <label for="">
+            <input
+              type="text"
+              name="username"
+              placeholder="Nombre de Usuario"
+              class="input-text"
+            />
+          </label>
         </div>
-
-   <section class="detalle-carrito">
-           <nav class="carrito">
-               <div class="detalle-producto">Producto
-                   <div class="vino-carrito" >
-                        <img class="img-vino" src="images/Vino_muestra-400x400.jpg" alt="Producto del Carrito">
-                   </div>                  
-               </div>
-               <div class="detalle-precio">Precio</div>
-               <div class="detalle-cantidad">Cantidad
-                    <form action="cantidad" method="get"></form>
-                    <label for="unidades"></label>
-                        <select name="cantidad" id="cantidad" class="contador-cantidad">
-                            <option value="option-1">1</option>
-                            <option value="option-2">2</option>
-                            <option value="option-3">3</option>
-                        </select>
-                    <a href="" class="delete-icon"><i class="fa-solid fa-trash-can"></i></a>    
-               </div>
-               <div class="detalle-total">Total</div>
-           </nav>
-                <div class="cupon">
-                   <input type="text" value="">
-                   <button type="submit" class="botones-carrito">Aplicar cupon</button>
-                </div>
-   </section>
-           
-   <aside class="carrito-total">        
-       <h2  >Total Del Carrito</h2> 
-           <div class="descripcion-total">
-                   <div class="total-subtotal">Subtotal</div>
-                   <div class="total-envio">Envío</div>
-                   <div class="total-descuentos">Descuentos</div>
-                   <div class="total-pagos">
-                       <form action="pagos" method="get">
-                           <label >Seleccione un metodo de pago:</label>
-                           <select name="pagos" id="pagos">
-                               <option value="debito">Debito</option>
-                               <option value="credito">Credito</option>
-                               <option value="rapipago">Rapipago</option>
-                           </select>
-                       </form>
-                   </div>
-                   <div class="total-precio">Total</div>  
-                   <div class="boton-finalizar-compra"><input type="button" value="Finalizar Compra" class="botones-carrito"></div>
-           </div>
-   </aside>
-
+        <div>
+          <input
+            type="password"
+            placeholder="Ingrese su contraseña"
+            class="input-password"
+          />
+        </div>
+        <div>
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
 
 </main>
 
