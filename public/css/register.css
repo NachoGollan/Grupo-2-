@@ -11,10 +11,16 @@ body {
 }
 
 form {
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
+}
+
+form label {
+    font-size: 16px;
+    text-decoration: double;
 }
 
 header {
@@ -299,6 +305,7 @@ div a {
         position: relative;
         top: -20px
     }
+    
     .login-register{
         display: flex;
         width: 30%;
@@ -414,6 +421,7 @@ div a {
         position: relative;
         padding-top: 230.69px;
     }
+
 
     
 }

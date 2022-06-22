@@ -1,151 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-
-   
-    <link rel="stylesheet" href="/css/formularios.css" />
-    
-
-    <title>Creá tu usuario</title>
-  </head>
-  <body>
-    <header class="bg-yellow">
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/register.css" rel="stylesheet">
+    <link rel="stylesheet" href=".\css\productCart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/c7717cdd20.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <title>eVins | Carrito de compras</title>
+</head>
+<body>
+    <header>
+        <div class="search-login-cart">
+            <div class="menuBurger">
+                <i id="iconosHeader" class="fas fa-bars"></i><i><img style="width:45px; display: flex; align-items: center;" src="images/logoeVins2.png"></i>
+            </div>
+                    <form action="#" method="post">
+                <p style="width:90%;">
+                    <input type="search" name="busquedaProducto" placeholder="El que busca encuentra, decia mi ex...">
+                </p>
+            </form>
+            <div  class="login-register">
+                <i class="far fa-id-card"></i><a href="/login"> Ingresar</a> | <a href="/registrar">Registrar </a><i style="margin: 5px" class="fas fa-key"></i>
+            </div>
+            <div>
+                <i id="iconosHeader" class="fas fa-shopping-cart"></i>
+            </div>
         </div>
-
-      </div>
-      <section>
-        <nav class="navbar texto-centrado">
-          <ul>
-            <li>
-              <a href="/register"
-                >Creá tu cuenta <i class="fas fa-id-card"></i
-              ></a>
-            </li>
-            <li>
-              <a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a>
-            </li>
-
-          </ul>
-        </nav>
-
-        <div class="burger-menu texto-centrado">
-          
-        </div>
-      </section>
+        <section class="encabezado">
+            <nav>
+                <ul>
+                    <li><a href="">VINOS</a></li>
+                    <li><a href="">ESPUMANTES</a></li>
+                    <li><a href="">DESTILADOS</a></li>
+                </ul>
+                <img src="images/logoeVins.png" alt="logo eVins">
+                <ul>
+                    <li><a href="">IMPORTADOS</a></li>
+                    <li><a href="">ACCESORIOS</a></li>
+                    <li><a href="">PROMOCIONES</a></li>
+                </ul>
+            </nav>
+        </section>
     </header>
-    <section>
-      <form action="/" class="form-container">
-        <div>
-          <div>
-            <label for="user-full-name">
-              <input
-                type="text"
-                class="input-text"
-                placeholder="Nombre y apellido"
-                name="user-full-name"
-                id="user-full-name"
-                required
-              />
-            </label>
-          </div>
-          <div>
-            <label for="user">
-              <input
-                type="text"
-                class="input-text"
-                placeholder="Nombre de usuario"
-                name="user"
-                id="user"
-                required
-              />
-            </label>
-          </div>
-          <div>
-            <label for="email">
-              <input
-                type="email"
-                class="input-email"
-                placeholder="E-mail"
-                name="email"
-                id="email"
-                required
-              />
-            </label>
-          </div>
-        </div>
-        <p class="font-sixteen bold">Fecha de nacimiento</p>
-        <div>
-          <div>
-            <label for="birthday-date">
-              <input
-                type="date"
-                name="bd-date"
-                class="input-date"
-                id="birthday-date"
-                required
-              />
-            </label>
-          </div>
-          <div>
-            <label for="domicilio">
-              <input
-                type="text"
-                class="input-text"
-                placeholder="Domicilio"
-                name="domicilio"
-                id="domicilio"
-              />
-            </label>
-          </div>
-        </div>
-        </div>
-        <div>
-          <div>
-            <label for="">
-              <input
-                type="password"
-                class="input-password"
-                name="password"
-                placeholder="Password"
-                required
-              />
-            </label>
-          </div>
-          <div>
-            <label for="">
-              <input
-                type="password"
-                class="input-password"
-                name="password"
-                placeholder="Confirm password"
-                required
-              />
-            </label>
-          </div>
-        </div>
-        <div>
-          <button type="submit">ENVIAR</button>
-        </div>
-      
-      </form>
-    </section>
+
+ <main>
+
+<section>
+    <h3 style="text-align: center;">Creá tu cuenta <h3>
+  <form>
+    <input class="boxInput" type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apelldo" required>
+    <br>
+    <input class="boxInput" type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
+    <br>
+    <input class="boxInput" type="email" id="email" name="email" placeholder="E-mail" required>
+    <br>
+<label for="fechaNacimiento">Fecha de Nacimiento:</label>
+    <input class="boxInput" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+    <br>
+    <input class="boxInput" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+    <br>
+<label for="fotoUsuario">Foto de usuario:</label>
+    <input type="file" id="fotoUsuario" name="fotoUsuario">
+    <br>
+    <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
+    <br>
+    <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
+<br>
+<button type="submit">Enviar</button>
+<button type="reset">Resetear</button>
+</form>
+</section>
+</main>
+
     <footer>
+        <p class="beberConModeracion"> BEBER CON MODERACION. PROHIBIDA SU VENTA A MENORES DE 18 AÑOS.</p>
+        <div class="divFooter">
+            <div>
+                <i class="fas fa-mobile-alt"></i> <span>REDES</span>
+                <p>
+                    <ul class="textoFooter"> 
+                        <li><i class="fab fa-instagram"></i> Instagram |</li>
+                        <li><i class="fab fa-facebook"></i> Facebook |</li>
+                        <li><i class="fab fa-twitter"></i> Twitter</li>
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <i class="far fa-envelope"></i> <span>CONTACTO</span>
+                <p class="textoFooter">
+                    Correo: contacto@eVins.com.ar  |  Telefono: +XX XXX XXXX XXXX
+                </p>
+            </div>
+            <img src="images/logoeVins.png" alt="logo eVins">
+            <div>
+                <i class="fas fa-map-marker-alt"></i> <span>UBACACION</span>
+                <p class="textoFooter">Av. Siempre viva 742, Springfields, Estados Unidos</p>
+            </div>
+            <div>
+                <i class="far fa-list-alt"></i> <span>NAVEGACION</span>
+                <p></p>
+                    <ul class="textoFooter">
+                        <li> VINOS |</li>
+                        <li> ESPUMANTES |</li>
+                        <li> DESTILADOS |</li>
+                        <li> IMPORTADOS |</li>
+                        <li> ACCESORIOS |</li>
+                        <li> PROMOCIONES</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
     </footer>
-  </body>
+</body>
 </html>
