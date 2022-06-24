@@ -15,7 +15,7 @@ ________
 eVins está orientado a un público mayor de 18 años, con acceso a internet y gustos por vino y las bebidas espirituosas. Por motivos de logística y costos nuestro principal foco es el público local/nacional. Pero como entendemos que un buen vino despierta pasiones al rededor del mundo nuestro alcance no tiene fronteras.
 
 --------
-### const dreamTeam = ["Matías Añón", "Ignacio Gollan", "Maximiliano Pola", "Jeferson Chavez", "Matías Brocos"]
+### const dreamTeam = [Matías Añón, Ignacio Gollan, Maximiliano Pola, Jeferson Chavez, Matías Brocos]
 
 ##### Console.log(dreamTeam[0]):
 > Mi nombres es Matías Añón. Tengo 32 años. Soy de Buenos Aires, Argentina. Fanatico de la tecnologia y amante del buen vino. 
