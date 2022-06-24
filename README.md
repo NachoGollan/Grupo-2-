@@ -2,7 +2,9 @@
 <p align="center">
 <img src="https://github.com/NachoGollan/Grupo_2_eVins/blob/main/public/images/logoeVins.png">
 </p>
+
 --------
+
 Hola, somos el grupo 2 del curso de desarrollo Full Stack de Digital House.
 
 eVins dá nombre a nuestro proyecto integrador. Un eCommerce de Vinos (Vins en Francés) y bebidas espirituosas. Uno de los rubros que más crecimiento tuvo durante la pandemia.
