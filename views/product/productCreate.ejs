@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ('./partials/header') %>
+
+    <main>
+        <section>
+            <h3 style="text-align: center;">Creá tu cuenta <h3>
+          <form>
+            <input class="boxInput" type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apelldo" required>
+            <br>
+            <input class="boxInput" type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
+            <br>
+            <input class="boxInput" type="email" id="email" name="email" placeholder="E-mail" required>
+            <br>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input class="boxInput" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <br>
+            <input class="boxInput" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+            <br>
+        <label for="fotoUsuario">Foto de usuario:</label>
+            <input type="file" id="fotoUsuario" name="fotoUsuario">
+            <br>
+            <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
+            <br>
+            <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Resetear</button>
+        </form>
+        </section>
+    </main>
+
+    <%- include ('./partials/footer') %>
+</body>
+</html>
