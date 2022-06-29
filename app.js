@@ -1,32 +1,19 @@
 const express = require('express'); // 
-const path = require('path');
 const app = express();
 const puerto = process.env.PORT || 3000;
-const publicPath = path.join(__dirname, './public');
 
-app.use(express.static(publicPath));
 
-app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname,'./views/index.html'))
-});
+app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
-app.get('/login', (req,res) => {
-    res.sendFile(path.join(__dirname,'./views/login.html'))
-});
-app.get('/register', (req,res) => {
-    res.sendFile(path.join(__dirname,'./views/register.html'))
-});
-app.get('/productDetails', (req,res) => {
-    res.sendFile(path.join(__dirname,'./views/productDetails.html'))
-});
+const mainRoutes = require ('./routes/mainRoutes')
+const usersRoutes = require ('./routes/usersRoutes')
+const productRoutes = require ('./routes/productRoutes')
 
-app.get('/productCart', (req,res) => {
-    res.sendFile(path.join(__dirname,'./views/productCart.html'))
-});
+app.use('/', mainRoutes)
+app.use('/users', usersRoutes)
+app.use('/product', productRoutes)
 
-app.get('/menu', (req,res) => {
-    res.sendFile(path.join(__dirname,'./views/menu.html'))
-});
 
 app.listen(puerto,() => {
     console.log("Servidor corriendo en el puerto " + puerto)
