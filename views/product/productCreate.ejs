@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="./css/register.css" rel="stylesheet">
+    <link rel="stylesheet" href=".\css\productCart.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/c7717cdd20.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/logoeVins2.png">
+    <title>eVins | Carga de producto</title>
 </head>
 <body>
-    <%- include ('./partials/header') %>
+    <%- include(/partials/header) %>
 
-    <main>
-        <section>
-            <h3 style="text-align: center;">Creá tu cuenta <h3>
-          <form>
-            <input class="boxInput" type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apelldo" required>
-            <br>
-            <input class="boxInput" type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
-            <br>
-            <input class="boxInput" type="email" id="email" name="email" placeholder="E-mail" required>
-            <br>
-        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-            <input class="boxInput" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
-            <br>
-            <input class="boxInput" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
-            <br>
-        <label for="fotoUsuario">Foto de usuario:</label>
-            <input type="file" id="fotoUsuario" name="fotoUsuario">
-            <br>
-            <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
-            <br>
-            <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
-        <br>
-        <button type="submit">Enviar</button>
-        <button type="reset">Resetear</button>
-        </form>
-        </section>
-    </main>
+ <main>
 
-    <%- include ('./partials/footer') %>
+<section>
+    <h3 style="text-align: center;">Carga de producto<h3>
+  <form>
+    <input class="boxInput" type="text" id="nombreDeProducto" name="nombreDeProducto" placeholder="Nombre de producto" required>
+    <br>
+    <textarea class="boxInput" id="descripcionDeProducto" name="descripcionDeProducto" placeholder="Descripcion de producto" required>Descripcion</textarea>
+    <br>
+    <label for="fotoProducto">Foto de producto:</label>
+    <input type="file" id="fotoUsuario" name="fotoUsuario">
+    <br>
+    <label for="categoria">Categoria:</label>
+    <select name="categoria" id="categoria">
+      <option value="vinos">Vinos</option>
+      <option value="espumantes">Espumantes</option>
+      <option value="destilados">Destilados</option>
+      <option value="importados">Importados</option>
+      <option value="accesorios">Accesorios</option>
+      <option value="promociones">Promociones</option>
+  </select>
+    <br>
+    <input class="boxInput" type="text" id="cepa" name="cepa" placeholder="Cepa" required>
+    <br>
+    <input class="boxInput" type="text" id="precio" name="precio" placeholder="precio" required>
+<br>
+<button type="submit">Enviar</button>
+<button type="reset">Resetear</button>
+</form>
+</section>
+</main>
+
+ <%- include(/partials/footer) %>
 </body>
 </html>
