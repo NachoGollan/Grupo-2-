@@ -3,7 +3,7 @@ const path = require ("path")
 
 const usersController = {
     register:(req,res) => {
-        res.render('register', {
+        res.render('/users/register', {
             
         })
     },
