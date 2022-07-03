@@ -3,7 +3,7 @@
 #### Resumen de tareas completadas:
 
 - actualizamos el proyecto usando vistas y rutas implementando EJS.
-- 
+- Separamos los componentes repetidos y los guardamos en la carpeta partials
 - 
 
 #### Resumen de impedimentos encontrados:
@@ -14,6 +14,6 @@
 
 #### Resumen de soluciones propuestas:
 
-- 
-- 
-- 
+- [x] Consultamos con profe Franco y arreglamos el problema de rutas
+- [x] En equipo buscamos donde se encontraba el error de carga de las hojas de estilo y lo solucionamos
+- [x]
