@@ -15,7 +15,8 @@ const productController = {
         res.render('product/productCreate', {
             
         })
-    }
+    },
+    crearProducto: 
     
 
 }
