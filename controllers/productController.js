@@ -16,8 +16,6 @@ const productController = {
             
         })
     },
-    crearProducto: 
-    
 
 }
 
