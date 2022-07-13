@@ -1,6 +1,7 @@
 const express = require('express'); // 
 const app = express();
 const puerto = process.env.PORT || 3000;
+const methodOverRide = require('method-override')
 
 
 app.set('view engine', 'ejs');
@@ -14,6 +15,7 @@ app.use('/', mainRoutes)
 app.use('/users', usersRoutes)
 app.use('/product', productRoutes)
 
+app.use(methodOverRide('_method'))
 
 app.listen(puerto,() => {
     console.log("Servidor corriendo en el puerto " + puerto)
