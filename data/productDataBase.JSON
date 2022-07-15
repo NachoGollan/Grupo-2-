@@ -1,4 +1,6 @@
-[
+
+ 
+ [
     {
         "id": 1,
         "name": "CLAROSCURO PINOT NOIR",
@@ -6,5 +8,21 @@
         "image": "images/vinos/claroscuro_pinot.jpg",
         "category": "VINOS",
         "price": "1900"
+    },
+    {
+        "id": 2,
+        "name": "OSCURO",
+        "description": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
+        "image": "images/vinos/claroscuro_pinot.jpg",
+        "category": "VINOS",
+        "price": "1950"
+    },
+    {
+        "id": 3,
+        "name": "AÑEJO",
+        "description": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
+        "image": "images/vinos/claroscuro_pinot.jpg",
+        "category": "VINOS",
+        "price": "1930"
     }
 ]
