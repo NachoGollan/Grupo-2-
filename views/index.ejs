@@ -15,21 +15,23 @@
             </article>
             <article>
                     <p class="titulares">VINOS</p>
-                    <div class="article">
-                        <div class="articulo">
-                            <a href="productDetails">
-                                <div class="divImagen">
-                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                                </div>
-                                <div class="caja">
-                                    <div class="precioDescuento">
-                                        <p id="precio">$XX.XXX</p>
+                    <% for (producto of vinos) {%>
+                        <div class="article">
+                            <div class="articulo">
+                                <a href="/product/<%=producto.id%>">
+                                    <div class="divImagen">
+                                        <img class="imagenes" src="images/producto.jpg" alt="Vino">
                                     </div>
-                                    <br>
-                                    <p id="descripcion">VINO 1</p>
-                                </div>
-                            </a>
-                        </div>
+                                    <div class="caja">
+                                        <div class="precioDescuento">
+                                            <p id="precio">$XX.XXX</p>
+                                        </div>
+                                        <br>
+                                        <p id="descripcion">VINO 1</p>
+                                    </div>
+                                </a>
+                            </div>
+                    <%}%>
                         <div class="articulo">
                             <a href="productDetails">
                                 <div class="divImagen">

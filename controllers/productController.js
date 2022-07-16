@@ -1,38 +1,49 @@
-const path = require('path')
+const path = require("path")
 const fs = require('fs')
-const productFilePath = path.join(__dirname, '../data/productDataBase.json')
+
+const productFilePath = path.join(__dirname, '../data/productDataBase.JSON')
 const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
-const productsController = {
-    productDetails:(req,res) => {
-        res.render('product/productDetails')
+const productController = {
+    productDetails: (req, res) => {
+        res.render('product/productDetails', {
+
+        })
     },
-    productCart:(req,res) => {
-        res.render('product/productCart')
+    productCart: (req, res) => {
+        res.render('product/productCart', {
+
+        })
     },
-    productCreate:(req,res) => {
-        res.render('product/productCreate')
+    productCreate: (req, res) => {
+        res.render('product/productCreate', {
+
+        })
     },
-    crearProducto: (req,res) => {
+    crearProducto: (req, res) => {
+        let data = req.body
         let newProduct =
         {
-            id: products[products.length -1].id +1,
-            nombre: req.body.nombre,
-            descripcion: req.body.descripcion,
+            id: products[products.lenght - 1].id + 1,
+            name: data.name,
+            description: data.description,
             image: '',
-            categoria: req.body.categoria,
-            precio: req.body.precio
+            category: data.category,
+            price: data.price,
         }
-    products.push(newProduct)
-    fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '))
-    res.redirect('/')
+        products.push(newProduct)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))
+        res.redirect('/')
     },
-   
-
-
-
-
+    obtenerProducto: (req, res) => {
+        const idProducto = req.params.id;
+        const producto = products.find(element => {
+            return element.id == idProducto;
+        });
+        
+        res.render('product/productDetails', { producto: producto })
+    },
 
 }
 
-module.exports = productsController
+module.exports = productController

@@ -17,11 +17,15 @@
                         <img class="fotoProducto" src="../images/producto.jpg">
                     </div>
                     <div class="divDetalleProducto">
-                        <p class="nombreProducto">NOMBRE DEL PRODUCTO</p>
-                        <p class="precioProducto">$ XXXX.XX</p>
+                        <p class="nombreProducto">
+                            <%= producto.name %>
+                        </p>
+                        <p class="precioProducto">
+                            <%= producto.precio %>
+                        </p>
                         <br>
                         <p  class="descripcionProducto"> 
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat labore accusamus pariatur deleniti corrupti rem eius inventore libero velit excepturi, ad voluptas nostrum perferendis enim similique, repellendus illo consequuntur! Harum.
+                            <%= producto.description %>
                         </p>
                         <div class="agregarAlCarrito">
                             <form class="formCarrito" action="" method="POST">
