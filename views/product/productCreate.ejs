@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="../css/register.css" rel="stylesheet">
     <link rel="stylesheet" href="..\css\productCart.css">
     <%- include ('../partials/head') %>
     <title>eVins | Carga de producto</title>
@@ -12,32 +11,41 @@
  <main>
 
 <section>
-    <h3 style="text-align: center;">Carga de producto<h3>
-  <form>
-    <input class="boxInput" type="text" id="nombreDeProducto" name="nombreDeProducto" placeholder="Nombre de producto" required>
-    <br>
-    <textarea class="boxInput" id="descripcionDeProducto" name="descripcionDeProducto" placeholder="Descripcion de producto" required>Descripcion</textarea>
-    <br>
-    <label for="fotoProducto">Foto de producto:</label>
-    <input type="file" id="fotoUsuario" name="fotoUsuario">
-    <br>
-    <label for="categoria">Categoria:</label>
-    <select name="categoria" id="categoria">
-      <option value="vinos">Vinos</option>
-      <option value="espumantes">Espumantes</option>
-      <option value="destilados">Destilados</option>
-      <option value="importados">Importados</option>
-      <option value="accesorios">Accesorios</option>
-      <option value="promociones">Promociones</option>
-  </select>
-    <br>
-    <input class="boxInput" type="text" id="cepa" name="cepa" placeholder="Cepa" required>
-    <br>
-    <input class="boxInput" type="text" id="precio" name="precio" placeholder="precio" required>
-<br>
-<button type="submit">Enviar</button>
-<button type="reset">Resetear</button>
-</form>
+  <br>
+  <div class="col-12">
+    <form action="/product" method="POST">
+      <div class="row product-detail">
+        <div class="col-12 col-md-6">
+          <label for="nombre" class="form-label">Nombre del producto:</label>
+          <input type="text" name="nombre" placeholder="Ej:  " class="form-input">
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="categoria" class="form-label">Categoría:</label>
+          <select name="categoria" id="categoria" class="form-input">
+            <option value="">Categoria</option>
+            <option value="vinos">Vinos</option>
+            <option value="Espumantes">Espumantes</option>
+            <option value="Destilados">Destilados</option>
+            <option value="Accesorios">Accesorios</option>
+          </select>
+        </div>
+        <div>
+          <label for="descuento" class="form-label">Descuento (%):</label>
+          <input type="text" id="descuento" name="descuento" placeholder="Ej: 15" class="form-input">
+        <div class="col-12">
+          <label for="description" class="form-label">Descipción:</label>
+          <textarea name="description" id="description" class="form-input"></textarea>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="precio" class="form-label">Precio del producto:</label>
+          <input type="text" id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
+        </div>
+        <div class="col-12">
+          <button type="submit" class="buy-now-button">Guardar producto</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </section>
 </main>
 

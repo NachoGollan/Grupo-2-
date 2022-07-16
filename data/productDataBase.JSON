@@ -1,10 +1,34 @@
 [
-    {
-        "id": 1,
-        "name": "CLAROSCURO PINOT NOIR",
-        "description": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "VINOS",
-        "price": "1900"
-    }
+ {
+  "id": 1,
+  "nombre": "CLAROSCURO PINOT NOIR",
+  "descripcion": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "categoria": "VINOS",
+  "precio": 900
+ },
+ {
+    "id": 2,
+    "nombre": "Angélica Zapata Merlot, es un vino elegante y complejo de color rojo violáceo con destellos rubíes, de nariz delicada, donde sobresalen aromas que recuerdan a de frutos rojos del bosque y notas suaves de especias.",
+    "descripcion": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
+    "image": "images/vinos/claroscuro_pinot.jpg",
+    "categoria": "VINOS",
+    "precio": 3000
+   },
+   {
+    "id": 3,
+    "nombre": "ANIMAL CON ESTUCHE",
+    "descripcion": "Origen del roble: Francés 50%, Americano 50%. Tiempo en barriles: 10 meses. Altura 1130 snm. Cosecha manual: Si. Fermentación: 100% fermentación meloláctica. Espontánea. Maceración: prefermentativa en frío (entre 8 y 10ºC), por 48 horas. Fermentación maloláctica: Si. Clarificación: No. Filtración: No.",
+    "image": "images/vinos/claroscuro_pinot.jpg",
+    "categoria": "VINOS",
+    "precio": 2500
+   },
+   {
+    "id": 4,
+    "nombre": "BENMARCO CABERNET FRANC",
+    "descripcion": "No hay descripcion para este producto.",
+    "image": "images/vinos/claroscuro_pinot.jpg",
+    "categoria": "VINOS",
+    "precio": 1800
+   }
 ]

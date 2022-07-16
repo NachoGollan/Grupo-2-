@@ -6,6 +6,8 @@ const methodOverRide = require('method-override')
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 const mainRoutes = require ('./routes/mainRoutes')
 const usersRoutes = require ('./routes/usersRoutes')
