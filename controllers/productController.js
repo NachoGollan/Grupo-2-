@@ -1,7 +1,7 @@
 const path = require("path")
 const fs = require('fs')
 
-const productFilePath = path.join(__dirname, '../data/productDataBase.JSON')
+const productFilePath = path.join(__dirname, '../data/productDataBase.json')
 const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
 const productController = {
@@ -28,6 +28,7 @@ const productController = {
             name: data.name,
             description: data.description,
             image: '',
+            descuento: data.descuento,
             category: data.category,
             price: data.price,
         }
@@ -42,7 +43,7 @@ const productController = {
         });
         
         res.render('product/productDetails', { producto: producto })
-    },
+    }
 
 }
 
