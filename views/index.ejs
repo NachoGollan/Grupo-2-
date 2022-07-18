@@ -15,191 +15,65 @@
             </article>
             <article>
                     <p class="titulares">VINOS</p>
-                    <% for (producto of vinos) {%>
                         <div class="article">
-                            <div class="articulo">
-                                <a href="/product/<%=producto.id%>">
-                                    <div class="divImagen">
-                                        <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                                    </div>
-                                    <div class="caja">
-                                        <div class="precioDescuento">
-                                            <p id="precio">$XX.XXX</p>
+                            <% for(producto of vinos) {%>
+                                <div class="articulo">
+                                    <a href="/product/<%=producto.id%>">
+                                        <div class="divImagen">
+                                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
                                         </div>
-                                        <br>
-                                        <p id="descripcion">VINO 1</p>
-                                    </div>
-                                </a>
-                            </div>
-                    <%}%>
-                        <div class="articulo">
-                            <a href="productDetails">
-                                <div class="divImagen">
-                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                                        <div class="caja">
+                                            <div class="precioDescuento">
+                                                <p id="precio">$<%=producto.price%></p>
+                                            </div>
+                                            <br>
+                                            <p id="descripcion"><%=producto.name%></p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="caja">
-                                    <div class="precioDescuento">
-                                        <p id="precio">$XX.XXX</p>
-                                    </div>
-                                    <br>
-                                    <p id="descripcion">VINO 2</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="articulo">
-                            <a href="productDetails">
-                                <div class="divImagen">
-                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                                </div>
-                                <div class="caja">
-                                    <div class="precioDescuento">
-                                        <p id="precio">$XX.XXX</p>
-                                    </div>
-                                    <br>
-                                    <p id="descripcion">VINO 3</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="articulo">
-                            <a href="productDetails">
-                                <div class="divImagen">
-                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                                </div>
-                                <div class="caja">
-                                    <div class="precioDescuento">
-                                        <p id="precio">$XX.XXX</p>
-                                    </div>
-                                    <br>
-                                    <p id="descripcion">VINO 4</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>    
+                            <%}%>
+                        </div>    
             </article>
             <article>
                 <p class="titulares">ESPUMANTES</p>
                 <div class="article">
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
+                    <% for(producto of espumantes) {%>
+                        <div class="articulo">
+                            <a href="productDetails">
+                                <div class="divImagen">
+                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
                                 </div>
-                                <br>
-                                <p id="descripcion">ESPUMANTE 1</p>
-                            </div>
-                        </a>   
-                    </div>
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
+                                <div class="caja">
+                                    <div class="precioDescuento">
+                                        <p id="precio">$<%=producto.price%></p>
+                                    </div>
+                                    <br>
+                                    <p id="descripcion"><%=producto.name%></p>
                                 </div>
-                                <br>
-                                <p id="descripcion">ESPUMANTE 2</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
-                                </div>
-                                <br>
-                                <p id="descripcion">ESPUMANTE 3</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
-                                </div>
-                                <br>
-                                <p id="descripcion">ESPUMATE 4</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>    
-        </article>
+                            </a>   
+                        </div>
+                    <%}%>
+            </article>
             <article>
                 <p class="titulares">PROMOCIONES</p>
                 <div class="article">
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
-                                    <p id="descuento">XX% OFF</p>
+                    <% for(producto of descuento) {%>
+                        <div class="articulo">
+                            <a href="productDetails">
+                                <div class="divImagen">
+                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
                                 </div>
-                                <br>
-                                <p id="descripcion">PROMO 1</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
-                                    <p id="descuento">XX% OFF</p>
+                                <div class="caja">
+                                    <div class="precioDescuento">
+                                        <p id="precio">$<%=producto.price%></p>
+                                        <p id="descuento"><%=producto.descuento%>% OFF</p>
+                                    </div>
+                                    <br>
+                                    <p id="descripcion"><%=producto.name%></p>
                                 </div>
-                                <br>
-                                <p id="descripcion">PROMO 2</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
-                                    <p id="descuento">XX% OFF</p>
-                                </div>
-                                <br>
-                                <p id="descripcion">PROMO 3</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="articulo">
-                        <a href="productDetails">
-                            <div class="divImagen">
-                                <img class="imagenes" src="images/producto.jpg" alt="Vino">
-                            </div>
-                            <div class="caja">
-                                <div class="precioDescuento">
-                                    <p id="precio">$XX.XXX</p>
-                                    <p id="descuento">XX% OFF</p>
-                                </div>
-                                <br>
-                                <p id="descripcion">PROMO 4</p>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    <%}%>
                 </div>
             </div>
         </article>
