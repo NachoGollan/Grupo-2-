@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0px;    
+    box-sizing: border-box;
+}
+
+header {
+    position: absolute;
+    z-index: 10;
+    position: fixed;
+    top: 1x;
+    background: linear-gradient(to bottom, rgba(54,57,62,1),rgb(218, 218, 218,0.9));
+    color: #b19b42;
+    font-size: 20px;
+    width: 100%;    
+
+}
+
+h1, h2{
+    color: #b19b42;
+}
+
+
+
+
+/*----- Media queries -----*/
+@media screen and (min-width: 449px) {
+    nav{
+        display: flex;
+    }
+
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+
+    }
+
+    section {
+        position: relative;
+        top: -20px
+    }
+    .login-register{
+        display: flex;
+        width: 30%;
+        justify-content: center;
+    }
+    .menuBurger{
+        display: none;
+    }
+
+    header div input{
+    width: 50%;
+    font-size: 14px;
+    }
+
+    main {
+        position: relative;
+        padding-top: 123px;
+    }
+}
+
+
+@media (min-width: 768px){
+    
+}
+
+@media screen and (min-width: 968px) {
+    header {
+        color: #b19b42;
+        height: 200px;
+            }
+    nav {
+        position: relative;
+        top: -40px
+    }
+
+    nav ul {
+        width: 40%;
+        justify-content: space-around;
+        list-style: none;
+        font-size: 25px;
+    }
+
+    .agregarAlCarrito{
+        position: absolute;
+        bottom: 50px;
+    }
+    .menuBurger{
+        display: none;
+    }
+
+    main {
+        position: relative;
+        margin-top: 20px;
+    }
+
+    
+}
+
+@media (min-width: 1200px){
+  
+    
+   
+}
