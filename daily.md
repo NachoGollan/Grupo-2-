@@ -1,4 +1,4 @@
-## Daily/weekly standups.
+## Daily/weekly standups sprint 3.
 
 #### Resumen de tareas completadas:
 
@@ -16,4 +16,25 @@
 
 - [x] Consultamos con profe Franco y arreglamos el problema de rutas
 - [x] En equipo buscamos donde se encontraba el error de carga de las hojas de estilo y lo solucionamos
+- [x]
+
+
+## Daily/weekly standups sprint 4.
+
+#### Resumen de tareas completadas:
+
+- Generamos archivos JSON y definimos sus campos
+- implementamos el CRUD  para los productos
+- 
+
+#### Resumen de impedimentos encontrados:
+
+- Nos encontramos con un problema luego de implemetar el formulario de creacion de productos
+- Tambien nos encontramos con un problema luego de implemetar el formulario de edicion de productos, particularmente en el metodo put
+- 
+
+#### Resumen de soluciones propuestas:
+
+- [x] 
+- [x] 
 - [x]
