@@ -50,8 +50,8 @@ const productController = {
             return element.id == idProducto;
         });
 
-
-        res.render ('product/productEdit')
+        const productoEditado = producto[idProducto]
+        res.render ('product/productEdit', {productoEditado: productoEditado})
     }, 
 
 }
