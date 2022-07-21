@@ -12,17 +12,17 @@
 
 <section>
   <br>
-  <div class="col-12">
-    <form action="/product/productEdit?_method=PUT" method="POST">
+  <div class="divForm">
+    <form action="/product?_method=PUT" method="POST">
       <div class="row product-detail">
-        <div class="col-12 col-md-6">
+        <div class="divForm col-md-6">
           <label for="nombre" class="form-label">Nombre del producto:</label>
-          <input type="text" value="<% productoEditado.name %> " name="nombre" placeholder="Ej:  " class="form-input">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.name : ' ' %> " name="nombre" class="form-input">
         </div>
-        <div class="col-12 col-md-6">
+        <div class="divForm">
           <label for="categoria" class="form-label">Categoría:</label>
           <select name="categoria" id="categoria" class="form-input">
-            <option value="">Categoria</option>
+            <option value="<%= typeof productoEditable != 'undefined' ? productoEditable.category : ' '%>" selected><%= typeof productoEditable != 'undefined' ? productoEditable.category : ' ' %></option>
             <option value="vinos">Vinos</option>
             <option value="Espumantes">Espumantes</option>
             <option value="Destilados">Destilados</option>
@@ -31,17 +31,17 @@
         </div>
         <div>
           <label for="descuento" class="form-label">Descuento (%):</label>
-          <input type="text" value="<%productoEditado.descuento%>" id="descuento" name="descuento" placeholder="Ej: 15" class="form-input">
-        <div class="col-12">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.descuento : ' '%>" id="descuento" name="descuento" class="form-input">
+        <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
-          <textarea name="description" value="<% productoEditado.description %>  " id="description" class="form-input"></textarea>
+          <textarea name="description" value="<%= typeof productoEditable != 'undefined' ? productoEditable.description : ' ' %> " id="description" class="form-input"><%=productoEditable.description %></textarea>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="divForm col-md-6">
           <label for="precio" class="form-label">Precio del producto:</label>
-          <input type="text" value="<% productoEditado.price %> " id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.price : ' ' %> " id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
         </div>
-        <div class="col-12">
-          <button type="submit" class="buy-now-button">Editar producto</button>
+        <div class="divForm">
+          <button type="submit" >Editar producto</button>
         </div>
       </div>
     </form>

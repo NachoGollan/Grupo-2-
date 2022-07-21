@@ -18,14 +18,17 @@
                     </div>
                     <div class="divDetalleProducto">
                         <p class="nombreProducto">
-                            <%= producto.name %>
+                            <%= typeof producto != 'undefined' ? producto.name : ' '%>
                         </p>
-                        <p class="precioProducto">
-                            <%= producto.precio %>
-                        </p>
+                        <span class="precioProducto">
+                           $ <%= typeof producto != 'undefined' ?  producto.price : ' ' %>
+                        </span>
+                        <span class="descuento">
+                           <%= typeof producto.descuento != 'undefined' ? ' - '+producto.descuento +' % OFF' : ' ' %> 
+                        </span>
                         <br>
                         <p  class="descripcionProducto"> 
-                            <%= producto.description %>
+                            <%= typeof producto != 'undefined' ?  producto.description : ' ' %>
                         </p>
                         <div class="agregarAlCarrito">
                             <form class="formCarrito" action="" method="POST">

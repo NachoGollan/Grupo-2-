@@ -1,72 +1,70 @@
-
- 
- [
-    {
-        "id": 1,
-        "name": "CLAROSCURO PINOT NOIR",
-        "description": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "VINOS",
-        "descuento": "15",
-        "price": "1900"
-    },
-    {
-        "id": 2,
-        "name": "ALMA NEGRA",
-        "description": "Tipo de barrica 100% Roble Francés, roble nuevo 40%. Tiempo en barricas 16 meses. Cosecha manual. Fermentación levaduras naturales, maxima temperatura de fermentacion 23ºC tiempo 10 días. Maceración 40 días. Fermentación maloláctica si, en barriles.",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "VINOS",
-        "price": "3700"
-    },
-    {
-        "id": 3,
-        "name": "CICCHITTI SYRAH",
-        "description": "En nariz frutos rojos y violetas, leve tostado y chocolate, en boca firme y armonioso.",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "VINOS",
-        "price": "1700"
-    },
-    {
-        "id": 4,
-        "name": "COLOME TANNAT",
-        "description": "Color rojo rubí con destellos púrpuras. En sus aromas se destacan la cereza y la frambuesa, notas a chocolate y un toque mineral. Sabor de taninos firmes, envolventes y muy agradables. De estructura carnosa y final largo y persistente.",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "VINOS",
-        "descuento": "10",
-        "price": "2300"
-    },
-    {
-        "id": 5,
-        "name": "ROSELL BOHER ROSÉ X1",
-        "description": " ",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "ESPUMANTES",
-        "descuento": "15",
-        "price": "5500"
-    },
-    {
-        "id": 6,
-        "name": "ANIMAL CON ESTUCHE",
-        "description": "70% Chardonnay- 30% Pinot Noir Tiempo: 10 meses en botella. Altura 1100 snm. Cosecha manual: Si. Fermentación: 25 días. Temp. Max 12 c. Estabilización -4 c. Clarificación: No. Filtración: No.",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "ESPUMANTES",
-        "price": "850"
-    },
-    {
-        "id": 7,
-        "name": "TRUMPETER EXTRA BRUT X1",
-        "description": " ",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "ESPUMANTES",
-        "descuento": "20",
-        "price": "2300"
-    },
-    {
-        "id": 8,
-        "name": "ZAHA ESPUMANTE",
-        "description": "En Bodega Teho hacemos vinos que plasman en la botella las caracteristicas de un lugar, eso que llaman terruño; nuestro espumosos no son la excepción ",
-        "image": "images/vinos/claroscuro_pinot.jpg",
-        "category": "ESPUMANTES",
-        "price": "1100"
-    }
- ]
+[
+ {
+  "id": 1,
+  "name": "CLAROSCURO PINOT NOIR",
+  "description": "Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "VINOS",
+  "descuento": "15",
+  "price": "1900"
+ },
+ {
+  "id": 2,
+  "name": "ALMA NEGRA",
+  "description": "Tipo de barrica 100% Roble Francés, roble nuevo 40%. Tiempo en barricas 16 meses. Cosecha manual. Fermentación levaduras naturales, maxima temperatura de fermentacion 23ºC tiempo 10 días. Maceración 40 días. Fermentación maloláctica si, en barriles.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "VINOS",
+  "price": "3700"
+ },
+ {
+  "id": 3,
+  "name": "CICCHITTI SYRAH",
+  "description": "En nariz frutos rojos y violetas, leve tostado y chocolate, en boca firme y armonioso.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "VINOS",
+  "price": "1700"
+ },
+ {
+  "id": 4,
+  "name": "COLOME TANNAT",
+  "description": "Color rojo rubí con destellos púrpuras. En sus aromas se destacan la cereza y la frambuesa, notas a chocolate y un toque mineral. Sabor de taninos firmes, envolventes y muy agradables. De estructura carnosa y final largo y persistente.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "VINOS",
+  "descuento": "10",
+  "price": "2300"
+ },
+ {
+  "id": 5,
+  "name": "ROSELL BOHER ROSÉ X1",
+  "description": " ",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "ESPUMANTES",
+  "descuento": "15",
+  "price": "5500"
+ },
+ {
+  "id": 6,
+  "name": "ANIMAL CON ESTUCHE",
+  "description": "70% Chardonnay- 30% Pinot Noir Tiempo: 10 meses en botella. Altura 1100 snm. Cosecha manual: Si. Fermentación: 25 días. Temp. Max 12 c. Estabilización -4 c. Clarificación: No. Filtración: No.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "ESPUMANTES",
+  "price": "850"
+ },
+ {
+  "id": 7,
+  "name": "TRUMPETER EXTRA BRUT X1",
+  "description": "Esto es una descripcion de prueba ",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "ESPUMANTES",
+  "descuento": "20",
+  "price": "2300"
+ },
+ {
+  "id": 8,
+  "name": "ZAHA ESPUMANTE",
+  "description": "En Bodega Teho hacemos vinos que plasman en la botella las caracteristicas de un lugar, eso que llaman terruño; nuestro espumosos no son la excepción ",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "ESPUMANTES",
+  "price": "1100"
+ }
+]

@@ -8,7 +8,8 @@ router.post('/', productController.crearProducto)
 
 //EDIT PRODUCTS//
 router.get('/productEdit', productController.editarProducto)
-router.put('/productEdit/:idProductoEditable',)
+router.get('/productEdit/:idProductoEditable', productController.editarProducto)
+router.put('/productEdit', productController.actualizarProducto )
 
 
 router.get('/productDetails', productController.productDetails)
