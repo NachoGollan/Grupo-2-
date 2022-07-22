@@ -16,10 +16,10 @@
   <div class="divForm">
     <form action="/product?_method=PUT" method="POST">
       <div class="row product-detail">
-        <div class="divForm col-md-6">
-          <label for="nombre" class="form-label">ID Producto:</label>
-          <input type="idProducto" value="<%= typeof productoEditable != 'undefined' ? productoEditable.id : ' ' %> " id="id" name="id" class="form-input">
-        </div>
+        <!-- <div class="divForm col-md-6">
+          <label for="id" class="form-label">ID Producto:</label>
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.id : ' ' %> " id="id" name="id" class="form-input">
+        </div> -->
         <div class="divForm col-md-6">
           <label for="nombre" class="form-label">Nombre del producto:</label>
           <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.name : ' ' %> " id="name" name="name" class="form-input">

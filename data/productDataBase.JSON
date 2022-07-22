@@ -66,13 +66,5 @@
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "ESPUMANTES",
   "price": "1100"
- },
- {
-  "id": 9,
-  "name": "TRUMPETER EXTRA BRUT X1 ",
-  "description": "Esto es una descripcion de prueba ",
-  "image": "",
-  "category": "ESPUMANTES",
-  "price": "2300 "
  }
 ]

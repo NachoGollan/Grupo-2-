@@ -36,7 +36,7 @@ const productController = {
         res.redirect('/')
     },
     obtenerProducto: (req, res) => {
-        const idProducto = req.params.id;
+        let idProducto = req.params.id;
         const producto = products.find(element => {
             return element.id == idProducto;
         });
@@ -44,14 +44,25 @@ const productController = {
         res.render('product/productDetails', { producto: producto })
     },
     editarProducto: (req, res) => {
-        const idProduct = req.params.idProductoEditable
-        const productoEditable = products[idProduct-1]
+        let idProduct = req.params.idProductoEditable
+        let productoEditable = products[idProduct-1]
 
+            
         res.render ('product/productEdit', {productoEditable: productoEditable})
     }, 
     actualizarProducto: (req,res) => {
-      
-        res.redirect('product/productEdit/idProducto')
+        let idProduct = req.params.idProductoEditable
+        let producto = products[idProduct-1]
+
+            producto['name'] = productoEditable.name,
+            producto['description'] = productoEditable.description,
+            producto['image'] = '',
+            producto['category'] = productoEditable.category,
+            producto['descuento'] = productoEditable.descuento,
+            producto['price'] = productoEditable.price,
+        
+        fs.writeFileSync(productFilePath, JSON.stringify(products))
+        res.redirect('product/productEdit/'+idProduct)
     }
 
     }
