@@ -13,8 +13,9 @@ router.put('/productEdit', productController.actualizarProducto )
 
 
 router.get('/productDetails', productController.productDetails)
+router.get('/productDetails/:id', productController.obtenerProducto)
 router.get('/productCart', productController.productCart)
-router.get('/:id', productController.obtenerProducto)
+
 
 
 

@@ -50,8 +50,8 @@ const productController = {
         res.render ('product/productEdit', {productoEditable: productoEditable})
     }, 
     actualizarProducto: (req,res) => {
-
-        res.render('product')
+      
+        res.redirect('product/productEdit/idProducto')
     }
 
     }

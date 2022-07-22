@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="..\css\productCart.css">
+    <link rel="stylesheet" href="../../css/productCart.css">
+    <link href="../../css/style.css" rel="stylesheet">
     <%- include ('../partials/head') %>
     <title>eVins | Edicion de producto</title>
 </head>
@@ -16,12 +17,16 @@
     <form action="/product?_method=PUT" method="POST">
       <div class="row product-detail">
         <div class="divForm col-md-6">
+          <label for="nombre" class="form-label">ID Producto:</label>
+          <input type="idProducto" value="<%= typeof productoEditable != 'undefined' ? productoEditable.id : ' ' %> " id="id" name="id" class="form-input">
+        </div>
+        <div class="divForm col-md-6">
           <label for="nombre" class="form-label">Nombre del producto:</label>
-          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.name : ' ' %> " name="nombre" class="form-input">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.name : ' ' %> " id="name" name="name" class="form-input">
         </div>
         <div class="divForm">
-          <label for="categoria" class="form-label">Categoría:</label>
-          <select name="categoria" id="categoria" class="form-input">
+          <label for="category" class="form-label">Categoría:</label>
+          <select name="category" id="category" class="form-input">
             <option value="<%= typeof productoEditable != 'undefined' ? productoEditable.category : ' '%>" selected><%= typeof productoEditable != 'undefined' ? productoEditable.category : ' ' %></option>
             <option value="vinos">Vinos</option>
             <option value="Espumantes">Espumantes</option>
@@ -38,7 +43,7 @@
         </div>
         <div class="divForm col-md-6">
           <label for="precio" class="form-label">Precio del producto:</label>
-          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.price : ' ' %> " id="precio" name="precio" placeholder="Ej: 5678" class="form-input">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.price : ' ' %> " id="price" name="price" placeholder="Ej: 5678" class="form-input">
         </div>
         <div class="divForm">
           <button type="submit" >Editar producto</button>
