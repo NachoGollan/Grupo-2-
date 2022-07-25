@@ -32,7 +32,7 @@ const productController = {
             price: data.price,
         }
         products.push(newProduct)
-        fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '))
+            fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '))
         res.redirect('/')
     },
     obtenerProducto: (req, res) => {
@@ -41,28 +41,46 @@ const productController = {
             return element.id == idProducto;
         });
         
-        res.render('product/productDetails', { producto: producto })
+        res.render('product/productDetails', { producto })
     },
     editarProducto: (req, res) => {
         let idProduct = req.params.idProductoEditable
-        let productoEditable = products[idProduct-1]
+        let productoEditable = products.find((product) => {
+            return product.id === +idProduct
+        })
 
-            
-        res.render ('product/productEdit', {productoEditable: productoEditable})
+         res.render ('product/productEdit', {productoEditable})
     }, 
     actualizarProducto: (req,res) => {
         let idProduct = req.params.idProductoEditable
-        let producto = products[idProduct-1]
-
-            producto['name'] = productoEditable.name,
-            producto['description'] = productoEditable.description,
-            producto['image'] = '',
-            producto['category'] = productoEditable.category,
-            producto['descuento'] = productoEditable.descuento,
-            producto['price'] = productoEditable.price,
+        let productsCopy = products
+        let producto = productsCopy.find((product) => {
+            return product.id === +idProduct
+        })
         
-        fs.writeFileSync(productFilePath, JSON.stringify(products))
-        res.redirect('product/productEdit/'+idProduct)
+            producto.name = req.body.name 
+            producto.description = req.body.description
+            producto.category = req.body.category
+            producto.descuento = req.body.descuento
+            producto.price = req.body.price
+
+            let newProducts = [
+                ...productsCopy
+            ]
+            
+            fs.writeFileSync(productFilePath, JSON.stringify(newProducts, null, ' '))
+            res.render('product/productDetails', {producto} )
+    },
+    borrarProducto: (req, res) => {
+        let idProducto = req.params.idProductoEditable;
+        const productsCopy = products
+        const newProducts = productsCopy.filter(element => {
+            return element.id !== +idProducto;
+        })
+        
+        fs.writeFileSync(productFilePath, JSON.stringify(newProducts, null, ' '))
+        res.redirect('/')
+        
     }
 
     }
