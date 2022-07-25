@@ -9,6 +9,15 @@
   "price": 1900
  },
  {
+  "id": 2,
+  "name": "ALMA NEGRA",
+  "description": "Tipo de barrica 100% Roble Francés, roble nuevo 40%. Tiempo en barricas 16 meses. Cosecha manual. Fermentación levaduras naturales, maxima temperatura de fermentacion 23ºC tiempo 10 días. Maceración 40 días. Fermentación maloláctica si, en barriles.",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "VINOS",
+  "price": 3700,
+  "descuento": ""
+ },
+ {
   "id": 3,
   "name": "CICCHITTI SYRAH",
   "description": "En nariz frutos rojos y violetas, leve tostado y chocolate, en boca firme y armonioso.",
