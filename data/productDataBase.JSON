@@ -52,20 +52,28 @@
   "price": 850
  },
  {
-  "id": 7,
-  "name": "TRUMPETER EXTRA BRUT X1",
-  "description": "Esto es una descripcion de prueba ",
-  "image": "images/vinos/claroscuro_pinot.jpg",
-  "category": "ESPUMANTES",
-  "descuento": 20,
-  "price": 2300
- },
- {
   "id": 8,
   "name": "ZAHA ESPUMANTE",
   "description": "En Bodega Teho hacemos vinos que plasman en la botella las caracteristicas de un lugar, eso que llaman terruño; nuestro espumosos no son la excepción ",
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "ESPUMANTES",
   "price": 1100
+ },
+ {
+  "id": 9,
+  "name": "tintoconpan",
+  "description": "q",
+  "image": "",
+  "category": "vinos",
+  "price": "1111 ",
+  "descuento": ""
+ },
+ {
+  "id": 10,
+  "name": "tinto2",
+  "description": "q",
+  "image": "",
+  "category": "vinos",
+  "price": "1111"
  }
 ]

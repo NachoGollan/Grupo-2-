@@ -2,6 +2,9 @@ const express = require ("express")
 const router = express.Router()
 const productController = require('../controllers/productController')
 
+//CREATE PRODUCTS//
+router.get('/create', productController.productCreate)
+router.post('/', productController.crearProducto)
 
 //EDIT PRODUCTS//
 
@@ -13,9 +16,6 @@ router.delete('/edit/:idProductoEditable', productController.borrarProducto)
 router.get('/:id', productController.obtenerProducto)
 router.get('/cart', productController.productCart)
 
-//CREATE PRODUCTS//
-router.get('/create', productController.productCreate)
-router.post('/', productController.crearProducto)
 
 
 
