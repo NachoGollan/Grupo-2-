@@ -13,20 +13,22 @@
 
 <section>
     <h3 style="text-align: center;">Creá tu cuenta <h3>
-  <form>
-    <input class="boxInput" type="text" id="nombreApellido" name="nombreApellido" placeholder="Nombre y Apelldo" required>
+  <form action="/users" method="POST" enctype="multipart/form-data">
+    <input class="boxInput" type="text" name="first_name" placeholder="Nombre" required>
     <br>
-    <input class="boxInput" type="text" id="userName" name="userName" placeholder="Nombre de usuario" required>
+    <input class="boxInput" type="text" name="last_name" placeholder="Apellido" required>
     <br>
-    <input class="boxInput" type="email" id="email" name="email" placeholder="E-mail" required>
+    <input class="boxInput" type="text" name="userName" placeholder="Nombre de usuario" required>
+    <br>
+    <input class="boxInput" type="email" name="email" placeholder="E-mail" required>
     <br>
 <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-    <input class="boxInput" type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+    <input class="boxInput" type="date" name="birthday" required>
     <br>
-    <input class="boxInput" type="text" id="domicilio" name="domicilio" placeholder="Domicilio" required>
+    <input class="boxInput" type="text" name="address" placeholder="address" required>
     <br>
 <label for="fotoUsuario">Foto de usuario:</label>
-    <input type="file" id="fotoUsuario" name="fotoUsuario">
+    <input type="file" name="image">
     <br>
     <input class="boxInput" type="password" id="password" name="password" placeholder="Contraseña" required>
     <br>

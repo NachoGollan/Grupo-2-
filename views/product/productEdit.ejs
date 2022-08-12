@@ -24,6 +24,11 @@
           <label for="nombre" class="form-label">Nombre del producto:</label>
           <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.name : ' ' %> " id="name" name="name" class="form-input">
         </div>
+        <div>
+          <label for="imported" class="form-label">Importado:</label>
+          <label>SI <input type="radio"  name="imported" value="<%= typeof productoEditable != 'undefined' ? productoEditable.imported : ' ' %> "></label>
+          <label>NO <input type="radio"  name="imported" value="<%= typeof productoEditable != 'undefined' ? productoEditable.imported : ' ' %> " checked></label>
+        </div>
         <div class="divForm">
           <label for="category" class="form-label">Categoría:</label>
           <select name="category" id="category" class="form-input">
@@ -34,9 +39,6 @@
             <option value="Accesorios">Accesorios</option>
           </select>
         </div>
-        <div>
-          <label for="descuento" class="form-label">Descuento (%):</label>
-          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.descuento : ' '%>" id="descuento" name="descuento" class="form-input">
         <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
           <textarea name="description" value="<%= typeof productoEditable != 'undefined' ? productoEditable.description : ' ' %> " id="description" class="form-input"><%=productoEditable.description %></textarea>
@@ -44,6 +46,15 @@
         <div class="divForm col-md-6">
           <label for="precio" class="form-label">Precio del producto:</label>
           <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.price : ' ' %> " id="price" name="price" placeholder="Ej: 5678" class="form-input">
+        </div>
+        <div>
+          <label for="oferta" class="form-label">En oferta:</label>
+          <label>SI <input type="radio"  name="enOferta" value="<%= typeof productoEditable != 'undefined' ? productoEditable.enOferca : ' '%>"  onclick="document.getElementById('descuento').removeAttribute('disabled')"></label>
+          <label>NO <input type="radio"  name="enOferta" value="<%= typeof productoEditable != 'undefined' ? productoEditable.enOferca : ' '%>"  onclick="document.getElementById('descuento').setAttribute('disabled')"></label>
+        </div>
+        <div>
+          <label for="descuento" class="form-label">Descuento (%):</label>
+          <input type="text" id="descuento" value="<%= typeof productoEditable != 'undefined' ? productoEditable.descuento : ' '%>" id="descuento" name="descuento" disabled>
         </div>
         <div class="divForm">
           <button type="submit" >Editar producto</button>

@@ -19,6 +19,11 @@
           <label for="name" class="form-label">Nombre del producto:</label>
           <input type="text" name="name" placeholder="Ej: Catena Malbec " class="form-input">
         </div>
+        <div>
+          <label for="imported" class="form-label">Importado:</label>
+          <label>SI <input type="radio"  name="imported" value="true"></label>
+          <label>NO <input type="radio"  name="imported" value="false" checked></label>
+        </div>
         <div class="divForm ">
           <label for="category" class="form-label">Categoría:</label>
           <select name="category" id="category" class="form-input">
@@ -29,16 +34,26 @@
             <option value="Accesorios">Accesorios</option>
           </select>
         </div>
-        <div>
-          <label for="descuento" class="form-label">Descuento (%):</label>
-          <input type="text"  name="descuento" placeholder="Ej: 15" class="form-input">
         <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
           <textarea name="description" class="form-input"></textarea>
         </div>
         <div class="divForm">
+          <label for="details">Detalles Tecnicos:</label>
+          <textarea name="details" class="form-input"></textarea>
+        </div>
+        <div class="divForm">
           <label for="price" class="form-label">Precio del producto:</label>
-          <input type="text" name="price" placeholder="Ej: 5678" class="form-input">
+          <input type="number" name="price" placeholder="Ej: 5678" class="form-input">
+        </div>
+        <div>
+          <label for="oferta" class="form-label">En oferta:</label>
+          <label>SI <input type="radio"  name="enOferta" value="si"  onclick="document.getElementById('descuento').removeAttribute('disabled')"></label>
+          <label>NO <input type="radio"  name="enOferta" value="no" checked onclick="document.getElementById('descuento').setAttribute('disabled')"></label>
+        </div>
+        <div>
+          <label for="descuento" class="form-label">Descuento (%):</label>
+          <input type="number" id="descuento" name="descuento" placeholder="Ej: 15" disabled>
         </div>
         <div class="divForm">
           <button type="submit" class="buy-now-button">Guardar producto</button>
