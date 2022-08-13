@@ -4,6 +4,8 @@ const fs = require('fs')
 const productFilePath = path.join(__dirname, '../data/users.json')
 const users = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
+const bcryptjs = require('bcryptjs')
+
 const usersController = {
     register:(req,res) => {
         res.render('users/register', {
@@ -25,9 +27,10 @@ const usersController = {
             last_name: data.last_name,
             image: req.file.filename,
             email: data.email,
-            password: data.password,
+            password: bcryptjs.hashSync(data.password, 10),
             birthday: data.birthday,
         }
+
         users.push(newUser)
             fs.writeFileSync(productFilePath, JSON.stringify(users, null, ' '))
         res.redirect('/')

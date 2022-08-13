@@ -233,5 +233,23 @@
   "password": "kFIJHkxt",
   "birthday": "30/01/1986",
   "image": "http://dummyimage.com/139x100.png/5fa2dd/ffffff"
+ },
+ {
+  "id": 27,
+  "first_name": "matias",
+  "last_name": "anon",
+  "image": "user-1660425912381.jpg",
+  "email": "manon@gmail.com",
+  "password": "matias0",
+  "birthday": "2004-06-24"
+ },
+ {
+  "id": 28,
+  "first_name": "juan",
+  "last_name": "perez",
+  "image": "user-1660426114065.jpg",
+  "email": "jperez@gmail.com",
+  "password": "$2a$10$YPMdKYRRslSlbrjUE5iFXeJBc1/HaJSJop4OgqvbD22j/hjlmByO.",
+  "birthday": "1988-07-22"
  }
 ]
