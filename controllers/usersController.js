@@ -3,7 +3,7 @@ const fs = require('fs')
 
 const productFilePath = path.join(__dirname, '../data/users.json')
 const users = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
-
+const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs')
 
 const usersController = {
@@ -12,11 +12,7 @@ const usersController = {
             
         })
     },
-    login:(req,res) => {
-        res.render('users/login', {
-            
-        })
-    },
+    
     createUser:(req,res) => {
         if (req.file) {
         let data = req.body
@@ -37,6 +33,38 @@ const usersController = {
     } else {
         res.render('users/register')
     }
+    },
+    
+    login:(req,res) => {
+        res.render('users/login', {  
+        })
+    },
+
+    processLogin: (req,res) => {
+
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()){
+            let usuarioALoguearse
+        for (i = 0; i < users.length; i++){
+            if (users[i].email == req.body.email){
+                if (bcryptjs.compareSync(req.body.password, users[i].password)){
+                     usuarioALoguearse = users[i] 
+                     break;
+                }
+            } 
+        }
+
+        if (usuarioALoguearse == undefined){
+            return res.render('users/login', {errors:[{msg: 'Credenciales invalidas'}]})
+        }
+            req.session.usuarioLogueado = usuarioALoguearse
+
+            res.redirect('/', {usuarioALoguearse} )
+        }else{
+            return res.render('users/login', {errors:[{msg: 'Complete los campos'}]})
+
+        }
     }
 }
 

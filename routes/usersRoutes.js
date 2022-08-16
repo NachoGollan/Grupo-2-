@@ -3,6 +3,7 @@ const usersController = require("../controllers/usersController")
 const multer = require('multer')
 const router = express.Router()
 const path = require('path')
+const validatorLogin = require ('../middlewares/validatorLogin')
 
 const storage = multer.diskStorage({
 
@@ -17,9 +18,12 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage })
 
+//Ruteo login
 router.get('/login', usersController.login)
-router.get('/register', usersController.register)
+router.post('/login', validatorLogin, usersController.processLogin)
 
+//Ruteo register
+router.get('/register', usersController.register)
 router.post('/', upload.single('image'), usersController.createUser)
 
 module.exports = router

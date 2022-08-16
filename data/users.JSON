@@ -251,5 +251,23 @@
   "email": "jperez@gmail.com",
   "password": "$2a$10$YPMdKYRRslSlbrjUE5iFXeJBc1/HaJSJop4OgqvbD22j/hjlmByO.",
   "birthday": "1988-07-22"
+ },
+ {
+  "id": 29,
+  "first_name": "Maxi",
+  "last_name": "Pola",
+  "image": "user-1660622675355.jpg",
+  "email": "maxipola95@gmail.com",
+  "password": "$2a$10$ctLPkQhTPmVf8kBl86V6WuI9dCUwLdcnidORVI9wN9Bt1PH97NGbu",
+  "birthday": "2022-08-09"
+ },
+ {
+  "id": 30,
+  "first_name": "Maxi",
+  "last_name": "Pola",
+  "image": "user-1660680848839.jpg",
+  "email": "maxipola95@gmail.com",
+  "password": "$2a$10$ykK3wLkAxT01Ckvnntw8ROVM.HA28uewS932zFxhHGzXy9/PvUl7y",
+  "birthday": "2022-08-09"
  }
 ]
