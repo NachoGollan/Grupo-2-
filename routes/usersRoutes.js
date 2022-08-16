@@ -5,6 +5,10 @@ const router = express.Router()
 const path = require('path')
 const validatorLogin = require ('../middlewares/validatorLogin')
 
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const authMiddleware = require('../middlewares/authMiddleware')
+
+
 const storage = multer.diskStorage({
 
     destination: (req, file, cb) => {
@@ -23,7 +27,7 @@ router.get('/login', usersController.login)
 router.post('/login', validatorLogin, usersController.processLogin)
 
 //Ruteo register
-router.get('/register', usersController.register)
+router.get('/register',guestMiddleware, usersController.register)
 router.post('/', upload.single('image'), usersController.createUser)
 
 module.exports = router
