@@ -22,9 +22,14 @@ const productController = {
     },
     crearProducto: (req, res) => {
         let data = req.body
+        let ids = products.map(e => {
+            return e.id;
+        });
+        let maxId = Math.max(...ids);
+        
         let newProduct =
-        {        
-            id: products[products.length - 1].id + 1,
+        {
+            id: maxId + 1,
             name: data.name,
             description: data.description,
             image: '',
