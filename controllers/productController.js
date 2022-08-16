@@ -34,7 +34,10 @@ const productController = {
             description: data.description,
             image: '',
             category: data.category,
+            descuento: data.descuento,
+            enOferta: data.enOferta,
             price: data.price,
+            imported: data.imported
         }
         products.push(newProduct)
             fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '))
@@ -68,6 +71,9 @@ const productController = {
             producto.category = req.body.category
             producto.descuento = req.body.descuento
             producto.price = req.body.price
+            producto.enOferta = req.body.enOferta
+            producto.imported= req.body.imported
+        
 
             let newProducts = [
                 ...productsCopy

@@ -9,31 +9,42 @@
 <body>
     <%- include ('../partials/header') %>
     <main>
+    <!-- //Muestra de errores -->
+      <% if (typeof errors != 'undefined') { %>
+        <p>ERROR</p>
+        <ul>
+            <% for (let i=0; i<errors.length; i++){ %>
+                <li>
+                  <%=errors[i].msg%>
+                </li>
+        <% } %> 
+        </ul> 
+        <% } %>
+    <!-- //Muestra de session -->
+      <% if (typeof usuarioALoguearse != 'undefined' ){%>
+          <p>Hola <%=usuarioALoguearse.email %></p> 
+          <% } %>    
         <h3 style="text-align: center">Ingresá tus datos</h3>
         <div class="login">
-          <form action="/" method="POST">
+          <form action="/users/login" method="POST">
             <div>
               <label for="">
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Nombre de Usuario"
-                  class="input-text"
-                />
+                <input type="email" name="email" placeholder="Ingrese su email" class="input-text" />
               </label>
             </div>
             <div>
-              <input
-                type="password"
-                placeholder="Ingrese su contraseña"
-                class="input-password"
-              />
+              <input type="password" name="password" placeholder="Ingrese su contraseña" class="input-password"/>
             </div>
             <div>
-              <button type="submit">Enviar</button>
+              <label for="">Recordar Usuario</label>
+              <input type="checkbox" name="recordarUsuario" id="">
+            </div>
+            <div>
+                <form action="">
+                    <button type="submit">Enviar</button>
+                </form> 
             </div>
           </form>
-        </article>
     </main>
     <%- include ('../partials/footer') %>
 </body>

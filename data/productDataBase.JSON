@@ -6,7 +6,9 @@
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "VINOS",
   "descuento": 15,
-  "price": 1900
+  "enOferta": "si",
+  "price": 1900,
+  "imported": false
  },
  {
   "id": 2,
@@ -15,7 +17,9 @@
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "VINOS",
   "price": 3700,
-  "descuento": ""
+  "enOferta": "no",
+  "descuento": null,
+  "imported": false
  },
  {
   "id": 3,
@@ -23,7 +27,10 @@
   "description": "En nariz frutos rojos y violetas, leve tostado y chocolate, en boca firme y armonioso.",
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "VINOS",
-  "price": 1700
+  "enOferta": "no",
+  "descuento": null,
+  "price": 1700,
+  "imported": "false"
  },
  {
   "id": 4,
@@ -31,8 +38,10 @@
   "description": "Color rojo rubí con destellos púrpuras. En sus aromas se destacan la cereza y la frambuesa, notas a chocolate y un toque mineral. Sabor de taninos firmes, envolventes y muy agradables. De estructura carnosa y final largo y persistente.",
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "VINOS",
+  "enOferta": "si",
   "descuento": 10,
-  "price": 2300
+  "price": 2300,
+  "imported": "false"
  },
  {
   "id": 5,
@@ -40,8 +49,10 @@
   "description": " ",
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "ESPUMANTES",
+  "enOferta": "si",
   "descuento": 15,
-  "price": 5500
+  "price": 5500,
+  "imported": "false"
  },
  {
   "id": 6,
@@ -49,7 +60,21 @@
   "description": "70% Chardonnay- 30% Pinot Noir Tiempo: 10 meses en botella. Altura 1100 snm. Cosecha manual: Si. Fermentación: 25 días. Temp. Max 12 c. Estabilización -4 c. Clarificación: No. Filtración: No.",
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "ESPUMANTES",
-  "price": 850
+  "enOferta": "no",
+  "descuento": null,
+  "price": 850,
+  "imported": "false"
+ },
+ {
+  "id": 7,
+  "name": "TRUMPETER EXTRA BRUT X1",
+  "description": "Esto es una descripcion de prueba ",
+  "image": "images/vinos/claroscuro_pinot.jpg",
+  "category": "ESPUMANTES",
+  "enOferta": "si",
+  "descuento": 20,
+  "price": 2300,
+  "imported": "false"
  },
  {
   "id": 8,
@@ -57,7 +82,10 @@
   "description": "En Bodega Teho hacemos vinos que plasman en la botella las caracteristicas de un lugar, eso que llaman terruño; nuestro espumosos no son la excepción ",
   "image": "images/vinos/claroscuro_pinot.jpg",
   "category": "ESPUMANTES",
-  "price": 1100
+  "enOferta": "no",
+  "descuento": null,
+  "price": 1100,
+  "imported": "false"
  },
  {
   "id": 9,
