@@ -4,9 +4,6 @@ const puerto = process.env.PORT || 3000;
 const methodOverRide = require('method-override')
 
 
-
-
-
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
