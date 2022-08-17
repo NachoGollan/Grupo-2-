@@ -8,15 +8,20 @@
 
 <body>
     <%- include ('./partials/header') %>
-    <% if (typeof usuarioALoguearse != 'undefined' ){%>
-        <p>Hola <%=usuarioALoguearse.email %></p> 
-        <% } %>
+
+
+
     <main>
             <article>
                 <img style="width:100% ;" src="images/banner-vinos-ed.jpg" alt="Banner">
             </article>
             <article>
-                    <p class="titulares">VINOS</p>
+                    <p class="titulares">VINOS    <% if ( locals && locals.usuarioLogueado  ){%>
+        <p>Hola <%=locals.usuarioLogueado %></p> 
+        <% } else{ %>
+            <p>No existe</p>
+            <% } %> </p>
+
                         <div class="article">
                             <% for(producto of vinos) {%>
                                 <div class="articulo">
