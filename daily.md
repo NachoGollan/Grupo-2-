@@ -37,4 +37,26 @@
 
 - [x] 
 - [x] 
+
+
+
+## Daily/weekly standups sprint 5.
+
+#### Resumen de tareas completadas:
+
+- Implementamos el registro de usuarios
+- Implementamos el login de usuarios
+- Implementamos las rutas de invitados y de usuarios
+- Creamos una cookie para el login
+
+#### Resumen de impedimentos encontrados:
+
+- Nos encontramos con un problema al implementar login de usuarios
+- 
+- 
+
+#### Resumen de soluciones propuestas:
+
+- [x] Por medio de una reunion de equipo pudimos solucionar el problema, y dejamos una duda para consultar con los profes
+- [x] 
 - [x]
