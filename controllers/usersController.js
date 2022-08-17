@@ -46,25 +46,25 @@ const usersController = {
 
         if (errors.isEmpty()){
             let usuarioALoguearse
-        for (i = 0; i < users.length; i++){
-            if (users[i].email == req.body.email){
-                if (bcryptjs.compareSync(req.body.password, users[i].password)){
-                     usuarioALoguearse = users[i] 
-                     break;
-                }
-            } 
-        }
-
-        if (usuarioALoguearse == undefined){
-            return res.render('users/login', {errors:[{msg: 'Credenciales invalidas'}]})
-        }
+            for (i = 0; i < users.length; i++){
+                if (users[i].email == req.body.email){
+                    if (bcryptjs.compareSync(req.body.password, users[i].password)){
+                        usuarioALoguearse = users[i] 
+                        break;
+                    }
+                } 
+            }
+            
+            if (usuarioALoguearse == undefined){
+                return res.render('users/login', {errors:[{msg: 'Email o contraseña incorrecto'}]})
+            }
             req.session.usuarioLogueado = usuarioALoguearse
-
-            res.redirect('/', {usuarioALoguearse} )
+            console.log(req.session)
+            res.redirect('/')
         }else{
             return res.render('users/login', {errors:[{msg: 'Complete los campos'}]})
 
-        }
+         }
     }
 }
 
