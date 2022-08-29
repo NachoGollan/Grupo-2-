@@ -27,7 +27,7 @@ router.get('/login', usersController.login)
 router.post('/login', validatorLogin, usersController.processLogin)
 
 //Ruteo register
-router.get('/register',authMiddleware, usersController.register)
+router.get('/register', usersController.register)
 router.post('/', upload.single('image'), usersController.createUser)
 
 module.exports = router
