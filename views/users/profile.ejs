@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link href="../../public/css/login.css" rel="stylesheet">
+    <%- include ('../partials/head') %>
+    <title>eVins | Login</title>
+</head>
+<body>
+    <%- include ('../partials/header') %>
+    <main>
+    <!-- //Muestra de errores -->
+      <% if (typeof errors != 'undefined') { %>
+        <p>ERROR</p>
+        <ul>
+            <% for (let i=0; i<errors.length; i++){ %>
+                <li>
+                  <%=errors[i].msg%>
+                </li>
+        <% } %> 
+        </ul> 
+        <% } %>
+    <!-- //Muestra de session -->
+      <% if (typeof usuarioALoguearse != 'undefined' ){%>
+          <p>Hola <%=usuarioALoguearse.email %></p> 
+          <% } %>    
+          <div>
+            <div>
+              <img src="../../images/profile_images/<%=user.image%>">
+            </div>
+            <div>
+              <ul>
+                <li>Usuario: </li>
+                <li>Nombre: <%=user.first_name%> </li>
+                <li>Apellido: <%=user.last_name%></li>
+                <li>E-Mail: <%=user.email%> </li>
+                <li>Fehca de Nacimiento: <%=user.birthday%></li>
+
+              </ul>
+            </div>
+          </div>
+          
+    </main>
+    <%- include ('../partials/footer') %>
+</body>
+</html>
