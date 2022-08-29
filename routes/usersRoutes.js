@@ -30,4 +30,6 @@ router.post('/login', validatorLogin, usersController.processLogin)
 router.get('/register',authMiddleware, usersController.register)
 router.post('/', upload.single('image'), usersController.createUser)
 
+router.get('/profile/:id', usersController.profile )
+
 module.exports = router
