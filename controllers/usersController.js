@@ -65,7 +65,17 @@ const usersController = {
             return res.render('users/login', {errors:[{msg: 'Complete los campos'}]})
 
          }
+    },
+
+    profile:(req,res) => {
+        let idUser = req.params.id;
+        const user = users.find(element => {
+            return element.id == idUser;
+        });
+        
+        res.render('users/profile', { user })
     }
 }
 
-module.exports = usersController 
+
+module.exports = usersController
