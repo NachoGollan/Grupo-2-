@@ -1,5 +1,6 @@
 const path = require("path")
 const fs = require('fs')
+const db = require('../database/models')
 
 const productFilePath = path.join(__dirname, '../data/productDataBase.json')
 const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
@@ -16,31 +17,27 @@ const productController = {
         })
     },
     productCreate: (req, res) => {
-        res.render('product/productCreate', {
-
-        })
+        db.Category.findAll()
+            .then(function(category) {
+                return res.render('product/productCreate', { category:category})
+            })
+        db.Brand.findAll()
+            .then(function(brand) {
+                return res.render('product/productCreate', { brand:brand})
+            })
     },
     crearProducto: (req, res) => {
-        let data = req.body
-        let ids = products.map(e => {
-            return e.id;
-        });
-        let maxId = Math.max(...ids);
-        
-        let newProduct =
-        {
-            id: maxId + 1,
-            name: data.name,
-            description: data.description,
+        db.Product.create({
+            product_name: req.body.name,
+            descript: req.body.description,
+            category_id: req.body.category,
             image: '',
-            category: data.category,
-            descuento: data.descuento,
-            enOferta: data.enOferta,
-            price: data.price,
-            imported: data.imported
-        }
-        products.push(newProduct)
-            fs.writeFileSync(productFilePath, JSON.stringify(products, null, ' '))
+            discount: req.body.descuento,
+            offer: req.body.enOferta,
+            price: req.body.price,
+            imported: req.body.imported
+        })
+        
         res.redirect('/')
     },
     obtenerProducto: (req, res) => {
