@@ -1,3 +1,4 @@
+const Category = require("./Category")
 
 module.exports = (sequlize, dataTypes) => {
     let alias = "Products"
@@ -42,6 +43,13 @@ module.exports = (sequlize, dataTypes) => {
         timestapms: false
     }
     const Producto = sequlize.define(alias, cols, config)
+
+    Producto.associate = function (models){
+        Category.belongsTo(models.Category), {
+            as: "category",
+            foreignKey: "category_id"
+        }
+    }
 
     return Producto
 }
