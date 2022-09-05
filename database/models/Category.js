@@ -1,12 +1,13 @@
+
 module.exports = (sequlize, dataTypes) => {
     let alias = "Category"
     let cols = {
-        category_id:{
+        id:{
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name:{
+        cat_name:{
             type: dataTypes.STRING
         },
 
@@ -23,7 +24,6 @@ module.exports = (sequlize, dataTypes) => {
             foreignKey: "category_id"
         }
     }
-
 
     return Category
 }
