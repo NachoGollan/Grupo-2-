@@ -18,17 +18,20 @@
                     </div>
                     <div class="divDetalleProducto">
                         <p class="nombreProducto">
-                            <%= typeof producto != 'undefined' ? producto.name : ' '%>
+                            <%=product.product_name%>
+                        </p>
+                        <p class="marcaProducto">
+                            
                         </p>
                         <span class="precioProducto">
-                           $ <%= typeof producto != 'undefined' ?  producto.price : ' ' %>
+                           $ <%= product.price %>
                         </span>
                         <span class="descuento">
-                           <%= typeof producto.descuento != 'undefined' ? ' - '+producto.descuento +' % OFF' : ' ' %> 
+                           <%= product.discount %> 
                         </span>
                         <br>
                         <p  class="descripcionProducto"> 
-                            <%= typeof producto != 'undefined' ?  producto.description : ' ' %>
+                            <%= product.descript %>
                         </p>
                         <div class="agregarAlCarrito">
                             <form class="formCarrito" action="" method="POST">
@@ -41,12 +44,8 @@
                 </div>
                 <div class="especifTecnicas">
                     <p>ESPECIFICACIONES TECNICAS</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aspernatur officia, molestiae distinctio reiciendis, voluptatibus soluta modi vitae velit voluptatum ad quos laudantium optio aliquam ducimus tempora accusamus quis repellat?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aspernatur officia, molestiae distinctio reiciendis, voluptatibus soluta modi vitae velit voluptatum ad quos laudantium optio aliquam ducimus tempora accusamus quis repellat?</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aspernatur officia, molestiae distinctio reiciendis, voluptatibus soluta modi vitae velit voluptatum ad quos laudantium optio aliquam ducimus tempora accusamus quis repellat?</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum aspernatur officia, molestiae distinctio reiciendis, voluptatibus soluta modi vitae velit voluptatum ad quos laudantium optio aliquam ducimus tempora accusamus quis repellat?</p>
+                
+                    <%= product.details %>
                 </div>
            </article>
     </main>

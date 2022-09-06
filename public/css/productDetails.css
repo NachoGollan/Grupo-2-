@@ -172,7 +172,7 @@ header div input{
 
 .nombreProducto{
     font-size: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .precioProducto{
@@ -209,7 +209,7 @@ header div input{
 
 .ustedEstaAqui {
     margin-left: 40px;
-    color: white;
+    color: #AC3A3A;
     text-decoration: none;
 }
 

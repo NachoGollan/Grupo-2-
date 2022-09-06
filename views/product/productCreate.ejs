@@ -26,12 +26,22 @@
         </div>
         <div class="divForm ">
           <label for="category" class="form-label">Categoría:</label>
-          <select name="category" id="category" class="form-input">
-            <option value="">Categoria</option>
-            <option value="vinos">Vinos</option>
-            <option value="Espumantes">Espumantes</option>
-            <option value="Destilados">Destilados</option>
-            <option value="Accesorios">Accesorios</option>
+          <select name="category" id="category">
+            <% for (let i = 0; i < category.length; i ++) { %> 
+              <option value="<%= category[i].id %> ">
+                <%= category[i].cat_name %> 
+              </option>
+            <% } %>
+          </select>
+        </div>
+        <div class="divForm ">
+          <label for="brand" class="form-label">Marca:</label>
+          <select name="brand" id="brand">
+            <% for (let i = 0; i < brand.length; i ++) { %> 
+              <option value="<%= brand[i].id %> ">
+                <%= brand[i].brand_name %> 
+              </option>
+            <% } %>
           </select>
         </div>
         <div class="divForm">
