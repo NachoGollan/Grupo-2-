@@ -35,7 +35,7 @@ module.exports = (sequlize, dataTypes) => {
     }
     let config = {
         tableName: "users",
-        timestapms: false
+        timestamps: false
     }
     const Usuario = sequlize.define(alias, cols, config)
 
