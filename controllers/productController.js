@@ -6,6 +6,8 @@ const productFilePath = path.join(__dirname, '../data/productDataBase.json')
 const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
 const productController = {
+    productList: (req,res) => {
+    },
     productDetails: (req, res) => {
         res.render('product/productDetails', {
 
@@ -20,6 +22,7 @@ const productController = {
         db.Category.findAll()
             .then(function(category) {
                 return res.render('product/productCreate', { category:category})
+                
             })
         db.Brand.findAll()
             .then(function(brand) {
@@ -41,12 +44,11 @@ const productController = {
         res.redirect('/')
     },
     obtenerProducto: (req, res) => {
-        let idProducto = req.params.id;
-        const producto = products.find(element => {
-            return element.id == idProducto;
-        });
-        
-        res.render('product/productDetails', { producto })
+        db.Product.findByPk(req.params.id)
+            .then( (product) =>{
+               res.render('product/productDetails', { product:product})  
+            })
+       
     },
     editarProducto: (req, res) => {
         let idProduct = req.params.idProductoEditable
