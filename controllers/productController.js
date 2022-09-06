@@ -17,22 +17,22 @@ const productController = {
         })
     },
     productCreate: (req, res) => {
-        db.Category.findAll()
-            .then(function(category) {
-                return res.render('product/productCreate', { category:category})
-            })
-        db.Brand.findAll()
-            .then(function(brand) {
-                return res.render('product/productCreate', { brand:brand})
-            })
+        let obtenerCategorias = db.Category.findAll()
+        let obtenerMarcas = db.Brand.findAll()
+            Promise.all([obtenerCategorias, obtenerMarcas])
+                .then(function([category, brand]) {
+                    return res.render('product/productCreate', { category, brand})
+                })
     },
     crearProducto: (req, res) => {
         db.Product.create({
             product_name: req.body.name,
             descript: req.body.description,
             category_id: req.body.category,
+            brand_id: req.body.brand,
             image: '',
             discount: req.body.descuento,
+            details: req.body.details,
             offer: req.body.enOferta,
             price: req.body.price,
             imported: req.body.imported
@@ -49,44 +49,40 @@ const productController = {
         res.render('product/productDetails', { producto })
     },
     editarProducto: (req, res) => {
-        let idProduct = req.params.idProductoEditable
-        let productoEditable = products.find((product) => {
-            return product.id === +idProduct
+        let producto = db.Product.findByPk(req.params.idProductoEditable)
+        let listadoCategorias = db.Category.findAll()
+        let listadoMarcas = db.Brand.findAll()
+        Promise.all([producto, listadoCategorias, listadoMarcas])
+        .then(function([productoEditable, category, brand ]) {
+            return res.render('product/productEdit', { productoEditable, category, brand})
         })
 
-         res.render ('product/productEdit', {productoEditable})
     }, 
     actualizarProducto: (req,res) => {
-        let idProduct = req.params.idProductoEditable
-        let productsCopy = products
-        let producto = productsCopy.find((product) => {
-            return product.id === +idProduct
+        db.Product.update({
+            product_name: req.body.name,
+            descript: req.body.description,
+            category_id: req.body.category,
+            brand_id: req.body.brand,
+            image: '',
+            discount: req.body.descuento,
+            details: req.body.details,
+            offer: req.body.enOferta,
+            price: req.body.price,
+            imported: req.body.imported
+        }, {
+            where: {
+                product_id: req.params.idProductoEditable
+            }
         })
-        
-            producto.name = req.body.name 
-            producto.description = req.body.description
-            producto.category = req.body.category
-            producto.descuento = req.body.descuento
-            producto.price = req.body.price
-            producto.enOferta = req.body.enOferta
-            producto.imported= req.body.imported
-        
-
-            let newProducts = [
-                ...productsCopy
-            ]
-            
-            fs.writeFileSync(productFilePath, JSON.stringify(newProducts, null, ' '))
-            res.render('product/productDetails', {producto} )
+        res.redirect('/')
     },
     borrarProducto: (req, res) => {
-        let idProducto = req.params.idProductoEditable;
-        const productsCopy = products
-        const newProducts = productsCopy.filter(element => {
-            return element.id !== +idProducto;
+        db.Product.destroy({
+            where: {
+                product_id: req.params.idProductoEditable
+            }
         })
-        
-        fs.writeFileSync(productFilePath, JSON.stringify(newProducts, null, ' '))
         res.redirect('/')
         
     }
