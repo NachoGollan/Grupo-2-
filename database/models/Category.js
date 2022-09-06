@@ -14,15 +14,15 @@ module.exports = (sequlize, dataTypes) => {
     }
     let config = {
         tableName: "category",
-        timestapms: false
+        timestamps: false
     }
     const Category = sequlize.define(alias, cols, config)
 
     Category.associate = function (models){
-        Category.hasMany(models.Products), {
+        Category.hasMany(models.Product, {
             as: "products",
             foreignKey: "category_id"
-        }
+        })
     }
 
     return Category
