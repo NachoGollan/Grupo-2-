@@ -1,5 +1,5 @@
 
-module.exports = (sequelize, dataTypes) => {
+module.exports = (sequlize, dataTypes) => {
     let alias = "Brand"
     let cols = {
         id:{
@@ -15,14 +15,14 @@ module.exports = (sequelize, dataTypes) => {
         tableName: "brand",
         timestamps: false
     }
-    const Brand = sequelize.define(alias, cols, config)
+    const Category = sequlize.define(alias, cols, config)
 
-    Brand.associate = function(models) {
-        Brand.hasMany(models.Product, {
+    Category.associate = function(models) {
+        Category.hasMany(models.Product, {
             as: 'products',
             foreignKey: 'brand_id'
         })
     }
  
-    return Brand
+    return Category
 }

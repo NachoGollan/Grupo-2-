@@ -34,7 +34,16 @@
             <% } %>
           </select>
         </div>
-
+        <div class="divForm ">
+          <label for="brand" class="form-label">Marca:</label>
+          <select name="brand" id="brand">
+            <% for (let i = 0; i < brand.length; i ++) { %> 
+              <option value="<%= brand[i].id %> ">
+                <%= brand[i].brand_name %> 
+              </option>
+            <% } %>
+          </select>
+        </div>
         <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
           <textarea name="description" class="form-input"></textarea>

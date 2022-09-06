@@ -14,34 +14,53 @@
 <section>
   <br>
   <div class="divForm">
-    <form action="/product/edit/<%= productoEditable.id %>?_method=PUT" method="POST">
+    <form action="/product/edit/<%= productoEditable.product_id %>?_method=PUT" method="POST">
       <div class="row product-detail">
         <div class="divForm col-md-6">
           <label for="id" class="form-label">ID Producto:</label>
-          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.id : ' ' %> " id="id" name="id" class="form-input">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.product_id : ' ' %> " id="id" name="product_id" class="form-input">
         </div>
         <div class="divForm col-md-6">
           <label for="nombre" class="form-label">Nombre del producto:</label>
-          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.name : ' ' %> " id="name" name="name" class="form-input">
+          <input type="text" value="<%= typeof productoEditable != 'undefined' ? productoEditable.product_name : ' ' %> " id="name" name="product_name" class="form-input">
         </div>
         <div>
           <label for="imported" class="form-label">Importado:</label>
           <label>SI <input type="radio"  name="imported" value="<%= typeof productoEditable != 'undefined' ? productoEditable.imported : ' ' %> "></label>
           <label>NO <input type="radio"  name="imported" value="<%= typeof productoEditable != 'undefined' ? productoEditable.imported : ' ' %> " checked></label>
         </div>
-        <div class="divForm">
+        <div class="divForm ">
           <label for="category" class="form-label">Categoría:</label>
-          <select name="category" id="category" class="form-input">
-            <option value="<%= typeof productoEditable != 'undefined' ? productoEditable.category : ' '%>" selected><%= typeof productoEditable != 'undefined' ? productoEditable.category : ' ' %></option>
-            <option value="vinos">Vinos</option>
-            <option value="Espumantes">Espumantes</option>
-            <option value="Destilados">Destilados</option>
-            <option value="Accesorios">Accesorios</option>
+          <select name="category" id="category">
+            <option value="<%= typeof productoEditable != 'undefined' ? productoEditable.category_id : ' '%>" selected><%= category[productoEditable.category_id-1].cat_name %></option>
+            <% for (let i = 0; i < category.length; i ++) { %> 
+              <% if (category[i].id != productoEditable.category_id) { %>
+              <option value="<%= category[i].id %> ">
+                <%= category[i].cat_name %> 
+              </option>
+              <% } %>
+            <% } %>
           </select>
         </div>
+        <label for="brand" class="form-label">Categoría:</label>
+        <select name="brand" id="brand">
+          <option value="<%= typeof productoEditable != 'undefined' ? productoEditable.brand_id : ' '%>" selected><%= brand[productoEditable.brand_id-1].brand_name %></option>
+          <% for (let i = 0; i < brand.length; i ++) { %> 
+            <% if (brand[i].id != productoEditable.brand_id) { %>
+            <option value="<%= brand[i].id %> ">
+              <%= brand[i].brand_name %> 
+            </option>
+            <% } %>
+          <% } %>
+        </select>
+      </div>
         <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
-          <textarea name="description" value="<%= typeof productoEditable != 'undefined' ? productoEditable.description : ' ' %> " id="description" class="form-input"><%=productoEditable.description %></textarea>
+          <textarea name="description" value="<%= typeof productoEditable != 'undefined' ? productoEditable.descript : ' ' %> " id="descript" class="form-input"><%=productoEditable.descript %></textarea>
+        </div>
+        <div class="divForm">
+          <label for="details">Detalles Tecnicos:</label>
+          <textarea name="details" value="<%= typeof productoEditable != 'undefined' ? productoEditable.details : ' ' %> " id="descript" class="form-input"><%=productoEditable.details %></textarea>
         </div>
         <div class="divForm col-md-6">
           <label for="precio" class="form-label">Precio del producto:</label>
@@ -49,19 +68,19 @@
         </div>
         <div>
           <label for="oferta" class="form-label">En oferta:</label>
-          <label>SI <input type="radio"  name="enOferta" value="<%= typeof productoEditable != 'undefined' ? productoEditable.enOferca : ' '%>"  onclick="document.getElementById('descuento').removeAttribute('disabled')"></label>
-          <label>NO <input type="radio"  name="enOferta" value="<%= typeof productoEditable != 'undefined' ? productoEditable.enOferca : ' '%>"  onclick="document.getElementById('descuento').setAttribute('disabled')"></label>
+          <label>SI <input type="radio"  name="offer" value="<%= typeof productoEditable != 'undefined' ? productoEditable.offer : ' '%>"  onclick="document.getElementById('descuento').removeAttribute('disabled')"></label>
+          <label>NO <input type="radio"  name="offer" value="<%= typeof productoEditable != 'undefined' ? productoEditable.offer : ' '%>"  onclick="document.getElementById('descuento').setAttribute('disabled')"></label>
         </div>
         <div>
           <label for="descuento" class="form-label">Descuento (%):</label>
-          <input type="text" id="descuento" value="<%= typeof productoEditable != 'undefined' ? productoEditable.descuento : ' '%>" id="descuento" name="descuento" disabled>
+          <input type="text" id="discount" value="<%= typeof productoEditable != 'undefined' ? productoEditable.discount : ' '%>" id="discount" name="discount" disabled>
         </div>
         <div class="divForm">
           <button type="submit" >Editar producto</button>
         </div>
       </div>
     </form>
-    <form action="/product/edit/<%= productoEditable.id %>?_method=DELETE" method="POST">
+    <form action="/product/edit/<%= productoEditable.product_id %>?_method=DELETE" method="POST">
     <button type="submit">Borrar producto</button>
     </form>
   </div>
