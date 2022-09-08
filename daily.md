@@ -60,3 +60,28 @@
 - [x] Por medio de una reunion de equipo pudimos solucionar el problema, y dejamos una duda para consultar con los profes
 - [x] 
 - [x]
+
+
+
+## Daily/weekly standups sprint 6.
+
+#### Resumen de tareas completadas:
+
+- Creamos el diagrama de base de datos
+- Creamos Script de datos
+- Creamos archivo con Script de datos
+- Carpeta y archivos de modelos
+- CRUD de productos
+- CRUD de usuarios
+
+#### Resumen de impedimentos encontrados:
+
+- En la creacion del CRUD de usuarios nos topamos con errores de lectura de la base de datos
+- En el CRUD de productos nos encontramos un problema con la creacion, y con la el listado
+- En el metodo details del CRUD de productos tuvimos problemas con la asociacion de tablas y no lograbamos mostrarlas en la vista
+
+#### Resumen de soluciones propuestas:
+
+- [x] Consultando con profe Franco solucionamos el problema de la creacion de productos
+- [x] Por medio de una reunion de equipo solucionamos los problemas de la asociacion de tablas y los problemas que teniamos en listado
+
