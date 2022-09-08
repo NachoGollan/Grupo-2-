@@ -26,7 +26,12 @@
           <% } %>    
           <div>
             <div>
-              <img src="../../images/profile_images/<%=user.image%>">
+              <% if(user.image !== null){%>
+                <img src="../../images/profile_images/<%=user.image%>">
+                <%}else{%>
+                <p>No cargaste una imagen</p>
+              <%}%>
+               
             </div>
             <div>
               
