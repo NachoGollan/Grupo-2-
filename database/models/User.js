@@ -1,7 +1,7 @@
 module.exports = (sequlize, dataTypes) => {
-    let alias = "Users"
+    let alias = "User"
     let cols = {
-        users_id:{
+        user_id:{
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -26,18 +26,25 @@ module.exports = (sequlize, dataTypes) => {
             type: dataTypes.DATE
         },
         image:{
-            type: dataTypes.BLOB
+            type: dataTypes.STRING
         },
         role_id:{
-            type: dataTypes.INTEGER,
-            foreignKey: true
+            type: dataTypes.INTEGER
+            
         }
     }
     let config = {
         tableName: "users",
         timestamps: false
     }
-    const Usuario = sequlize.define(alias, cols, config)
+    const User = sequlize.define(alias, cols, config)
 
-    return Usuario
+    User.associate = function (models){
+        User.belongsTo(models.UserRole, {
+            as: "users",
+            foreignKey: "role_id"
+        })
+    }
+
+    return User
 }
