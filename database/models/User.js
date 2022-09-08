@@ -26,10 +26,10 @@ module.exports = (sequlize, dataTypes) => {
             type: dataTypes.DATE
         },
         image:{
-            type: dataTypes.BLOB
+            type: dataTypes.STRING
         },
         role_id:{
-            type: dataTypes.INTEGER,
+            type: dataTypes.INTEGER
             
         }
     }

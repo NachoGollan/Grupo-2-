@@ -8,7 +8,7 @@ module.exports = (sequlize, dataTypes) => {
         },
         role_name:{
             type: dataTypes.STRING
-        },
+        }
 
     }
     let config = {

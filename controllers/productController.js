@@ -2,8 +2,6 @@ const path = require("path")
 const fs = require('fs')
 const db = require('../database/models')
 
-const productFilePath = path.join(__dirname, '../data/productDataBase.json')
-const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
 const productController = {
     productList: (req,res) => {

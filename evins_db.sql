@@ -16,7 +16,7 @@ CREATE TABLE users (
     first_name VARCHAR(100) NOT NULL,
     last_name VARCHAR(100) NOT NULL,
     email VARCHAR(200) NOT NULL UNIQUE,
-    psswd VARCHAR(100) NOT NULL,
+    passwd VARCHAR(100) NOT NULL,
     birthday DATE NOT NULL,
     image BLOB,
     role_id INT NOT NULL,
@@ -30,7 +30,6 @@ CREATE TABLE category (
 	cat_name VARCHAR(200) NOT NULL,
     PRIMARY KEY(id)
     );
-
 DROP TABLE IF EXISTS brand;
 CREATE TABLE brand (
 	id INT AUTO_INCREMENT NOT NULL,
@@ -42,10 +41,11 @@ DROP TABLE IF EXISTS products;
 CREATE TABLE products (
 	product_id INT NOT NULL AUTO_INCREMENT,
     product_name VARCHAR(200) NOT NULL UNIQUE,
-    descript TEXT NOT NULL,
-    category_id INT NOT NULL,
-    brand_id INT NOT NULL,
-    offer BOOLEAN UNIQUE,
+    descript TEXT,
+	details TEXT,
+    category_id INT,
+	brand_id INT,
+    offer BOOLEAN,
     discount DECIMAL,
     price DECIMAL NOT NULL,
     imported BOOLEAN,
@@ -54,4 +54,32 @@ CREATE TABLE products (
     FOREIGN KEY (category_id) REFERENCES category(id),
     FOREIGN KEY (brand_id) REFERENCES brand(id)
     );
+    
+INSERT INTO category VALUES 
+	(NULL, 'Vinos'),
+    (NULL, 'Espumantes'),
+    (NULL, 'Destilados'),
+    (NULL, 'Accesorios');
+    
+INSERT INTO brand VALUES 
+	(NULL, 'Alma Mora'),
+    (NULL, 'Animal'),
+    (NULL, 'Bressia'),
+	(NULL, 'Claroscuro'),
+	(NULL, 'Cicchiti'),
+    (NULL, 'El Enemigo'),
+    (NULL, 'Finca Las Moras'),
+    (NULL, 'Gouguenheim'),
+    (NULL, 'Huentala'),
+    (NULL, 'Las Perdices'),
+    (NULL, 'Nieto Senetiner'),
+    (NULL, 'Rutini'),
+    (NULL, 'Yacochuya');
+    
+    INSERT INTO users_roles VALUES 
+	(NULL, 'Admin'),
+    (NULL, 'Usuario'),
+    (NULL, 'Visitante'),
+
+    
     

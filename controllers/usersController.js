@@ -6,34 +6,32 @@ const { validationResult } = require('express-validator');
 const bcryptjs = require('bcryptjs')
 
 const usersController = {
+
     register:(req,res) => {
         db.UserRole.findAll()
         .then(function(roles){
-            res.render('users/register', {
-            roles
-            })
+            res.render('users/register', {roles})
         })
         
     },
     
     createUser:(req,res) => {
-        if(req.file){
+        if (req.file) {
         db.User.create({
             user_name: req.body.user_name,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
-            role_id: req.body.user_role,
+            role_id: req.body.roleId,
             image: req.file.filename,
             email: req.body.email,
             passwd: bcryptjs.hashSync(req.body.password, 10),
-            birthday: req.body.birthday,
+            birthday: req.body.birthday
         })
         
         res.redirect('/')
         
-    } else {
-        res.render('users/register')
     }
+        
     },
     
     login:(req,res) => {
@@ -69,14 +67,42 @@ const usersController = {
     },
 
     profile:(req,res) => {
-        let idUser = req.params.id;
-        const user = users.find(element => {
-            return element.id == idUser;
-        });
-        
-        res.render('users/profile', { user })
-    }
-}
+        let usersList = db.User.findByPk(req.params.id)
+        let userRole = db.UserRole.findAll()
+        Promise.all([usersList, userRole])
+        .then(function([user, role ]) {
+    
+            return res.render('users/profile', { user, role})
+        })        
+    },
 
+    editProfile:(req,res) => {
+        if (req.file) {
+        db.User.update({
+            user_name: req.body.user_name,
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            role_id: req.body.roleId,
+            image: req.file.filename,
+            email: req.body.email,
+            passwd: bcryptjs.hashSync(req.body.password, 10),
+            birthday: req.body.birthday
+        })
+        res.redirect('/')
+    }
+
+    },
+
+    deleteUser: (req, res) => {
+        db.User.destroy({
+            where: {
+                user_id: req.params.id
+            }
+        })
+        res.redirect('/')
+        
+    }
+
+}
 
 module.exports = usersController

@@ -254,6 +254,21 @@
  },
  {
   "id": 29,
+  "first_name": "max",
+  "last_name": "segal",
+  "image": "user-1660602520826.jpg",
+  "email": "msegal@gmail.com",
+  "password": "$2a$10$B.9QPCjkZkhY6keK8BIFbeSGMdsjQT6D4KABUqOqRICovOduVb06q",
+  "birthday": "2008-06-29"
+ },
+ {
+  "id": 30,
+  "first_name": "mati",
+  "last_name": "anon",
+  "image": "user-1660602556003.jpg",
+  "email": "manon@gmail.com",
+  "password": "$2a$10$Q2K6sPpEWx9HvgS2puczROakLRKrZpUxokPvH7styFd8dddFnMgg6",
+  "birthday": "2007-05-26",
   "first_name": "Maxi",
   "last_name": "Pola",
   "image": "user-1660622675355.jpg",
@@ -269,14 +284,5 @@
   "email": "maxipola95@gmail.com",
   "password": "$2a$10$ykK3wLkAxT01Ckvnntw8ROVM.HA28uewS932zFxhHGzXy9/PvUl7y",
   "birthday": "2022-08-09"
- },
- {
-  "id": 31,
-  "first_name": "Matias",
-  "last_name": "Anon",
-  "image": "user-1662054231584.pdf",
-  "email": "manon222@gmail.com",
-  "password": "$2a$10$JlnRnGo4SjSyfiR84Zwc1e2sb3gzQiSvY5VXAG0Ee6jzfvzRqHw7K",
-  "birthday": "1990-02-07"
  }
 ]

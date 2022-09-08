@@ -21,12 +21,13 @@
     <input class="boxInput" type="text" name="user_name" placeholder="Nombre de usuario" required>
     <br>
     <div class="divForm ">
-        <label for="user_role" class="form-label">Rol de Usuario:</label>
-        <select name="user_role" id="user_role">
+        <label for="roleId" class="form-label">Rol de Usuario:</label>
+        <select name="roleId" id="roleId">
           <% for (let i = 0; i < roles.length; i ++) { %> 
             <option value="<%= roles[i].id %> ">
               <%= roles[i].role_name %> 
             </option>
+            <% console.log(roles[i].id) %>
           <% } %>
         </select>
       </div>
