@@ -1,16 +1,15 @@
-## Retrospectiva Sprint 5.
+## Retrospectiva Sprint 6.
 
 #### Comenzar a hacer:
 
-> Dividir las tareas de trello en sub tareas para mayor control y organizacion
-> Aplicar las correciones del feedback
+> Aplicar las correciones del feedback.
 > 
 
 #### Hacer más:
-
-> Division de tareas 
+ 
 > Utilizar más a el tablero de trabajo.
-> Reuniones en aperturas y cierres de sprint.
+> Dividir las tareas de trello en sub tareas para mayor control y organizacion.
+> Avisar por la plataforma Discord cuando tenemos un inconveniente en nuestra tarea.
 
 #### Continuar haciendo:
 
@@ -21,6 +20,8 @@
 > Etiquetas en el tablero de trabajo para diferenciar las tareas por Sprint.
 > Implementar las fechas limites para cada tarea.
 > Frencuencia de reuniones.
+> Division de tareas.
+> Reuniones en aperturas y cierres de sprint.
 
 #### Hacer menos:
 
@@ -29,5 +30,5 @@
 
 #### Dejar de hacer:
 
-> No revisar que el proyecto funcione correctamente antes del cierre de Sprint 
-> No comunicarnos cuando surge un inconveniente en las tareas 
+> No revisar que el proyecto funcione correctamente antes del cierre de Sprint.
+> No comunicarnos cuando surge un inconveniente en las tareas.
