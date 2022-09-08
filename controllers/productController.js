@@ -6,8 +6,20 @@ const productFilePath = path.join(__dirname, '../data/productDataBase.json')
 const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
 const productController = {
+
+
     productList: (req,res) => {
+        let producto = db.Product.findAll()
+        let marcas = db.Brand.findAll()
+        Promise.all([producto, marcas])
+            .then( ([product,brand]) =>{
+               res.render('product/productList', { product,brand})  
+            })
+        
+        
     },
+
+
     productDetails: (req, res) => {
         res.render('product/productDetails', {
 
