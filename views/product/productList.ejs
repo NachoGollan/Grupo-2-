@@ -13,8 +13,8 @@
 
         <article>
             <div class="article">
-                <% for(let i=0; i < products.length; i++) {%>
-                    <% if ( product[i].id !== null  ){%>
+                <% for(let i=1; i < product.length; i++) {%>
+                    
                         <div class="articulo">                                    
                             <div class="divImagen">
                                     <img class="imagenes" src="images/producto.jpg" alt="Vino">
@@ -27,9 +27,7 @@
                                     <p id="descripcion"><%=product[i].product_name%></p>
                             </div>                                    
                         </div>
-                    <% } else{ %>
-                        <p>No existen productos</p>
-                        <% } %>
+
                 <%}%>
             </div>    
         </article>
