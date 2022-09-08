@@ -16,6 +16,6 @@ router.post('/', productController.crearProducto)
 router.get('/cart', productController.productCart)
 router.get('/:id', productController.obtenerProducto)
 
-
+router.get('/list', productController.productList)
 
 module.exports = router
