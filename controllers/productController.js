@@ -10,13 +10,12 @@ const productController = {
         let producto = db.Product.findAll()
         let marcas = db.Brand.findAll()
         Promise.all([producto, marcas])
-            .then( ([product,brand]) =>{
+            .then( ([product,brand]) => {
                res.render('product/productList', { product,brand})  
             })
         
         
     },
-
 
     productDetails: (req, res) => {
         res.render('product/productDetails', {
