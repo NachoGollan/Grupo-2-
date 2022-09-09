@@ -17,11 +17,6 @@ const productController = {
         
     },
 
-    productDetails: (req, res) => {
-        res.render('product/productDetails', {
-
-        }) 
-    },
     productCart: (req, res) => {
         res.render('product/productCart', {
 
