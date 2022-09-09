@@ -73,7 +73,7 @@ const usersController = {
         .then(function([user, role ]) {
     
             return res.render('users/profile', { user, role})
-        })        
+        })       
     },
 
     editProfile:(req,res) => {
@@ -87,6 +87,8 @@ const usersController = {
             email: req.body.email,
             passwd: bcryptjs.hashSync(req.body.password, 10),
             birthday: req.body.birthday
+        },{
+            where:{user_id: req.params.id}
         })
         res.redirect('/')
     }
