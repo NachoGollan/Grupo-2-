@@ -77,21 +77,26 @@ const usersController = {
     },
 
     editProfile:(req,res) => {
-        if (req.file) {
+        //if (req.file) { POR EL MOMENTO EL UPDATE CON ESTE IF COMENTADO
         db.User.update({
+            
             user_name: req.body.user_name,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             role_id: req.body.roleId,
-            image: req.file.filename,
+            //image: req.file.filename,
             email: req.body.email,
             passwd: bcryptjs.hashSync(req.body.password, 10),
             birthday: req.body.birthday
-        },{
+        },
+          {
             where:{user_id: req.params.id}
-        })
+          }     
+    )
+//}
         res.redirect('/')
-    }
+    
+    
 
     },
 
