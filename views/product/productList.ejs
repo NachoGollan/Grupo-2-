@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('./partials/head') %>
+    <%- include ('../partials/head') %>
     <title>eVins | Lista de productos</title>
 </head>
 <body>
-    <%- include ('./partials/header') %>
+    <%- include ('../partials/header') %>
 
 
 
@@ -13,7 +13,7 @@
 
         <article>
             <div class="article">
-                <% for(let i=1; i < product.length; i++) {%>
+                <% for(let i=0; i < product.length; i++) {%>
                     
                         <div class="articulo">                                    
                             <div class="divImagen">
@@ -33,7 +33,7 @@
         </article>
 
     </main>
-    <%- include ('./partials/footer') %>
+    <%- include ('../partials/footer') %>
 
 </body>
 
