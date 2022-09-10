@@ -31,6 +31,7 @@ const productController = {
                 })
     },
     crearProducto: (req, res) => {
+        
         db.Product.create({
             product_name: req.body.name,
             descript: req.body.description,
@@ -45,6 +46,7 @@ const productController = {
         })
         
         res.redirect('/')
+    
     },
     obtenerProducto: (req, res) => {
         let producto = db.Product.findByPk(req.params.id)
