@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="../../css/productList.css" rel="stylesheet">
     <%- include ('../partials/head') %>
     <title>eVins | Lista de productos</title>
 </head>
@@ -11,25 +12,28 @@
 
     <main>
 
-        <article>
-            <div class="article">
+        <article class="cajaList">  
+                <div class="article">
                 <% for(let i=0; i < product.length; i++) {%>
-                    
-                        <div class="articulo">                                    
+                    <div class="articulo">
+                        <a href="/product/<%=product[i].product_id%>">
                             <div class="divImagen">
-                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                                <img class="imagenes" src="../images/producto.jpg" alt="Vino">
+                                <img src="../../images/vinos/<%=product.image%>">
                             </div>
                             <div class="caja">
                                 <div class="precioDescuento">
                                     <p id="precio">$<%= product[i].price%></p>
+                                    <p> %<%= product[i].discount%></p>
                                 </div>
-                                    <br>
+                                <br>
                                     <p id="descripcion"><%=product[i].product_name%></p>
-                            </div>                                    
-                        </div>
-
+                            </div>
+                        </a>
+                    </div>    
                 <%}%>
-            </div>    
+            </div>
+                
         </article>
 
     </main>
