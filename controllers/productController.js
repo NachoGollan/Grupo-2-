@@ -46,7 +46,7 @@ const productController = {
         })
         
         res.redirect('/')
-    
+
     },
     obtenerProducto: (req, res) => {
         let producto = db.Product.findByPk(req.params.id)
