@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include ('./partials/head') %>
+    <link href="../../css/productList.css" rel="stylesheet">
+    <%- include ('../partials/head') %>
     <title>eVins | Lista de productos</title>
 </head>
 <body>
-    <%- include ('./partials/header') %>
+    <%- include ('../partials/header') %>
+
+
+
     <main>
-        <article>
-            <div class="article">
-                <% for(let i=1; i < products.length; i++) {%>
-                    
-                        <div class="articulo">                                    
+
+        <article class="cajaList">  
+                <div class="article">
+                <% for(let i=0; i < product.length; i++) {%>
+                    <div class="articulo">
+                        <a href="/product/<%=product[i].product_id%>">
                             <div class="divImagen">
-                                    <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                                <img class="imagenes" src="../images/producto.jpg" alt="Vino">
+                                <img src="../../images/vinos/<%=product.image%>">
                             </div>
                             <div class="caja">
                                 <div class="precioDescuento">
-                                    <p id="precio">$<%= products[i].price%></p>
+                                    <p id="precio">$<%= product[i].price%></p>
+                                    <p> %<%= product[i].discount%></p>
                                 </div>
-                                    <br>
-                                    <p id="descripcion"><%=products[i].product_name%></p>
-                            </div>                                    
-                        </div>
-
+                                <br>
+                                    <p id="descripcion"><%=product[i].product_name%></p>
+                            </div>
+                        </a>
+                    </div>    
                 <%}%>
-            </div>    
+            </div>
+                
         </article>
 
     </main>
-    <%- include ('./partials/footer') %>
+    <%- include ('../partials/footer') %>
 
 </body>
 
