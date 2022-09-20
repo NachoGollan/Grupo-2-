@@ -87,9 +87,11 @@ const usersController = {
             email: req.body.email,
             passwd: bcryptjs.hashSync(req.body.password, 10),
             birthday: req.body.birthday
+        }, {
+            where: { user_id: req.params.id}
         })
-        res.redirect('/')
     }
+    res.redirect('/')
 
     },
 

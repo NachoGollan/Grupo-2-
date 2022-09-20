@@ -18,7 +18,7 @@ CREATE TABLE users (
     email VARCHAR(200) NOT NULL UNIQUE,
     passwd VARCHAR(100) NOT NULL,
     birthday DATE NOT NULL,
-    image BLOB,
+    image TEXT,
     role_id INT NOT NULL,
     PRIMARY KEY (user_id),
     FOREIGN KEY (role_id) REFERENCES users_roles(id)
@@ -49,7 +49,7 @@ CREATE TABLE products (
     discount DECIMAL,
     price DECIMAL NOT NULL,
     imported BOOLEAN,
-    image BLOB,
+    image TEXT,
     PRIMARY KEY (product_id),
     FOREIGN KEY (category_id) REFERENCES category(id),
     FOREIGN KEY (brand_id) REFERENCES brand(id)
@@ -79,7 +79,7 @@ INSERT INTO brand VALUES
     INSERT INTO users_roles VALUES 
 	(NULL, 'Admin'),
     (NULL, 'Usuario'),
-    (NULL, 'Visitante'),
+    (NULL, 'Visitante')
 
     
     

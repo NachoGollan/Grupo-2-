@@ -6,14 +6,10 @@
 </head>
 <body>
     <%- include ('./partials/header') %>
-
-
-
     <main>
-
         <article>
             <div class="article">
-                <% for(let i=1; i < product.length; i++) {%>
+                <% for(let i=1; i < products.length; i++) {%>
                     
                         <div class="articulo">                                    
                             <div class="divImagen">
@@ -21,10 +17,10 @@
                             </div>
                             <div class="caja">
                                 <div class="precioDescuento">
-                                    <p id="precio">$<%= product[i].price%></p>
+                                    <p id="precio">$<%= products[i].price%></p>
                                 </div>
                                     <br>
-                                    <p id="descripcion"><%=product[i].product_name%></p>
+                                    <p id="descripcion"><%=products[i].product_name%></p>
                             </div>                                    
                         </div>
 
