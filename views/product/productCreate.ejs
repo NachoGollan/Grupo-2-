@@ -6,18 +6,18 @@
     <title>eVins | Carga de producto</title>
 </head>
 <body>
-    <%- include('../partials/header') %>
-
+    
+  <%- include('../partials/header') %>
  <main>
 
 <section>
   <br>
   <div class="divForm">
-    <form action="/product" method="POST">
+    <form id="formulario" action="/product" method="POST">
       <div class="row product-detail">
         <div class="divForm col-md-6">
           <label for="name" class="form-label">Nombre del producto:</label>
-          <input type="text" name="name" placeholder="Ej: Catena Malbec " class="form-input">
+          <input type="text" name="name"  id="name" placeholder="Ej: Catena Malbec " class="form-input">
         </div>
         <div>
           <label for="imported" class="form-label">Importado:</label>
@@ -44,9 +44,13 @@
             <% } %>
           </select>
         </div>
+        <div class="divForm ">
+          <label for="fotoProducto">Foto de producto:</label>
+          <input type="file" name="image" id="image">
+          </div>
         <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
-          <textarea name="description" class="form-input"></textarea>
+          <textarea name="description" id="description" class="form-input"></textarea>
         </div>
         <div class="divForm">
           <label for="details">Detalles Tecnicos:</label>
@@ -65,17 +69,18 @@
           <label for="descuento" class="form-label">Descuento (%):</label>
           <input type="number" id="descuento" name="descuento" placeholder="Ej: 15" disabled>
         </div>
-        <!-- <label for="fotoUsuario">Foto de producto:</label>
-          <input type="file" name="image">
-          <br> -->
         <div class="divForm">
-          <button type="submit" class="buy-now-button">Guardar producto</button>
+          <button type="submit" class="boton">Guardar producto</button>
+        </div>
+        <div class="divErrores" id="divErrores">
+          <ul></ul>
         </div>
       </div>
     </form>
   </div>
 </section>
 </main>
+<script src="../../js/productValidator.js"></script>
 
  <%- include('../partials/footer') %>
 </body>

@@ -7,13 +7,12 @@ const productController = {
 
 
     productList: (req,res) => {
-        let producto = db.Product.findAll()
-        let marcas = db.Brand.findAll()
-        Promise.all([producto, marcas])
-            .then( ([product,brand]) => {
-               res.render('product/productList', { product,brand})  
+        let productosDB = db.Product.findAll()
+        let marcasDB = db.Brand.findAll()
+        Promise.all([productosDB, marcasDB])
+            .then( function ([prodDB,brandsDB]) {
+               res.render('product/productList', { prodDB,brandsDB})  
             })
-        
         
     },
 
@@ -94,7 +93,19 @@ const productController = {
         })
         res.redirect('/')
         
+    },  vinos: (req,res) => {
+        db.Product.findAll()
+            .then(( productos ) => {
+                let productosDB = []
+                productoDB = productos.filter(product => {
+                    return productos.category_id == 1
+                }) 
+
+               res.render('product/productos', { productosDB })
+            })
+        
     }
+
 
     }
 

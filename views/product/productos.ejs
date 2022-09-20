@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include ('../partials/head') %>
+    <title>eVins | Home</title>
+</head>
+
+<body>
+    <%- include ('../partials/header') %>
+
+
+
+    <main>
+            <article>
+                <img style="width:100% ;" src="../images/banner-vinos-ed.jpg" alt="Banner">
+            </article>
+            <article>
+                    <p class="titulares">VINOS    <% if ( locals && locals.usuarioLogueado  ){%>
+        <p>Hola <%=locals.usuarioLogueado %></p> 
+        <% } else{ %>
+            <p>No existe</p>
+            <% } %> </p>
+
+                        <div class="article">
+                            <% for(producto of productosDB) {%>
+                                <div class="articulo">
+                                    <a href="/product/<%=producto.id%>">
+                                        <div class="divImagen">
+                                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                                        </div>
+                                        <div class="caja">
+                                            <div class="precioDescuento">
+                                                <p id="precio">$<%=producto.price%></p>
+                                            </div>
+                                            <br>
+                                            <p id="descripcion"><%=producto.name%></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            <%}%>
+                        </div>    
+            </article>
+    </main>
+    <%- include ('../partials/footer') %>
+
+</body>
+
+</html>

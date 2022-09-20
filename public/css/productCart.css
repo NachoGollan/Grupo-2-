@@ -16,6 +16,10 @@ header {
 
 }
 
+.divErrores {
+    color: red;
+}
+
 h1, h2{
     color: #b19b42;
 }

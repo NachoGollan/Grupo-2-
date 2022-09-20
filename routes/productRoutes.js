@@ -18,6 +18,14 @@ const upload = multer({ storage })
 
 
 
+//PRODUCTOS//
+router.get('/vinos', productController.vinos)
+// router.get('/espumantes', productController.espumantes)
+// router.get('/destilados', productController.vinos)
+// router.get('/importados', productController.importados)
+// router.get('/accesorios', productController.accesorios)
+// router.get('/ofertas', productController.ofertas)
+
 //EDIT PRODUCTS//
 router.get('/edit/:idProductoEditable', productController.editarProducto)
 router.put('/edit/:idProductoEditable', productController.actualizarProducto)
@@ -37,5 +45,7 @@ router.get('/list', productController.productList)
 router.get('/:id', productController.obtenerProducto)
 
 
+
+router.get('/:id', productController.obtenerProducto)
 
 module.exports = router
