@@ -7,6 +7,7 @@ const validatorLogin = require ('../middlewares/validatorLogin')
 
 const guestMiddleware = require('../middlewares/guestMiddleware')
 const authMiddleware = require('../middlewares/authMiddleware')
+const validatorReg = require("../middlewares/validatorRegistro")
 
 
 const storage = multer.diskStorage({
@@ -27,7 +28,7 @@ router.get('/login', usersController.login)
 router.post('/login', validatorLogin, usersController.processLogin)
 
 //Ruteo register
-router.get('/register', usersController.register)
+router.get('/register',validatorReg, usersController.register)
 router.post('/', upload.single('image'), usersController.createUser)
 
 router.get('/profile/:id', usersController.profile)
