@@ -19,6 +19,8 @@ window.addEventListener("load",() => {
         
         if(passwordLogin.value == ""){
             errores.push("Por favor ingrese su contraseña")
+        }else if (passwordLogin.value.length < 4 ) {
+            errores.push("La contraseña debe tener al menos 5 caractares")
         }
         
         if(errores.length > 0){ 
@@ -27,8 +29,8 @@ window.addEventListener("load",() => {
                     erroresLogin.innerHTML += "<li>" + errores[i] + "</li>"
                     
                 }
-            }
-        })
+        }
+    })
         
     
 
