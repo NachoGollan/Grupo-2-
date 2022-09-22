@@ -30,13 +30,13 @@ const productController = {
                 })
     },
     crearProducto: (req, res) => {
-        
+        if (req.file) {
         db.Product.create({
             product_name: req.body.name,
             descript: req.body.description,
             category_id: req.body.category,
             brand_id: req.body.brand,
-            image: '',
+            image: req.file.filename,
             discount: req.body.descuento,
             details: req.body.details,
             offer: req.body.enOferta,
@@ -46,7 +46,9 @@ const productController = {
         
         res.redirect('/')
 
+    }
     },
+
     obtenerProducto: (req, res) => {
         let producto = db.Product.findByPk(req.params.id)
         let marcas = db.Brand.findAll()

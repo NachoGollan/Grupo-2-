@@ -13,7 +13,7 @@
 <section>
   <br>
   <div class="divForm">
-    <form id="formulario" action="/product" method="POST">
+    <form id="formulario" action="/product" method="POST" enctype="multipart/form-data">
       <div class="row product-detail">
         <div class="divForm col-md-6">
           <label for="name" class="form-label">Nombre del producto:</label>
@@ -46,7 +46,7 @@
         </div>
         <div class="divForm ">
           <label for="fotoProducto">Foto de producto:</label>
-          <input type="file" name="image" id="image">
+          <input type="file" name="image">
           </div>
         <div class="divForm">
           <label for="description" class="form-label">Descipción:</label>
