@@ -35,6 +35,7 @@ window.addEventListener("load", () => {
         if (imageReg.value == "" || !imageReg.value.toLowerCase().endsWith("jpg") || !imageReg.value.toLowerCase().endsWith("jpeg") || !imageReg.value.toLowerCase().endsWith("png") || !imageReg.value.toLowerCase().endsWith("gif")) {
             errores.push("Por favor ingrese una imagen valida");
         }
+        
 
         if (errores.length > 0) {
             e.preventDefault()
