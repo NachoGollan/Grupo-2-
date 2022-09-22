@@ -29,12 +29,12 @@
 
       <section>
         <h3 style="text-align: center;">Creá tu cuenta <h3>
-            <form action="/users" method="POST" enctype="multipart/form-data" class="form-register">
-              <input class="first_name" type="text" name="first_name" placeholder="Nombre" required>
+            <form action="/users" method="POST" enctype="multipart/form-data"  id='form-register' class="form-register">
+              <input class="first_name" type="text" id="first_name" name="first_name" placeholder="Nombre" >
               <br>
-              <input class="last_name" type="text" name="last_name" placeholder="Apellido" required>
+              <input class="last_name" type="text" name="last_name"  id="last_name" placeholder="Apellido" >
               <br>
-              <input class="user_name" type="text" name="user_name" placeholder="Nombre de usuario" required>
+              <input class="user_name" type="text" name="user_name" id="user_name" placeholder="Nombre de usuario" >
               <br>
               <div class="divForm ">
                 <label for="roleId" class="form-label">Rol de Usuario:</label>
@@ -47,27 +47,30 @@
                       <% } %>
                 </select>
               </div>
-              <input class="email" type="email" name="email" placeholder="E-mail" required>
+              <input class="email" type="email" id="email" name="email" placeholder="E-mail" >
               <br>
               <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-              <input class="boxInput" type="date" name="birthday" required>
+              <input class="boxInput" type="date" id="birthday" name="birthday" >
               <br>
-              <input class="boxInput" type="text" name="address" placeholder="address" required>
+              <input class="boxInput" type="text" name="address" id="address" placeholder="address" >
               <br>
               <label for="fotoUsuario">Foto de usuario:</label>
-              <input type="file" name="image">
+              <input type="file" id="image" name="image">
               <br>
-              <input class="password" type="password" id="password" name="password" placeholder="Contraseña" required>
+              <input class="password" type="password" id="password" name="password" placeholder="Contraseña" >
               <br>
 
               <button type="submit">Enviar</button>
               <button type="reset">Resetear</button>
             </form>
       </section>
+      <div class="divErrores" id="divErrores">
+        <ul></ul>
+      </div>
     </main>
-
-    <%- include ('../partials/footer') %>
     <script src="../../js/register.js"></script>
+    <%- include ('../partials/footer') %>
+
 </body>
 
 </html>
