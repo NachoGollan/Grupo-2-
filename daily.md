@@ -85,3 +85,26 @@
 - [x] Consultando con profe Franco solucionamos el problema de la creacion de productos
 - [x] Por medio de una reunion de equipo solucionamos los problemas de la asociacion de tablas y los problemas que teniamos en listado
 
+
+
+## Daily/weekly standups sprint 7.
+
+#### Resumen de tareas completadas:
+
+- Se crearon las validaciones front-end en el login de usuarios.
+- Se crearon las validaciones front-end en el register de usuarios.
+- Se crearon las validaciones front-end en el create de productos.
+- Se agregaron middlewares con las validaciones del register y login de usuarios.
+- Se agregaron middlewares con las validaciones en el create de prodcutos.
+- Se actualizo retro y daily.md.
+
+#### Resumen de impedimentos encontrados:
+
+- En las validaciones de front-end de login, la lista de errores se multiplicaba en vez de actualizarse.
+- En las validaciones de front-end de productos ocurria el mismo error que en el login.
+- 
+
+#### Resumen de soluciones propuestas:
+
+- [x] Ya que teniamos el mismo error, nos reunimos los encargados de éstas tareas y lo solucionamos en conjunto.
+- [x] 
