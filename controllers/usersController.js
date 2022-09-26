@@ -40,31 +40,34 @@ const usersController = {
     },
 
     processLogin: (req,res) => {
-
         let errors = validationResult(req);
 
         if (errors.isEmpty()){
-            let usuarioALoguearse
-            for (i = 0; i < db.User.length; i++){
-                if (db.User[i].email == req.body.email){
-                    if (bcryptjs.compareSync(req.body.password, db.User[i].passwd)){
-                        usuarioALoguearse = db.User[i] 
-                        break;
+            db.User.findOne({
+                where: {
+                    email: req.body.email
+                }
+            })
+                .then((usuario) => {
+                    let usuarioALoguearse
+                    if(usuario){
+                        if (bcryptjs.compareSync(req.body.password, usuario.passwd)){
+                            usuarioALoguearse = usuario                           
+                        }else {
+                            return res.render('users/login', {errors:[{msg: 'Usuario o contraseña incorrecto'}]})
+                        }
                     }
-                } 
-            }
-            
-            if (usuarioALoguearse == undefined){
-                return res.render('users/login', {errors:[{msg: 'Email o contraseña incorrecto'}]})
-            }
-            req.session.usuarioLogueado = usuarioALoguearse
-            console.log(req.session)
-            res.redirect('/')
+                    req.session.usuarioLogueado = usuarioALoguearse
+                    res.redirect('/')
+                    
+
+                })
+                    
         }else{
             return res.render('users/login', {errors:[{msg: 'Complete los campos'}]})
 
-         }
-    },
+        }
+    },    
 
     profile:(req,res) => {
         let usersList = db.User.findByPk(req.params.id)
