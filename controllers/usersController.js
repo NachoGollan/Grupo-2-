@@ -45,10 +45,10 @@ const usersController = {
 
         if (errors.isEmpty()){
             let usuarioALoguearse
-            for (i = 0; i < users.length; i++){
-                if (users[i].email == req.body.email){
-                    if (bcryptjs.compareSync(req.body.password, users[i].password)){
-                        usuarioALoguearse = users[i] 
+            for (i = 0; i < db.User.length; i++){
+                if (db.User[i].email == req.body.email){
+                    if (bcryptjs.compareSync(req.body.password, db.User[i].passwd)){
+                        usuarioALoguearse = db.User[i] 
                         break;
                     }
                 } 
