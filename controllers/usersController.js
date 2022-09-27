@@ -49,23 +49,16 @@ const usersController = {
                 }
             })
                 .then((usuario) => {
-                    let usuarioALoguearse
-                    if(usuario){
-                        if (bcryptjs.compareSync(req.body.password, usuario.passwd)){
-                            usuarioALoguearse = usuario                           
-                        }else {
-                            return res.render('users/login', {errors:[{msg: 'Usuario o contraseña incorrecto'}]})
-                        }
+                    
+                    if(usuario && (bcryptjs.compareSync(req.body.password, usuario.passwd))){
+                        req.session.usuarioLogueado = usuario
+                        res.render('users/login', {usuario})                
+                    }else{
+                            return res.render('users/login', {errors:[{msg: 'Contraseña incorrecta'}]})
                     }
-                    req.session.usuarioLogueado = usuarioALoguearse
-                    res.redirect('/')
-                    
-
-                })
-                    
+                })         
         }else{
             return res.render('users/login', {errors:[{msg: 'Complete los campos'}]})
-
         }
     },    
 
