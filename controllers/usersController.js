@@ -50,11 +50,16 @@ const usersController = {
             })
                 .then((usuario) => {
                     
-                    if(usuario && (bcryptjs.compareSync(req.body.password, usuario.passwd))){
-                        req.session.usuarioLogueado = usuario
-                        res.render('users/login', {usuario})                
-                    }else{
+                    if(usuario) {
+                        if (bcryptjs.compareSync(req.body.password, usuario.passwd)){
+                            req.session.usuarioLogueado = usuario
+                            res.render('users/login', {usuario}) 
+                        } else {
                             return res.render('users/login', {errors:[{msg: 'Contraseña incorrecta'}]})
+                        }
+               
+                    }else{
+                            return res.render('users/login', {errors:[{msg: 'No existe el usuario'}]})
                     }
                 })         
         }else{
