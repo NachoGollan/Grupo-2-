@@ -109,6 +109,28 @@ const usersController = {
         })
         res.redirect('/')
         
+    },
+
+    apiUser: (req, res) => {
+        db.User.findAll()
+        .then(usuarios => {
+            return res.json({
+                count: usuarios.length,
+            users: usuarios})
+         })
+    },
+    apiUserId: (req, res) => {
+        db.User.findByPk(req.params.id)
+        .then(usuario => {
+            return res.json({
+                user_name: usuario.user_name,
+                first_name: usuario.first_name,
+                last_name: usuario.last_name,
+                image: usuario.image,
+                email: usuario.email,
+                birthday: usuario.birthday
+            })
+        })
     }
 
 }
