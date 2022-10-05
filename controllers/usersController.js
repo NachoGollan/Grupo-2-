@@ -119,6 +119,7 @@ const usersController = {
             users: usuarios})
          })
     },
+    
     apiUserId: (req, res) => {
         db.User.findByPk(req.params.id)
         .then(usuario => {
