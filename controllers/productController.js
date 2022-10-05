@@ -110,7 +110,6 @@ const productController = {
     apiProduct: (req, res) => {
         let productos = db.Product.findAll()
 
-
         // let categorias = (id) => {
         //     let dbCategorias = db.Category.findAll()
         //     for(i=0; i<dbCategorias.length; i++){
