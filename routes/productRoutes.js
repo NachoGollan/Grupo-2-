@@ -23,8 +23,11 @@ const upload = multer({ storage,
         let errorMulter = null
         extensiones?errorMulter = null :errorMulter = 'El archivo seleccionado no tiene una extension valida'
       }})
-
-
+      
+      
+      //api routes
+      router.get('/api/:id', productController.apiProductId)
+      router.get('/api',productController.apiProduct)
 
 //PRODUCTOS//
 router.get('/vinos', productController.vinos)
@@ -47,14 +50,13 @@ router.post('/', validatorProduct, upload.single('image'), productController.cre
 
 router.get('/cart', productController.productCart)
 
-
 router.get('/list', productController.productList)
 //PRODUCT DETAIL
 router.get('/:id', productController.obtenerProducto)
 
 
 
-router.get('/:id', productController.obtenerProducto)
+
 
 
 module.exports = router

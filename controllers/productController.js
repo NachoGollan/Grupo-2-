@@ -106,10 +106,73 @@ const productController = {
                res.render('product/productos', { productosDB })
             })
         
+    },
+    apiProduct: (req, res) => {
+        let productos = db.Product.findAll()
+
+
+        // let categorias = (id) => {
+        //     let dbCategorias = db.Category.findAll()
+        //     for(i=0; i<dbCategorias.length; i++){
+        //     }
+        // }
+
+
+        let vino = db.Product.findAll({
+            where: {
+                category_id : 1
+            }
+        })
+        let espumantes = db.Product.findAll({
+            where: {
+                category_id : 2
+            }
+        })
+        let destilados = db.Product.findAll({
+            where: {
+                category_id : 3
+            }
+        })
+        let accesorios = db.Product.findAll({
+            where: {
+                category_id : 4
+            }
+        })
+        Promise.all([productos, vino, espumantes, destilados, accesorios])
+        .then(([productos, vino, espumantes, destilados, accesorios]) => {
+            return res.json({
+                count: productos.length,
+                products: productos,
+                countByCategory: {
+                    vinos: vino.length,
+                    espumantes: espumantes.length,
+                    destilados: destilados.length,
+                    accesorios: accesorios.length
+                }
+            })
+        })
+    },
+    apiProductId: (req, res) => {
+        db.Product.findByPk(req.params.id)
+        .then(producto => {
+            return res.json({
+                product_name: producto.product_name,
+                descript: producto.descript,
+                category_id: producto.category_id,
+                brand_id: producto.brand_id,
+                image: producto.image,
+                discount: producto.discount,
+                details: producto.details,
+                offer: producto.offer,
+                price: producto.price,
+                imported: producto.imported
+            })
+        })
     }
 
 
-    }
+
+}
 
 
 module.exports = productController
