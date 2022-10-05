@@ -25,9 +25,9 @@ const upload = multer({ storage,
       }})
       
       
-      //api routes
-      router.get('/api/:id', productController.apiProductId)
-      router.get('/api',productController.apiProduct)
+//api routes
+router.get('/api/:id', productController.apiProductId)
+router.get('/api',productController.apiProduct)
 
 //PRODUCTOS//
 router.get('/vinos', productController.vinos)
