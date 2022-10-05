@@ -35,6 +35,7 @@ router.get('/profile/:id', usersController.profile)
 router.put('/profile/:id', upload.single('image'), usersController.editProfile)
 router.delete('/profile/:id', usersController.deleteUser)
 
+
 //Api routes
 router.get('/api/:id', usersController.apiUserId)
 router.get('/api', usersController.apiUser)
