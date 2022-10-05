@@ -153,18 +153,35 @@ const productController = {
     },
     apiProductId: (req, res) => {
         db.Product.findByPk(req.params.id)
+
+        // Promise.all([producto, categoria, marca])
         .then(producto => {
-            return res.json({
-                product_name: producto.product_name,
-                descript: producto.descript,
-                category_id: producto.category_id,
-                brand_id: producto.brand_id,
-                image: producto.image,
-                discount: producto.discount,
-                details: producto.details,
-                offer: producto.offer,
-                price: producto.price,
-                imported: producto.imported
+            let categoria = db.Category.findOne({
+                where: {
+                    id: producto.category_id
+                }
+            })
+            let marca = db.Brand.findOne({
+                where: {
+                    id: producto.brand_id
+                }
+            })
+            Promise.all([categoria, marca])
+            .then(([categoria, marca])=> {
+                return res.json({
+                    product_name: producto.product_name,
+                    descript: producto.descript,
+                    category_id: producto.category_id,
+                    brand_id: producto.brand_id,
+                    image: producto.image,
+                    discount: producto.discount,
+                    details: producto.details,
+                    offer: producto.offer,
+                    price: producto.price,
+                    imported: producto.imported,
+                    brand: {marca},
+                    category: {categoria}
+                })
             })
         })
     }
