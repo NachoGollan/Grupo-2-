@@ -6,7 +6,9 @@ import { promiseImpl } from 'ejs';
 function App() {
   return (
     <div className="App">
-      <Panel/>
+      <Panel total = {["Total de Productos"]} />
+      <Panel total = {["Total de Ususarios"]} />
+      <Panel total = {["Total de Categorias"]} />
 
     </div>
   );
