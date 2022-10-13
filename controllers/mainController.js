@@ -1,41 +1,40 @@
 const path = require ("path")
 const fs = require('fs')
+const db = require('../database/models')
 
 const productFilePath = path.join(__dirname, '../data/productDataBase.json')
 const products = JSON.parse(fs.readFileSync(productFilePath, 'utf-8'))
 
 const mainController = {
-    index:(req,res) => {
-        let vinos = []
-        let espumantes = []
-        let destilados = []
-        let descuento = []
-        
-        vinos = products.filter(product => {
-            return product.category == 'VINOS'
-        }) 
+    index  : (req,res) => {
+        db.Product.findAll()
+            .then(( productos ) => {
+                let vinos = []
+                let espumantes = []
+                let descuento = []
+                let destilados = []
+                vinos = productos.filter(product => {
+                    return product.category_id == 1
+                }) 
 
-        espumantes = products.filter(product => {
-            return product.category == 'ESPUMANTES'
-        }) 
+                espumantes = productos.filter(product => {
+                    return product.category_id == 2
+                }) 
 
-        destilados = products.filter(product => {
-            return product.category == 'DESTILADOS'
-        }) 
-
-        descuento = products.filter(product => {
-            return product.descuento != null
-        }) 
-
-
-        res.render('index', {
-            vinos: vinos,
-            espumantes: espumantes,
-            destilados: destilados,
-            descuento: descuento
-
-        })
+                descuento = productos.filter(product => {
+                    return product.offer == 1
+                }) 
+                destilados = productos.filter(product => {
+                    return product.category_id == 3
+                }) 
+               res.render('index', {
+                vinos: vinos,
+                espumantes: espumantes,
+                destilados: destilados,
+                descuento: descuento })
+            })
     },
+
     menu:(req,res) => {
         res.render('menu', {
             

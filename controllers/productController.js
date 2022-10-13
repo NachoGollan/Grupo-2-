@@ -95,15 +95,17 @@ const productController = {
         })
         res.redirect('/')
         
-    },  vinos: (req,res) => {
+    },  
+    
+    vinos: (req,res) => {
         db.Product.findAll()
             .then(( productos ) => {
-                let productosDB = []
-                productoDB = productos.filter(product => {
+                let vinos = []
+                vinosDb = productos.filter(product => {
                     return productos.category_id == 1
                 }) 
 
-               res.render('product/productos', { productosDB })
+               res.render('/', { vinosDb })
             })
         
     },

@@ -25,7 +25,7 @@ router.get('/api/:id', productController.apiProductId)
 router.get('/api',productController.apiProduct)
 
 //PRODUCTOS//
-router.get('/vinos', productController.vinos)
+// router.get('/vinos', productController.vinos)
 // router.get('/espumantes', productController.espumantes)
 // router.get('/destilados', productController.vinos)
 // router.get('/importados', productController.importados)
