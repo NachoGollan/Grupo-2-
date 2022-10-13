@@ -1,3 +1,4 @@
+const { toDefaultValue } = require("sequelize/types/utils")
 const Category = require("./Category")
 
 module.exports = (sequelize, dataTypes) => {
@@ -36,7 +37,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.BOOLEAN
         },
         image:{
-            type: dataTypes.STRING
+            type: dataTypes.STRING,
+            defaultValue: 'default.jpg'
         }
     }
     let config = {

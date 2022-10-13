@@ -110,7 +110,7 @@ nav ul li a{
 
 }
 
-nav img {
+.logoInicio {
     width: 15%;
 }
 
@@ -181,9 +181,10 @@ main {
 }
 
 .titulares {
-    padding-right: 10px;
+    padding-left: 30px;
     font-size: 24px;
-    color: #666;
+    color: #b19b42;
+    background-color: #36393E;
 }
 .divProducto {
     display: flex;
@@ -357,7 +358,7 @@ main {
 
 @media screen and (min-width: 700px) {
     
-    nav ul {
+    .navUl {
         width: 40%;
         justify-content: space-around;
         list-style: none;
@@ -452,14 +453,6 @@ main {
 }
 
 
-
-@media screen and (min-width: 968px) {
- 
-}
-
-@media screen and (min-width: 1200px) {
-
-}
 
 
 

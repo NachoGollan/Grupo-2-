@@ -21,7 +21,7 @@ const usersController = {
             user_name: req.body.user_name,
             first_name: req.body.first_name,
             last_name: req.body.last_name,
-            role_id: req.body.roleId,
+            role_id: 2,
             image: req.file.filename,
             email: req.body.email,
             passwd: bcryptjs.hashSync(req.body.password, 10),
@@ -48,12 +48,12 @@ const usersController = {
                     email: req.body.email
                 }
             })
-                .then((usuario) => {
+                .then((user) => {
                     
-                    if(usuario) {
-                        if (bcryptjs.compareSync(req.body.password, usuario.passwd)){
-                            req.session.usuarioLogueado = usuario
-                            res.render('users/login', {usuario}) 
+                    if(user) {
+                        if (bcryptjs.compareSync(req.body.password, user.passwd)){
+                            req.session.usuarioLogueado = user
+                            res.render('users/profile', {user}) 
                         } else {
                             return res.render('users/login', {errors:[{msg: 'Contraseña incorrecta'}]})
                         }

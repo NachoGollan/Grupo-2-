@@ -15,19 +15,18 @@
             <article>
                 <img style="width:100% ;" src="../images/banner-vinos-ed.jpg" alt="Banner">
             </article>
+            <% if ( locals && locals.usuarioLogueado  ){%>
+                <p>Hola <%=locals.usuarioLogueado %></p> 
+                    <% } %> </p>
             <article>
-                    <p class="titulares">VINOS    <% if ( locals && locals.usuarioLogueado  ){%>
-        <p>Hola <%=locals.usuarioLogueado %></p> 
-        <% } else{ %>
-            <p>No existe</p>
-            <% } %> </p>
+                    <p class="titulares"><%=categoria%></p>   
 
                         <div class="article">
                             <% for(let i = 0; i < producto.length; i++) {%>
                                 <div class="articulo">
                                     <a href="/product/<%=producto[i].product_id%>">
                                         <div class="divImagen">
-                                            <img class="imagenes" src="images/<%=producto[i].image%>" alt="Vino">
+                                            <img class="imagenes" src="../../images/productos/<%=producto[i].image%>" alt="Vino">
                                         </div>
                                         <div class="caja">
                                             <div class="precioDescuento">

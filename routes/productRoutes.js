@@ -26,11 +26,10 @@ router.get('/api',productController.apiProduct)
 
 //PRODUCTOS//
 router.get('/vinos', productController.vinos)
-// router.get('/espumantes', productController.espumantes)
-// router.get('/destilados', productController.vinos)
-// router.get('/importados', productController.importados)
-// router.get('/accesorios', productController.accesorios)
-// router.get('/ofertas', productController.ofertas)
+router.get('/espumantes', productController.espumantes)
+router.get('/destilados', productController.destilados)
+router.get('/importados', productController.importados)
+router.get('/promociones', productController.promociones)
 
 //EDIT PRODUCTS//
 router.get('/edit/:idProductoEditable', productController.editarProducto)

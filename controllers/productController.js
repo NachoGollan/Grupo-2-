@@ -101,11 +101,64 @@ const productController = {
         db.Product.findAll()
             .then(( productos ) => {
                 let producto = []
+                let categoria = 'VINOS'
                 producto = productos.filter(product => {
                     return product.category_id == 1
                 }) 
 
-               res.render('product/productos', { producto })
+               res.render('product/productos', { producto,categoria })
+            })
+        
+    },
+    espumantes: (req,res) => {
+        db.Product.findAll()
+            .then(( productos ) => {
+                let producto = []
+                let categoria = 'ESPUMANTES'
+                producto = productos.filter(product => {
+                    return product.category_id == 2
+                }) 
+
+                res.render('product/productos', { producto, categoria })
+                })
+        
+    },
+    destilados: (req,res) => {
+        db.Product.findAll()
+            .then(( productos ) => {
+                let producto = []
+                let categoria = 'DESTILADOS'
+                producto = productos.filter(product => {
+                    return product.category_id == 3
+                }) 
+
+                res.render('product/productos', { producto, categoria })
+            })
+        
+    },
+    importados: (req,res) => {
+        db.Product.findAll()
+            .then(( productos ) => {
+                let producto = []
+                let categoria = 'IMPORTADOS'
+                producto = productos.filter(product => {
+                    return product.imported == 1
+                }) 
+
+               res.render('product/productos', { producto, categoria })
+            })
+        
+    },
+    promociones: (req,res) => {
+        db.Product.findAll()
+            .then(( productos ) => {
+                let producto = []
+                let categoria = 'PROMOCIONES'
+                producto = productos.filter(product => {
+                    return product.offer == 1
+                }) 
+
+               res.render('product/productos', { producto, categoria })
             })
         
     },

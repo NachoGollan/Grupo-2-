@@ -46,19 +46,7 @@
                 <label for="user_name">Nombre usuario</label>
                 <input class="boxInput" type="text" name="user_name" value="<%=user.user_name%>"  required>
                 <br>
-                <div class="divForm ">
-                    <label for="roleId" class="form-label">Rol de Usuario:</label>
-                    <select name="roleId" id="roleId">
-                      <option value="<%= typeof user != 'undefined' ? user.role_id : ' '%>" selected><%= role[user.role_id-1].role_name %></option>
-                      <% for (let i = 0; i < role.length; i ++) { %> 
-                        <% if (role[i].id != user.role_id) { %>
-                        <option value="<%= role[i].id %> ">
-                          <%= role[i].role_name %> 
-                        </option>
-                        <% } %>
-                      <% } %>
-                    </select>
-                  </div>
+            
                   <label for="fechaNacimiento">Correo electronico</label>
                 <input class="boxInput" type="email" name="email" value="<%=user.email%>" required>
                 <br>

@@ -36,17 +36,6 @@
               <br>
               <input class="user_name" type="text" name="user_name" id="user_name" placeholder="Nombre de usuario" >
               <br>
-              <div class="divForm ">
-                <label for="roleId" class="form-label">Rol de Usuario:</label>
-                <select name="roleId" id="roleId">
-                  <% for (let i=0; i < roles.length; i ++) { %>
-                    <option value="<%= roles[i].id %> ">
-                      <%= roles[i].role_name %>
-                    </option>
-                    <% console.log(roles[i].id) %>
-                      <% } %>
-                </select>
-              </div>
               <input class="email" type="email" id="email" name="email" placeholder="E-mail" >
               <br>
               <label for="fechaNacimiento">Fecha de Nacimiento:</label>

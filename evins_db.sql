@@ -49,7 +49,7 @@ CREATE TABLE products (
     discount DECIMAL,
     price DECIMAL NOT NULL,
     imported BOOLEAN,
-    image TEXT,
+    image TEXT DEFAULT,
     PRIMARY KEY (product_id),
     FOREIGN KEY (category_id) REFERENCES category(id),
     FOREIGN KEY (brand_id) REFERENCES brand(id)
@@ -91,22 +91,22 @@ INSERT INTO users  VALUES
  (4, 'Daisey Gyles', 'Daisey', 'Gyles', 'dgyles3@about.me', 'wFDPQH3LjDal', '04/01/2022', 'http://dummyimage.com/162x100.png/ff4444/ffffff', 2),
  (5, 'Sutherlan Pevreal', 'Sutherlan', 'Pevreal', 'spevreal4@hostgator.com', 'MmI2Qsiw6', '10/28/2021', 'http://dummyimage.com/240x100.png/dddddd/000000', 3);
 
- INSERT INTO products  VALUES    
-(5, 'Brekke Inc', 'mi in porttitor pede justo eu massa donec dapibus duis at velit', 'morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus', 1, 1, 57, 166, false),
-(6, 'Carroll Group', 'potenti cras in purus eu magna vulputate luctus cum sociis', 'aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh', 4, 11, 35, 133, false),
-(7, 'O''Hara, Jacobson and Corwin', 'nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non', 'morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed', 3, 5, 21, 557, false),
-(8, 'Daugherty, Tillman and Gerhold', 'dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam', 'nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget', 2, 13, 14, 248, false),
-(9, 'O''Hara Group', 'ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin', 'nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat', 3, 2, 27, 128, true),
-(10, 'Halvorson, Casper and Senger', 'ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at', 'leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat', 3, 12, 35, 939, true),
-(11, 'Kassulke, Dicki and Hermiston', 'cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel', 'tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum', 3, 4, 22, 371, true),
-(12, 'Effertz Group', 'nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan', 'ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis', 2, 9, 67, 947, false),
-(13, 'Rowe-Hills', 'aenean fermentum donec ut mauris eget massa tempor convallis nulla neque', 'mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit', 1, 7, 25, 958, false),
-(14, 'Klein and Sons', 'fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam', 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam', 2, 5, 31, 718, true),
-(15, 'Frami and Sons', 'nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo', 'etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris', 4, 8, 75, 824, true),
-(16, 'Huel LLC', 'tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae', 'eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat', 4, 12, 63, 610, false),
-(17, 'Ernser, Langosh and Feeney', 'eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante', 'eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed', 1, 13, 37, 662, false),
-(18, 'O''Connell Group', 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec', 'aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac', 1, 1, 72, 845, false),
-(19, 'Johns Inc', 'enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit', 'lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in', 1, 8, 8, 551, true);
+ 
+INSERT INTO products (product_id, product_name, descript, details, category_id, brand_id, offer, discount, price, imported, image) VALUES
+(1, 'Alma negra', 'Barrica 100% roble francés. Tiempo en barrica 16 meses', 'Bodega: Ernesto Catena. Cosecha: 2016. Varietal: Corte', 1, 1, 1, 5, 4000, 0, "alma-negra.png"),
+(2, 'Ciccitti Sangiovese', 'Rojo Rubi, en nariz frutos rojos y notas de café ', 'Bodega: Cicchitti Cosecha: 2012 Varietal: Sangiovese', 1, 5, 1, 10, 2400, 0, "Ciccitti.jpeg"),
+(3, 'Claroscuro Cabernet Franc', 'En boca presenta un notable volumen, dada la perfecta madurez de esta cosecha, con alcohol moderado y acidez natural balanceada. La concentración de sabores y la persistencia hacen de éste, un típico Cabernet franc de zonas frías.', 'Bodega: Claroscuro. Cosecha: 2018. Varietal: Cabernet Franc', 1, 4, 0, 0, 2200, 0, "claroscuro-cabernet.png"),
+(4, 'Claroscuro Malbec', 'Marcados tonos azulados y violáceos típicos del Malbec. Resaltan aromas florales (violetas) característicos de Vistaflores enriquecidos por frutos rojos y otros aromas complejos aportados por el añejamiento', 'Bodega: Claroscuro. Cosecha: 2015. Varietal: Malbec', 1, 4, 0, 0, 2500, 0, "claroscuro-malbec.png"),
+(5, 'Tinto negro rosé', 'Notas de Cata: De color rosado intenso y brillante, aromas de frutos rojos, frambuesas y cerezas con un dejo floral.', 'Bodega: Las perdices. Cosecha: 2015. Varietal: Malbec', 1, 10, 1, 5, 1400, 0, "tinto-negro-rose.jpg"),
+(6, 'Animal', '70% Chardonnay- 30% Pinot Noir Tiempo: 10 meses en botella. Altura 1100 snm. Cosecha manual: Si. Fermentación: 25 días. Temp. Max 12 c. Estabilización -4 c. Clarificación: No. Filtración: No', 'Bodega: Ernesto Catena. Cosecha: 2016.', 2, 2, 0, 0, 1200, 0, "animal-chardonay.jpeg"),
+(7, 'Trumpeter', 'Espumante extra brut', 'Bodega: Rutini. Cosecha: 2016. ', 2, 12, 0, 0, 2200, 0, "trumpeter-extra-brut.jpg"),
+(8, 'Finca las moras', 'Espumante extra brut', 'Bodega: Las moras. Cosecha: 2017.', 2, 7, 0, 0, 2000, 0, "default.jpg"),
+(9, 'Santa Teresa añejo', 'Ron añejo gran reserva.', '', 3, 9, 1, 5, 4000, 0, "santa-teresa.jpg"),
+(10,'Flor de caña', 'Ron añejo claro', '', 3, 13, 0, 0, 3200, 0, "flor-de-cania.jpg"),
+(11, 'Hendricks', 'Gin', 'Gin 15 años', 3, 9, 0, 0, 11000, 1, "Hendricks-gin.jpg"),
+(12, 'Tanqueray', '750ml doblemente destilado', '', 3, 9, 0, 0, 4700, 1, "Tanqueray.jpg"),
+(13, 'Rutini extra brut', 'Rutini extra brut ', 'Bodega: Rutini. Cosecha: 2018.', 2, 12, 0, 0, 4000, 0, "rutini-extra-brut.jpg");
+
 
     
     

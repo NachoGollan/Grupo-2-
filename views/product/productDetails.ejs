@@ -14,7 +14,7 @@
             </p>
                 <div class="productDetails">
                     <div class="divImgProducto">
-                        <img class="fotoProducto" src="../../images/producto.jpg">
+                        <img class="fotoProducto" src="../../images/productos/<%= product.image %>">
                     </div>
                     <div class="divDetalleProducto">
                         <p class="nombreProducto">
@@ -46,6 +46,10 @@
                     <p>ESPECIFICACIONES TECNICAS</p>
                 
                     <%= product.details %>
+                </div>
+
+                <div style ="text-align: center;" >
+                    <a href="/product/edit/<%=product.product_id%>"><button class="botonCantidad" type="submit">Editar Producto</button></a> <br/>
                 </div>
            </article>
     </main>
