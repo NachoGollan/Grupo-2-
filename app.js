@@ -3,12 +3,13 @@ const app = express();
 const puerto = process.env.PORT || 3001;
 const methodOverRide = require('method-override')
 const session = require ('express-session')
-
+const cors = require ('cors')
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(cors())
 app.use(session({
     secret: "Mensaje",
     resave: false,
