@@ -6,6 +6,7 @@ import UltimoProducto from './UltimoProducto';
 import ContentRowEvins from './ContentRowEvins';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
+import ListadoProductos from './ListadoProductos';
 
 function SideBar(){
     return(
@@ -53,7 +54,7 @@ function SideBar(){
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
-                <Link className="nav-link" to="/ContentRowEvins">
+                <Link className="nav-link" to="/ListadoProductos">
                     <i className="fas fa-wine-bottle"></i>
                         <span>Productos</span></Link>
                 </li>
@@ -95,8 +96,8 @@ function SideBar(){
                 <Route path="/UltimoProducto">
                     <UltimoProducto />
                 </Route>
-                <Route path="/ContentRowEvins">
-                    <ContentRowEvins />
+                <Route path="/ListadoProductos">
+                    <ListadoProductos />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
