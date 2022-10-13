@@ -23,18 +23,18 @@
             <% } %> </p>
 
                         <div class="article">
-                            <% for(producto of productosDB) {%>
+                            <% for(let i = 0; i < producto.length; i++) {%>
                                 <div class="articulo">
-                                    <a href="/product/<%=producto.id%>">
+                                    <a href="/product/<%=producto[i].product_id%>">
                                         <div class="divImagen">
-                                            <img class="imagenes" src="images/producto.jpg" alt="Vino">
+                                            <img class="imagenes" src="images/<%=producto[i].image%>" alt="Vino">
                                         </div>
                                         <div class="caja">
                                             <div class="precioDescuento">
-                                                <p id="precio">$<%=producto.price%></p>
+                                                <p id="precio">$<%=producto[i].price%></p>
                                             </div>
                                             <br>
-                                            <p id="descripcion"><%=producto.name%></p>
+                                            <p id="descripcion"><%=producto[i].product_name%></p>
                                         </div>
                                     </a>
                                 </div>
