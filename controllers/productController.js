@@ -100,12 +100,12 @@ const productController = {
     vinos: (req,res) => {
         db.Product.findAll()
             .then(( productos ) => {
-                let vinos = []
-                vinosDb = productos.filter(product => {
-                    return productos.category_id == 1
+                let producto = []
+                producto = productos.filter(product => {
+                    return product.category_id == 1
                 }) 
 
-               res.render('/', { vinosDb })
+               res.render('product/productos', { producto })
             })
         
     },
