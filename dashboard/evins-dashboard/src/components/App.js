@@ -4,7 +4,7 @@ import ContentWrapper from './ContentWrapper';
 function App() {
   const [showSideBar, setShowSidebar] = useState(true);
 
-  const sideBar = useRef();
+  //const sideBar = useRef();
 
   // useEffect(() => {
   //   if (showSideBar) {
@@ -27,7 +27,7 @@ function App() {
   return (
     <React.Fragment>
       	<div id="wrapper">
-          <SideBar ref={sideBar} />
+          <SideBar  />
         </div>
     </React.Fragment>
   );

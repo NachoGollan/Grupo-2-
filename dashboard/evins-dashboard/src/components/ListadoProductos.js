@@ -1,29 +1,26 @@
 import React from 'react';
+import { useEffect, useState } from "react";
 import ChartRow from './ChartRow';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
+function ListadoProductos (){
+    const [productos, setProductos] = useState([]) ;
 
+	useEffect(() => {
+		fetch(`http://localhost:3001/product/api`)
+		.then(response => response.json())
+		.then(data => {	
+			setProductos(data.products)})
+		.catch(error => console.error(error))
+	}, []);
 
-function Chart (){
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
+        <div className="card-header py-3">
+          <h5 className="m-0 font-weight-bold text-gray-800" width="100%">
+            Tabla de productos
+          </h5>
+          </div>
             <div className="card-body">
                 <div className="table-responsive">
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
@@ -32,8 +29,8 @@ function Chart (){
                                 <th>Producto</th>
                                 <th>Precio</th>
                                 <th>Categoria</th>
-                                <th>Marca</th>
                                 <th>Descuento</th>
+                                <th>Enlace</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -41,15 +38,17 @@ function Chart (){
                                 <th>Producto</th>
                                 <th>Precio</th>
                                 <th>Categoria</th>
-                                <th>Marca</th>
                                 <th>Descuento</th>
+                                <th>Enlace</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             {
-                            tableRowsData.map( ( row , i) => {
+                            productos.map( ( row , i) => {
                                 return <ChartRow { ...row} key={i}/>
+                            
                             })
+                            
                             }
 
                         </tbody>
@@ -61,4 +60,4 @@ function Chart (){
     )
 }
 
-export default Chart;
+export default ListadoProductos;

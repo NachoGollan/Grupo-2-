@@ -1,19 +1,31 @@
 import React from 'react';
-import imagenFondo from '../assets/images/producto.jpg';
+import { useEffect, useState } from 'react';
+
 
 function UltimoProducto(){
+    const [productos, setProductos] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:3001/product/api`)
+            .then(response => response.json())
+            .then(data => {
+                setProductos(data.products[data.products.length-1])
+            })
+            .catch(error => console.error(error))
+    }, [])
+
+
     return(
-        <div className="col-lg-6 mb-4">
+        <div className="col-mb-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                    <h5 className="m-0 font-weight-bold text-gray-800">Ultimo producto en base de datos</h5>
+                    <h5 className="m-0 font-weight-bold text-gray-800">Ultimo Producto Creado : {productos.product_name}</h5>
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={imagenFondo} alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 30 +'rem'}} src={`http://localhost:3001/images/productos/${productos.image}`} alt=" Imágen usuario "/>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver detalle de producto</a>
+                    <p>{productos.descript}</p>
                 </div>
             </div>
         </div>
