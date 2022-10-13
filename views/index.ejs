@@ -23,18 +23,18 @@
             <% } %> </p>
 
                         <div class="article">
-                            <% for(producto of vinos) {%>
+                            <% for(let i = 0; i < 4; i++) {%>
                                 <div class="articulo">
-                                    <a href="/product/<%=producto.id%>">
+                                    <a href="/product/<%=vinos[i].product_id%>">
                                         <div class="divImagen">
                                             <img class="imagenes" src="images/producto.jpg" alt="Vino">
                                         </div>
                                         <div class="caja">
                                             <div class="precioDescuento">
-                                                <p id="precio">$<%=producto.price%></p>
+                                                <p id="precio">$<%=vinos[i].price%></p>
                                             </div>
                                             <br>
-                                            <p id="descripcion"><%=producto.name%></p>
+                                            <p id="descripcion"><%=vinos[i].product_name%></p>
                                         </div>
                                     </a>
                                 </div>
@@ -44,18 +44,18 @@
             <article>
                 <p class="titulares">ESPUMANTES</p>
                 <div class="article">
-                    <% for(producto of espumantes) {%>
+                    <% for(let i = 0; i < 4; i++) {%>
                         <div class="articulo">
-                            <a href="/product/<%=producto.id%>">
+                            <a href="/product/<%=espumantes[i].product_id%>">
                                 <div class="divImagen">
                                     <img class="imagenes" src="images/producto.jpg" alt="Vino">
                                 </div>
                                 <div class="caja">
                                     <div class="precioDescuento">
-                                        <p id="precio">$<%=producto.price%></p>
+                                        <p id="precio">$<%=espumantes[i].price%></p>
                                     </div>
                                     <br>
-                                    <p id="descripcion"><%=producto.name%></p>
+                                    <p id="descripcion"><%=espumantes[i].product_name%></p>
                                 </div>
                             </a>   
                         </div>
@@ -64,19 +64,19 @@
             <article>
                 <p class="titulares">PROMOCIONES</p>
                 <div class="article">
-                    <% for(producto of descuento) {%>
+                    <% for(let i = 0; i < 4; i++) {%>
                         <div class="articulo">
-                            <a href="/product/<%=producto.id%>">
+                            <a href="/product/<%=descuento[i].product_id%>">
                                 <div class="divImagen">
                                     <img class="imagenes" src="/images/producto.jpg" alt="Vino">
                                 </div>
                                 <div class="caja">
                                     <div class="precioDescuento">
-                                        <p id="precio">$<%=producto.price%></p>
-                                        <p id="descuento"><%=producto.descuento%>% OFF</p>
+                                        <p id="precio">$<%=descuento[i].price%></p>
+                                        <p id="descuento"><%=descuento[i].discount%>% OFF</p>
                                     </div>
                                     <br>
-                                    <p id="descripcion"><%=producto.name%></p>
+                                    <p id="descripcion"><%=descuento[i].product_name%></p>
                                 </div>
                             </a>
                         </div>
