@@ -17,12 +17,7 @@ const storage = multer.diskStorage({
     }
 })
 
-const upload = multer({ storage,
-    fileFilter: function(req, file, cb) {
-        let extensiones = file.mimetype.startsWith('image/')
-        let errorMulter = null
-        extensiones?errorMulter = null :errorMulter = 'El archivo seleccionado no tiene una extension valida'
-      }})
+const upload = multer({ storage })
       
       
 //api routes
