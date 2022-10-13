@@ -2,13 +2,13 @@
 
 #### Comenzar a hacer:
 
-> Terminar tareas opcionales atrasadas
-> Reuniones de control de sprint en la fecha de finalización
+> Terminar detalles finales del proyecto
 
 #### Hacer más:
  
-> Dividir las tareas de trello en sub tareas para mayor control y organización.
-> Aplicar las correciones del feedback.
+> Terminar tareas opcionales atrasadas
+> Reuniones de control de sprint en la fecha de finalización
+
 
 #### Continuar haciendo:
 
@@ -23,6 +23,8 @@
 > Reuniones en aperturas y cierres de sprint.
 > Avisar por la plataforma Discord cuando tenemos un inconveniente en nuestra tarea.
 > Utilizar más a el tablero de trabajo.
+> Aplicar las correciones del feedback.
+> Dividir las tareas de trello en sub tareas para mayor control y organización.
 
 #### Hacer menos:
 
