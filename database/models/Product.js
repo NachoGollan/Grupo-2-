@@ -1,4 +1,3 @@
-const { toDefaultValue } = require("sequelize/types/utils")
 const Category = require("./Category")
 
 module.exports = (sequelize, dataTypes) => {
@@ -38,7 +37,6 @@ module.exports = (sequelize, dataTypes) => {
         },
         image:{
             type: dataTypes.STRING,
-            defaultValue: 'default.jpg'
         }
     }
     let config = {

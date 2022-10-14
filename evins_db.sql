@@ -49,7 +49,7 @@ CREATE TABLE products (
     discount DECIMAL,
     price DECIMAL NOT NULL,
     imported BOOLEAN,
-    image TEXT DEFAULT,
+    image TEXT,
     PRIMARY KEY (product_id),
     FOREIGN KEY (category_id) REFERENCES category(id),
     FOREIGN KEY (brand_id) REFERENCES brand(id)

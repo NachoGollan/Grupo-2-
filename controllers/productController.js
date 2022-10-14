@@ -42,12 +42,12 @@ const productController = {
             offer: req.body.enOferta,
             price: req.body.price,
             imported: req.body.imported
-        })
+        }) 
         
         res.redirect('/')
 
     }
-    },
+},
 
     obtenerProducto: (req, res) => {
         let producto = db.Product.findByPk(req.params.id)
