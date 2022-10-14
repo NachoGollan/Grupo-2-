@@ -108,3 +108,26 @@
 
 - [x] Ya que teniamos el mismo error, nos reunimos los encargados de éstas tareas y lo solucionamos en conjunto.
 - [x] 
+
+
+
+## Daily/weekly standups sprint 8.
+
+#### Resumen de tareas completadas:
+
+- Se crearon las APIs para usuarios y productos.
+- En cada API agregamos un contador para tener la cantidad de productos y usuarios en la base de datos.
+- Creamos un dashboard con REACT utilizando como base el que usamos en los microdesafios de react.
+- Configuramos el dashboard para consumir nuestras APIs y mostrar usuarios, productos y sus categorias.
+
+
+#### Resumen de impedimentos encontrados:
+
+- A la hora consumir las APIs nos encontramos con un error con fetch y no lograbamos mostrar los datos en el dashboard.
+- En la construccion de las APIs teniamos un problema con el contador de productos.
+- 
+
+#### Resumen de soluciones propuestas:
+
+- [x] Solucionamos el proble de fetch con la instalacion de cors.
+- [x] Pudimos agregar el contador de productos luego de crear un array distinto al de products
